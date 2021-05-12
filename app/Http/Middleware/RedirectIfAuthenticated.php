@@ -23,7 +23,7 @@ class RedirectIfAuthenticated
             return redirect('consultor');
         }
         if (Auth::guard($guard)->check()) {
-            return redirect('/home');
+            return redirect('/admin/home');
         }
 
         return $next($request);

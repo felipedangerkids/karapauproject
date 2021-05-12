@@ -36,6 +36,9 @@
                                           <div>
                                                 <a href="{{ route('admin.estatistica', $porto->id) }}"> <button class="btn btn-dark ml-2">Estatisticas Diarias</button></a>
                                           </div>
+                                          <div>
+                                                <a href=""> <button class="btn btn-warning ml-2">Desativar</button></a>
+                                          </div>
                                     </div>
                               </td>
                         </tr>

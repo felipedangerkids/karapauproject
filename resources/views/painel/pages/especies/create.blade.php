@@ -10,7 +10,7 @@
                   <div class="col-md-6">
                         <div class="form-group col-md-12">
                               <label for="exampleInputEmail1">Nome Comum Português</label>
-                              <input type="text" class="form-control" name="nome_portugues">
+                              <input type="text" required class="form-control" name="nome_portugues">
                         </div>
                         <div class="form-group col-md-12">
                               <label for="exampleInputEmail1">Nome Comum Inglês</label>
@@ -46,7 +46,7 @@
                         </div>
                         <div class="form-group col-md-12">
                               <label for="exampleInputEmail1">Fotografia</label>
-                              <input type="file" class="form-control" name="image">
+                              <input type="file" required class="form-control" name="image">
                         </div>
                         <div class="form-group col-md-6">
                              <label for="exampleInputEmail1"></label>

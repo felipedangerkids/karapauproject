@@ -14,7 +14,7 @@
                         </div>
                         <div class="form-group col-md-12">
                               <label for="exampleInputEmail1">Foto do Porto</label>
-                              <input type="file" class="form-control" name="image">
+                              <input type="file" required class="form-control" name="image">
                         </div>
                         <div class="form-group col-md-6">
                               <label for="exampleInputEmail1"></label>
@@ -36,7 +36,7 @@
                         </div>
                         <div class="form-group col-md-6">
                             <label for="exampleInputEmail1">Espécies do Porto</label>
-                              <select class="js-example-basic-multiple" name="especies[]" multiple="multiple">
+                              <select class="js-example-basic-multiple" required name="especies[]" multiple="multiple">
                                 @foreach ($especies as $especie)
                                     <option value="{{ $especie->id }}">{{ $especie->nome_portugues }}</option>
                                 @endforeach

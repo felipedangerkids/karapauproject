@@ -20,6 +20,7 @@ class CreatePortosTable extends Migration
             $table->string('descarga')->nullable();
             $table->string('registro')->nullable();
             $table->string('controle_veterinario')->nullable();   
+            $table->string('status')->nullable();
             $table->timestamps();
         });
     }
