@@ -61,10 +61,10 @@ class PortoController extends Controller
         ]);
         if ($porto) {
 
-            foreach ($data['portos'] as $key => $especi) {
+            foreach ($data['especies'] as $key => $especi) {
                 EspecieToPorto::create([
                     'porto_id' => $porto->id,
-                    'porto_id' => $especi,
+                    'especie_id' => $especi,
                 ]);
             }
         }
