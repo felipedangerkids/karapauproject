@@ -28,7 +28,7 @@ Route::get('/', function () {
 Auth::routes();
 
 /*  Painel Routes  */
-Route::prefix('admin')->group(function () {
+Route::middleware(['auth', 'permission'])->prefix('admin')->group( function () {
     Route::get('/', [PainelController::class, 'index']);
     Route::get('especies', [PainelController::class, 'especies'])->name('admin.especies');
     Route::get('especies/create', [EspecieController::class, 'create'])->name('admin.especies.create');
@@ -48,5 +48,6 @@ Route::prefix('admin')->group(function () {
     Route::get('estatistica/{id}', [EstatiscaDiariaController::class, 'index'])->name('admin.estatistica');
     Route::post('estatistica/store', [EstatiscaDiariaController::class, 'store'])->name('admin.estatistica.store');
 });
+    
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
