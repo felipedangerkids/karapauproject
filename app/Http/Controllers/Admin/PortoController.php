@@ -29,8 +29,9 @@ class PortoController extends Controller
      */
     public function create()
     {
-        $portos = porto::all();
-        return view('painel.pages.porto.create', compact('portos'));
+        $especies = Especie::all();
+        
+        return view('painel.pages.porto.create', compact('especies'));
     }
 
     /**
