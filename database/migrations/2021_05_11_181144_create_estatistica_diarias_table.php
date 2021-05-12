@@ -17,7 +17,7 @@ class CreateEstatisticaDiariasTable extends Migration
             $table->id();
             $table->string('especie');            
             $table->unsignedBigInteger('porto_id');
-            $table->foreign('porto_id')->references('id')->on('portos');
+            $table->foreign('porto_id')->references('id')->on('portos')->onDelete('cascade');
     
             $table->string('preco_minimo');
             $table->string('preco_medio');

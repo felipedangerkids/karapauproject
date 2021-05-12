@@ -17,7 +17,6 @@ class EspecieController extends Controller
      */
     public function index()
     {
-        
     }
 
     /**
@@ -58,7 +57,7 @@ class EspecieController extends Controller
             'margem' => $data['margem'],
         ]);
 
-        return redirect()->route('admin.especies')->with('success', 'Espécie criado com sucesso!');
+        return redirect()->route('admin.especies')->with('success', "Espécie $especie->nome_portugues criado com sucesso!");
     }
 
     /**
@@ -81,7 +80,7 @@ class EspecieController extends Controller
      */
     public function edit($id)
     {
-        //
+     
     }
 
     /**
@@ -93,7 +92,49 @@ class EspecieController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $especie = Especie::find($id);
+
+        $data = $request->all();
+
+        if ($request->image != '') {
+            $path = storage_path('app/public/especies/');
+
+            //code for remove old file
+            if ($especie->image != ''  && $especie->image != null) {
+                $file_old = $path . $especie->image;
+                unlink($file_old);
+            }
+
+            //upload new file
+            $img = ImageManagerStatic::make($data['image']);
+
+
+            $name = Str::random() . '.jpg';
+
+            $originalPath = storage_path('app/public/especies/');
+
+            $img->save($originalPath . $name);
+
+            //for update in table
+            $especie->update(['image' => $name]);
+        }
+
+
+        $especie->nome_portugues =     $request->get('nome_portugues');
+        $especie->nome_ingles = $request->get('nome_ingles');
+        $especie->nome_espanhol = $request->get('nome_espanhol');
+        $especie->nome_cientifico = $request->get('nome_cientifico');
+        $especie->codigo_fao = $request->get('codigo_fao');
+        $especie->codigo_lota = $request->get('codigo_lota');
+        $especie->tamanho_minimo = $request->get('tamanho_minimo');
+        $especie->margem = $request->get('margem');
+
+
+
+        $especie->save();
+
+
+        return redirect()->route('admin.especies')->with('success', 'especie alterado com sucesso!');
     }
 
     /**
@@ -104,6 +145,8 @@ class EspecieController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $especie = Especie::findOrFail($id);
+        $especie->delete();
+        return redirect()->route('admin.especies')->with('success', "Espécie $especie->nome_portugues deletado com sucesso!");
     }
 }

@@ -35,10 +35,15 @@ Route::prefix('admin')->group(function () {
     Route::post('especies/store', [EspecieController::class, 'store'])->name('admin.especies.store');
     Route::get('especies/show/{id}', [EspecieController::class, 'show'])->name('admin.especies.show');
     Route::post('especies/update/{id}', [EspecieController::class, 'update'])->name('admin.especies.update');
+    Route::any('especies/delete/{id}', [EspecieController::class, 'destroy'])->name('admin.especies.delete');
+
 
     Route::get('porto', [PainelController::class, 'porto'])->name('admin.porto');
     Route::get('porto/create', [PortoController::class, 'create'])->name('admin.porto.create');
     Route::post('porto/store', [PortoController::class, 'store'])->name('admin.porto.store');
+    Route::any('porto/delete/{id}', [PortoController::class, 'destroy'])->name('admin.porto.delete');
+    Route::get('porto/edit/{id}', [PortoController::class, 'edit'])->name('admin.porto.edit');
+    Route::post('porto/update/{id}', [PortoController::class, 'update'])->name('admin.porto.update');
 
     Route::get('estatistica/{id}', [EstatiscaDiariaController::class, 'index'])->name('admin.estatistica');
     Route::post('estatistica/store', [EstatiscaDiariaController::class, 'store'])->name('admin.estatistica.store');

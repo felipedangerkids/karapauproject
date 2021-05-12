@@ -27,7 +27,7 @@
                                                 <td>
                                                       <div class="d-flex">
                                                             <div>
-                                                                  <button class="btn btn-danger ">Apagar</button>
+                                                                 <a href="{{ route('admin.especies.delete', $especie->id) }}" onclick="return confirm('Você tem certeza?');"> <button class="btn btn-danger ">Apagar</button></a>
                                                             </div>
                                                             <div>
                                                                  <a href="{{ route('admin.especies.show', $especie->id) }}"> <button class="btn btn-primary ml-2">Editar</button></a>

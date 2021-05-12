@@ -58,7 +58,7 @@
                                           <td>{{ $est->preco_minimo }}</td>
                                           <td>{{ $est->preco_medio }}</td>
                                           <td>{{ $est->preco_maximo }}</td>
-                                          <td>{{ $est->created_at }}</td>
+                                          <td>{{ date('d/m/Y', strtotime($est->created_at)) }}</td>
                                     </tr>
              
   

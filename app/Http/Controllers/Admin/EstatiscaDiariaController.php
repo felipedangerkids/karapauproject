@@ -24,6 +24,6 @@ class EstatiscaDiariaController extends Controller
    public function store(Request $request)
    {
     $data = EstatisticaDiaria::create($request->all());
-    return redirect()->back()->with('success', 'Espécie criado com sucesso!');
+    return redirect()->back()->with('success', 'Criado com sucesso!');
    }
 }
