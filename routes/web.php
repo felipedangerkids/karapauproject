@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\EspecieController;
 use App\Http\Controllers\Admin\EstatiscaDiariaController;
 use App\Http\Controllers\Admin\PainelController;
 use App\Http\Controllers\Admin\PortoController;
+use App\Http\Controllers\Auth\LoginConsultorController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,19 +18,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/home', function () {
-    return view('layouts.painel');
-});
+
 Route::get('/', function () {
     return view('auth.login');
 });
 
+Route::get('consultor-login', function(){
+    return view('auth.consultor.login');
+});
 
 Auth::routes();
 
 /*  Painel Routes  */
-Route::middleware(['auth', 'permission'])->prefix('admin')->group( function () {
-    Route::get('/', [PainelController::class, 'index']);
+Route::middleware(['auth'])->prefix('admin')->group( function () {
+    Route::get('/home', [PainelController::class, 'index']);
     Route::get('especies', [PainelController::class, 'especies'])->name('admin.especies');
     Route::get('especies/create', [EspecieController::class, 'create'])->name('admin.especies.create');
     Route::post('especies/store', [EspecieController::class, 'store'])->name('admin.especies.store');
@@ -47,7 +49,17 @@ Route::middleware(['auth', 'permission'])->prefix('admin')->group( function () {
 
     Route::get('estatistica/{id}', [EstatiscaDiariaController::class, 'index'])->name('admin.estatistica');
     Route::post('estatistica/store', [EstatiscaDiariaController::class, 'store'])->name('admin.estatistica.store');
+
+
+    Route::get('consultor', [PainelController::class, 'consultores'])->name('admin.consultores');
+    Route::post('consultor-store', [LoginConsultorController::class, 'store'])->name('admin.consultores.store');
 });
     
 
+Route::get('consultor-login', [LoginConsultorController::class, 'index']);
+Route::post('consultor-entrar', [LoginConsultorController::class, 'login'])->name('consultor.login');
+
+Route::middleware('auth:consultor')->get('consultor', function(){
+    return view('home');
+});
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -16,10 +16,7 @@ class Permission
      */
     public function handle(Request $request, Closure $next)
     {
-        if (auth()->user()->permission == 1) {
-            return redirect('vendor');
-        }
-
+    
         return $next($request);
     }
 }

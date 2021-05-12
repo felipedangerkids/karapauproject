@@ -24,4 +24,10 @@ class PainelController extends Controller
         $portos = Porto::paginate(15);
         return view('painel.pages.porto.index', compact('portos'));
     }
+
+    public function consultores()
+    {
+        return view('painel.pages.consultores.index');
+
+    }
 }

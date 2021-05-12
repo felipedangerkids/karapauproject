@@ -52,6 +52,9 @@
                                     <li>
                                           <a href="{{ route('admin.porto') }}">Portos</a>
                                     </li>
+                                    <li>
+                                          <a href="{{ route('admin.consultores') }}">Consultores</a>
+                                    </li>
 
                               </ul>
                         </li>
