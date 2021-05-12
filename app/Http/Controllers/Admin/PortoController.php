@@ -30,7 +30,7 @@ class PortoController extends Controller
     public function create()
     {
         $especies = Especie::all();
-        
+
         return view('painel.pages.porto.create', compact('especies'));
     }
 
@@ -139,7 +139,7 @@ class PortoController extends Controller
         $porto->descarga = $request->get('descarga');
         $porto->controle_veterinario = $request->get('controle_veterinario');
         // $porto->especies = $request->get('especies');
-  
+
 
 
 
@@ -149,6 +149,13 @@ class PortoController extends Controller
         return redirect()->route('admin.porto')->with('success', 'porto alterado com sucesso!');
     }
 
+    public function status(Request $request, $id)
+    {
+        $porto = Porto::find($id);
+        $porto->status = $request->get('status');
+        $porto->save();
+        return redirect()->back();
+    }
     /**
      * Remove the specified resource from storage.
      *

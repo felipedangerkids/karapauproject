@@ -46,6 +46,7 @@ Route::middleware(['auth'])->prefix('admin')->group( function () {
     Route::any('porto/delete/{id}', [PortoController::class, 'destroy'])->name('admin.porto.delete');
     Route::get('porto/edit/{id}', [PortoController::class, 'edit'])->name('admin.porto.edit');
     Route::post('porto/update/{id}', [PortoController::class, 'update'])->name('admin.porto.update');
+    Route::any('porto/update/status/{id}', [PortoController::class, 'status'])->name('admin.porto.update.status');
 
     Route::get('estatistica/{id}', [EstatiscaDiariaController::class, 'index'])->name('admin.estatistica');
     Route::post('estatistica/store', [EstatiscaDiariaController::class, 'store'])->name('admin.estatistica.store');

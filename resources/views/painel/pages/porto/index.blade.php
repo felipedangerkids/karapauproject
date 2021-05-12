@@ -23,21 +23,37 @@
                               <th scope="row">{{ $porto->id }}</th>
                               <td>{{ $porto->nome }}</td>
                               <td>
-                                    <img width="70" height="70" src="{{ asset('storage/portos/'.$porto->image) }}" alt="">
+                                    <img width="70" height="70" src="{{ asset('storage/portos/'.$porto->image) }}"
+                                          alt="">
                               </td>
                               <td>
                                     <div class="d-flex">
                                           <div>
-                                           <a href="{{ route('admin.porto.delete', $porto->id) }}" onclick="return confirm('Você tem certeza?');">   <button class="btn btn-danger ">Apagar</button></a>
+                                                <a href="{{ route('admin.porto.delete', $porto->id) }}"
+                                                      onclick="return confirm('Você tem certeza?');"> <button
+                                                            class="btn btn-danger ">Apagar</button></a>
                                           </div>
                                           <div>
-                                                <a href="{{ route('admin.porto.edit', $porto->id) }}"> <button class="btn btn-primary ml-2">Editar</button></a>
+                                                <a href="{{ route('admin.porto.edit', $porto->id) }}"> <button
+                                                            class="btn btn-primary ml-2">Editar</button></a>
                                           </div>
                                           <div>
-                                                <a href="{{ route('admin.estatistica', $porto->id) }}"> <button class="btn btn-dark ml-2">Estatisticas Diarias</button></a>
+                                                <a href="{{ route('admin.estatistica', $porto->id) }}"> <button
+                                                            class="btn btn-dark ml-2">Estatisticas Diarias</button></a>
                                           </div>
                                           <div>
-                                                <a href=""> <button class="btn btn-warning ml-2">Desativar</button></a>
+                                                <form action="{{ route('admin.porto.update.status', $porto->id) }}">
+                                                      @csrf
+                                                      @if($porto->status == 0)
+                                                      <input type="hidden" value="1" name="status">
+                                                      <button type="submit" class="btn btn-warning ml-2">Desativar</button>
+                                                      @else
+                                                      <input type="hidden" value="0" name="status">
+                                                      <button type="submit" class="btn btn-success ml-2">Ativar</button>
+                                                      @endif
+
+                                                     
+                                                </form>
                                           </div>
                                     </div>
                               </td>
