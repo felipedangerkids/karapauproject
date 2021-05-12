@@ -63,7 +63,7 @@
 
                   </tbody>
             </table>
-           
+           {{ $portos->links() }}
       </div>
 </div>
 @endsection
