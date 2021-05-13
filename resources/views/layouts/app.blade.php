@@ -27,5 +27,17 @@
             @yield('content')
         </main>
     </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    @if(Session::has('success'))
+        <script type="text/javascript">
+            Swal.fire({
+                           title:'Sucesso!',
+                           icon: 'success',
+                           text:"{{Session::get('success')}}",
+                           timer:5000,
+                           type:'success'
+                       });
+        </script>
+        @endif
 </body>
 </html>

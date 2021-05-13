@@ -4,7 +4,10 @@ use App\Http\Controllers\Admin\EspecieController;
 use App\Http\Controllers\Admin\EstatiscaDiariaController;
 use App\Http\Controllers\Admin\PainelController;
 use App\Http\Controllers\Admin\PortoController;
+use App\Http\Controllers\Auth\CompradorIndividualController;
 use App\Http\Controllers\Auth\LoginConsultorController;
+use App\Http\Controllers\TesteController;
+use App\Models\CompradorIndividual;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -62,5 +65,12 @@ Route::post('consultor-entrar', [LoginConsultorController::class, 'login'])->nam
 
 Route::middleware('auth:consultor')->get('consultor', function(){
     return view('home');
-});
+})->name('consultor');
+
+Route::middleware(['auth:consultor'])->group(function () {
+        Route::get('comprador-individual-create', [CompradorIndividualController::class, 'index'])->name('consultor.comprador-individual.create');
+        Route::post('comprador-individual-store', [CompradorIndividualController::class, 'store'])->name('consultor.comprador-individual.store');
+    });
+
+Route::get('teste', [TesteController::class, 'index']);
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
