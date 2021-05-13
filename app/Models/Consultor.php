@@ -11,6 +11,7 @@ class Consultor extends Authenticatable
 {
     use HasFactory, Notifiable;
 
+    protected $guard = 'consultor';
     protected $fillable = [
         'name',
         'email',

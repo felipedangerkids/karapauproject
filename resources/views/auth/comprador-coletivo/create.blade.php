@@ -20,19 +20,19 @@
                   </div>
                   <div class="form-group col-md-12">
                         <label for="exampleInputEmail1">Sobrenome</label>
-                        <input type="text" class="form-control" name="sobrenome">
+                        <input type="text" required class="form-control" name="sobrenome">
                   </div>
                   <div class="form-group col-md-12">
                         <label for="exampleInputEmail1">Email</label>
-                        <input type="email" class="form-control" name="email">
+                        <input type="email" required class="form-control" name="email">
                   </div>
                   <div class="form-group col-md-12">
                         <label for="exampleInputEmail1">Telemóvel</label>
-                        <input type="text" class="form-control" name="telemovel">
+                        <input type="text" required class="form-control" name="telemovel">
                   </div>
                   <div class="form-group col-md-12">
                         <label for="exampleInputEmail1">Morada</label>
-                        <input type="text" class="form-control" name="morada">
+                        <input type="text" required class="form-control" name="morada">
                   </div>
                   <div class="row container">
                         <div class="form-check col-6">

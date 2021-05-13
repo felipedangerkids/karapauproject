@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Models\Mails;
+use App\Mail\AdminMail;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Models\CompradorIndividual;
@@ -50,6 +51,15 @@ class CompradorIndividualController extends Controller
             'telemovel' => $request->telemovel,
             'morada' => $request->morada,
         ]);
+
+
+        $mails = new Mails();
+        $mails['consultor'] = auth()->user()->name;
+        $mails['nome'] = $request->name;
+        $mails['email'] = $request->email;
+        $mails['senha'] = $random;
+
+        Mail::to('cadastros@karapau.pt')->send(new AdminMail($mails));
 
         $mails = new Mails();
         $mails['nome'] = $request->name;

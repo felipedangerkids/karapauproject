@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\CompradorColetivo;
 use App\Mail\CompradorColetivoMail;
 use App\Http\Controllers\Controller;
+use App\Mail\AdminMail;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 
@@ -56,11 +57,20 @@ class CompradorColetivoController extends Controller
         ]);
 
         $mails = new Mails();
+      
         $mails['nome'] = $request->name;
         $mails['email'] = $request->email;
         $mails['senha'] = $random;
 
         Mail::to($request->email)->send(new CompradorColetivoMail($mails));
+
+        $mails = new Mails();
+        $mails['consultor'] = auth()->user()->name;
+        $mails['nome'] = $request->name;
+        $mails['email'] = $request->email;
+        $mails['senha'] = $random;
+
+        Mail::to('cadastros@karapau.pt')->send(new AdminMail($mails));
 
         return redirect()->route('consultor')->with('success', 'Comprador criado com sucesso!');
     }
