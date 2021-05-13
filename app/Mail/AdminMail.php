@@ -29,7 +29,7 @@ class AdminMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('mails.admin')->subject('Inscrição feita com sucesso!')->with(
+        return $this->markdown('mails.admin')->subject('Cadastro feito Pelo Consultor')->with(
             [
                 'consultor' => $this->mail->consultor,
                 'nome' => $this->mail->name,

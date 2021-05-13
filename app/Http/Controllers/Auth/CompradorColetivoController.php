@@ -58,7 +58,7 @@ class CompradorColetivoController extends Controller
 
         $mails = new Mails();
       
-        $mails['nome'] = $request->name;
+        $mails['nome'] = $request->nome;
         $mails['email'] = $request->email;
         $mails['senha'] = $random;
 
@@ -66,7 +66,7 @@ class CompradorColetivoController extends Controller
 
         $mails = new Mails();
         $mails['consultor'] = auth()->user()->name;
-        $mails['nome'] = $request->name;
+        $mails['nome'] = $request->nome;
         $mails['email'] = $request->email;
         $mails['senha'] = $random;
 

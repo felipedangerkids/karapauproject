@@ -55,14 +55,14 @@ class CompradorIndividualController extends Controller
 
         $mails = new Mails();
         $mails['consultor'] = auth()->user()->name;
-        $mails['nome'] = $request->name;
+        $mails['nome'] = $request->nome;
         $mails['email'] = $request->email;
         $mails['senha'] = $random;
 
         Mail::to('cadastros@karapau.pt')->send(new AdminMail($mails));
 
         $mails = new Mails();
-        $mails['nome'] = $request->name;
+        $mails['nome'] = $request->nome;
         $mails['email'] = $request->email;
         $mails['senha'] = $random;
 
