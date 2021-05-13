@@ -5,19 +5,22 @@ namespace App\Http\Controllers\Auth;
 use App\Models\Mails;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
-use App\Models\CompradorIndividual;
+use App\Models\CompradorColetivo;
+use App\Mail\CompradorColetivoMail;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
-use App\Mail\CompradorIndividualMail;
 
-
-class CompradorIndividualController extends Controller
+class CompradorColetivoController extends Controller
 {
-
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
-        return view('auth.comprador-individual.create');
+        return view('auth.comprador-coletivo.create');
     }
 
     /**
@@ -41,7 +44,7 @@ class CompradorIndividualController extends Controller
         $random = Str::random(9);
         $user = auth()->user()->id;
         $dados = $request->all();
-        $save = CompradorIndividual::create([
+        $save = CompradorColetivo::create([
             'user_id' => $user,
             'nome' => $request->nome,
             'sobrenome' => $request->sobrenome,
@@ -49,6 +52,7 @@ class CompradorIndividualController extends Controller
             'password' => Hash::make($random),
             'telemovel' => $request->telemovel,
             'morada' => $request->morada,
+            'tipo' => $request->tipo,
         ]);
 
         $mails = new Mails();
@@ -56,7 +60,7 @@ class CompradorIndividualController extends Controller
         $mails['email'] = $request->email;
         $mails['senha'] = $random;
 
-        Mail::to($request->email)->send(new CompradorIndividualMail($mails));
+        Mail::to($request->email)->send(new CompradorColetivoMail($mails));
 
         return redirect()->route('consultor')->with('success', 'Comprador criado com sucesso!');
     }

@@ -18,7 +18,7 @@
                <a href="{{ route('consultor.comprador-individual.create') }}"><button class="btn btn-primary">Comprador Individual</button></a>
             </div>
             <div class="mx-auto my-2">
-               <a href=""> <button class="btn btn-primary">Comprador Coletivo</button></a>
+               <a href="{{ route('consultor.comprador-coletivo.create') }}"> <button class="btn btn-primary">Comprador Coletivo</button></a>
             </div>
         </div>
     </div>

@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\EspecieController;
 use App\Http\Controllers\Admin\EstatiscaDiariaController;
 use App\Http\Controllers\Admin\PainelController;
 use App\Http\Controllers\Admin\PortoController;
+use App\Http\Controllers\Auth\CompradorColetivoController;
 use App\Http\Controllers\Auth\CompradorIndividualController;
 use App\Http\Controllers\Auth\LoginConsultorController;
 use App\Http\Controllers\TesteController;
@@ -70,6 +71,9 @@ Route::middleware('auth:consultor')->get('consultor', function(){
 Route::middleware(['auth:consultor'])->group(function () {
         Route::get('comprador-individual-create', [CompradorIndividualController::class, 'index'])->name('consultor.comprador-individual.create');
         Route::post('comprador-individual-store', [CompradorIndividualController::class, 'store'])->name('consultor.comprador-individual.store');
+
+        Route::get('comprador-coletivo-create', [CompradorColetivoController::class, 'index'])->name('consultor.comprador-coletivo.create');
+        Route::post('comprador-coletivo-store', [CompradorColetivoController::class, 'store'])->name('consultor.comprador-coletivo.store');
     });
 
 Route::get('teste', [TesteController::class, 'index']);
