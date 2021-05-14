@@ -58,15 +58,20 @@ Route::middleware(['auth'])->prefix('admin')->group( function () {
 
     Route::get('consultor', [PainelController::class, 'consultores'])->name('admin.consultores');
     Route::post('consultor-store', [LoginConsultorController::class, 'store'])->name('admin.consultores.store');
+    Route::any('consultor-delete/{id}', [LoginConsultorController::class, 'destroy'])->name('admin.consultores.delete');
 });
     
 
 Route::get('consultor-login', [LoginConsultorController::class, 'index']);
 Route::post('consultor-entrar', [LoginConsultorController::class, 'login'])->name('consultor.login');
 
+
+
 Route::middleware('auth:consultor')->get('consultor', function(){
     return view('home');
 })->name('consultor');
+
+
 
 Route::middleware(['auth:consultor'])->group(function () {
         Route::get('comprador-individual-create', [CompradorIndividualController::class, 'index'])->name('consultor.comprador-individual.create');

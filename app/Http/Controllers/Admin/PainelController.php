@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Consultor;
 use App\Models\Especie;
 use App\Models\Porto;
 use Illuminate\Http\Request;
@@ -27,7 +28,9 @@ class PainelController extends Controller
 
     public function consultores()
     {
-        return view('painel.pages.consultores.index');
+
+        $consultores = Consultor::paginate(15);
+        return view('painel.pages.consultores.index', compact('consultores'));
 
     }
 }

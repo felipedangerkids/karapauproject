@@ -97,6 +97,8 @@ class LoginConsultorController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $consultor = Consultor::findOrFail($id);
+        $consultor->delete();
+        return redirect()->back()->with('success', 'Consultor deletado com sucesso!');
     }
 }

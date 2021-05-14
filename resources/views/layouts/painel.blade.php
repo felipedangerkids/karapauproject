@@ -52,9 +52,7 @@
                                     <li>
                                           <a href="{{ route('admin.porto') }}">Portos</a>
                                     </li>
-                                    <li>
-                                          <a href="{{ route('admin.consultores') }}">Consultores</a>
-                                    </li>
+                              
 
                               </ul>
                         </li>
@@ -62,7 +60,7 @@
                               <a href="#"><i class="fas fa-truck"></i> Entregadores</a>
                         </li>
                         <li>
-                              <a href="#"><i class="fas fa-briefcase"></i> Comerciais</a>
+                              <a href="{{ route('admin.consultores') }}"><i class="fas fa-briefcase"></i> Comerciais</a>
                         </li>
                         <li>
                               <a href="#"><i class="far fa-heart"></i> Comissões</a>
