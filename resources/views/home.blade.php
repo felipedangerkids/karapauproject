@@ -29,7 +29,7 @@
             </div>
         </div>
     </div>
-    <div class="title">
+    <div class="">
         <div class="container menu-ic">
             <div class="row pt-3 text-center">
                 <div class="col-4 text-center">
