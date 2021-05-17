@@ -65,14 +65,7 @@
                   </div>
                   <div class="form-group col-md-12">
                         <label for="exampleFormControlSelect1">Quantidade</label>
-                        <select class="form-control" name="quantidade" id="exampleFormControlSelect1">
-                              <option>Escolha a Quantidade</option>
-                              <option value="10">10</option>
-                              <option value="20">20</option>
-                              <option value="30">30</option>
-                              <option value="40">40</option>
-                              <option value="50">50</option>
-                        </select>
+                        <input type="text" required class="form-control" name="quantidade">
                   </div>
                   <div class="form-group col-md-12">
                         <label for="exampleFormControlSelect1">Unidade</label>
