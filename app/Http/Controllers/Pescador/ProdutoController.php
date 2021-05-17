@@ -30,7 +30,7 @@ class ProdutoController extends Controller
      */
     public function list()
     {
-       $produtos = Produto::with('especies')->get();
+       $produtos = Produto::with('especies')->where('pescador_id', auth()->user()->id)->get();
     //    dd($produtos);
        return view('pescador.pages.produto.list', compact('produtos'));
     }
