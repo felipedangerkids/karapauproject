@@ -13,15 +13,15 @@
         <div class="container">
             <div class="pt-3">
                 <h4>Olá,</h4>
-                <p>{{ auth()->user()->name  }}</p>
+                <h3>{{ auth()->user()->name  }}</h3>
             </div>
         </div>
     </div>
     <div class="title">
         <div class="container">
-            <div class="mt-3 d-flex ">
+            <div class="mt-3 d-flex">
                 <div>
-                    <h4>Wallet</h4>
+                    <h4>WALLET</h4>
                 </div>
                 <div class="mx-auto">
                     <h3>€ 00,00</h3>
