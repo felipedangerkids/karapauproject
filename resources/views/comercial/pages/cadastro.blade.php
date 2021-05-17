@@ -26,6 +26,8 @@
             </div>
       </div>
 </div>
-
+<a href="javascript:history.back()" class="float">
+      <i class="fas fa-arrow-alt-circle-left my-float"></i>
+</a>
 
 @endsection
