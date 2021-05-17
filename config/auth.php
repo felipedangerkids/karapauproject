@@ -40,9 +40,15 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        
         'consultor' => [
             'driver' => 'session',
             'provider' => 'consultors',
+        ],
+
+        'pescador' => [
+            'driver' => 'session',
+            'provider' => 'pescadores',
         ],
 
         'api' => [
@@ -77,6 +83,10 @@ return [
         'consultors' => [
             'driver' => 'eloquent',
             'model' => App\Models\Consultor::class,
+        ],
+        'pescadores' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Pescador::class,
         ],
 
         // 'users' => [

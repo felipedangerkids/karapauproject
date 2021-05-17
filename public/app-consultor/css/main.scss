@@ -1,5 +1,33 @@
+
+*{
+      font-family: 'Poppins', sans-serif !important;
+}
+
 .header{
       background-color: #DCF2FB;
       border-bottom: 4px solid rgb(17, 155, 197);
       border-top: 4px solid rgb(17, 155, 197);
+}
+.main{
+         background-color: #DCF2FB;  
+}
+
+.title{
+      border-bottom: 2px solid rgb(17, 155, 197);
+}
+.menu-ic{
+
+      a{
+      color: #000;
+      font-size: 1.3em;
+      }
+    .a-1{
+          font-size: 3em;
+    }
+    .a-2{
+          font-size: 3em;
+    }
+    .a-3{
+          font-size: 3em;
+    }
 }

@@ -8,19 +8,43 @@
         </div>
     </div>
 </div>
-<div>
-    <div class="container">
-        <div class="text-center mt-3">
-            Olá, {{ auth()->user()->name  }}
-        </div>
-        <div class="d-flex flex-column">
-            <div class="mx-auto my-4">
-               <a href="{{ route('consultor.comprador-individual.create') }}"><button class="btn btn-primary">Comprador Individual</button></a>
+<div class="main">
+    <div class="title">
+        <div class="container">
+            <div class="pt-3">
+                <h4>Olá,</h4>
+                <p>{{ auth()->user()->name  }}</p>
             </div>
-            <div class="mx-auto my-2">
-               <a href="{{ route('consultor.comprador-coletivo.create') }}"> <button class="btn btn-primary">Comprador Coletivo</button></a>
+        </div>
+    </div>
+    <div class="title">
+        <div class="container">
+            <div class="mt-3 d-flex ">
+                <div>
+                    <h4>Wallet</h4>
+                </div>
+                <div class="mx-auto">
+                    <h3>€ 00,00</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="title">
+        <div class="container menu-ic">
+            <div class="row pt-3 text-center">
+                <div class="col-4 text-center">
+                    <a href="{{ url('comprador-cad') }}"><i class="fas fa-user-plus a-1"></i>Cadastrar Comprador</a>
+                </div>
+                <div class="col-4">
+                    <a href=""><i class="fas fa-wallet a-2"></i>Wallet</a>
+                </div>
+                <div class="col-4">
+                    <a href=""><i class="fas fa-history a-3"></i>Histórico</a>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+
 @endsection
