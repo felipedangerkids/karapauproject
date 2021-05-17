@@ -10,7 +10,7 @@
 </div>
 <div class="main">
     <div class="title">
-        <div class="container">
+        <div class="container px-4">
             <div class="pt-3">
                 <h4>Olá,</h4>
                 <h3>{{ auth()->user()->name  }}</h3>
@@ -19,7 +19,7 @@
     </div>
     <div class="title">
         <div class="container">
-            <div class="mt-3 d-flex">
+            <div class="mt-3 d-flex px-3">
                 <div>
                     <h4>WALLET</h4>
                 </div>
