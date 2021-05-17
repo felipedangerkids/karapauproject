@@ -9,7 +9,6 @@ class PainelPescadorController extends Controller
 {
     public function index()
     {
-
         return view('pescador.pages.index');
     }
 }

@@ -16,6 +16,7 @@ use App\Http\Controllers\Auth\PescadorController;
 use App\Http\Controllers\Auth\PescadorRegController;
 use App\Http\Controllers\Comercial\ComercialPainelController;
 use App\Http\Controllers\Pescador\PainelPescadorController;
+use App\Http\Controllers\Pescador\ProdutoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -99,5 +100,8 @@ Route::post('pescador-login', [PescadorController::class, 'store'])->name('pesca
 
 
 Route::middleware('auth:pescador')->group(function(){
-    Route::get('pescador', [PainelPescadorController::class, 'index']);
+    Route::get('pescador', [PainelPescadorController::class, 'index'])->name('pescador.index');
+    Route::get('produto', [ProdutoController::class, 'index'])->name('pescador.produto');
+    Route::post('produto-store', [ProdutoController::class, 'store'])->name('pescador.produto.store');
+    Route::get('produto-list', [ProdutoController::class, 'list'])->name('pescador.produto.list');
 });

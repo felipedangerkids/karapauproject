@@ -22,6 +22,9 @@ class RedirectIfAuthenticated
         if ($guard == "consultor" && Auth::guard($guard)->check()) {
             return redirect('consultor');
         }
+        if ($guard == "pescador" && Auth::guard($guard)->check()) {
+            return redirect('pescador');
+        }
         if (Auth::guard($guard)->check()) {
             return redirect('/admin/home');
         }
