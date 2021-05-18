@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ComercialController;
 use App\Models\CompradorIndividual;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TesteController;
@@ -63,7 +64,8 @@ Route::middleware(['auth'])->prefix('admin')->group( function () {
     Route::post('estatistica/store', [EstatiscaDiariaController::class, 'store'])->name('admin.estatistica.store');
 
 
-    Route::get('consultor', [PainelController::class, 'consultores'])->name('admin.consultores');
+    Route::get('consultor', [ComercialController::class, 'index'])->name('admin.consultores');
+    Route::get('consultor-create', [ComercialController::class, 'create'])->name('admin.consultores.create');
     Route::post('consultor-store', [LoginConsultorController::class, 'store'])->name('admin.consultores.store');
     Route::any('consultor-delete/{id}', [LoginConsultorController::class, 'destroy'])->name('admin.consultores.delete');
 });

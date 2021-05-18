@@ -41,8 +41,10 @@ class LoginConsultorController extends Controller
      
       $save = Consultor::create([
           'name' => $request->name,
+          'name' => $request->lastname,
           'email' => $request->email,
           'password' => Hash::make($request->password),
+
       ]);
 
       return redirect()->back()->with('success', "Consultor $request->name criado com sucesso");

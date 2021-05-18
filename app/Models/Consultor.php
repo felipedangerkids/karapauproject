@@ -16,5 +16,9 @@ class Consultor extends Authenticatable
         'name',
         'email',
         'password',
+        'lastname',
+        'image',
+        'morada',
+        'iban'
     ];
 }

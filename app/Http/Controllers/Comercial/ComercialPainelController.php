@@ -12,6 +12,7 @@ class ComercialPainelController extends Controller
     {
        return view('home');
     }
+
     public function compradorCad()
     {
         return view('comercial.pages.cadastro');
