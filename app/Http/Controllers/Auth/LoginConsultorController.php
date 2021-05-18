@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Models\Consultor;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Intervention\Image\ImageManagerStatic;
 
 class LoginConsultorController extends Controller
 {
@@ -38,16 +40,25 @@ class LoginConsultorController extends Controller
      */
     public function store(Request $request)
     {
-     
-      $save = Consultor::create([
-          'name' => $request->name,
-          'name' => $request->lastname,
-          'email' => $request->email,
-          'password' => Hash::make($request->password),
+        $data = $request->all();
+        $img = ImageManagerStatic::make($data['image']);
+        $name = Str::random() . '.jpg';
 
-      ]);
+        $originalPath = storage_path('app/public/comerciais/');
 
-      return redirect()->back()->with('success', "Consultor $request->name criado com sucesso");
+        $img->save($originalPath . $name);
+
+        $save = Consultor::create([
+            'name' => $request->name,
+            'lastname' => $request->lastname,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'image' => $name,
+            'morada' => $request->morada,
+            'iban' => $request->iban,
+        ]);
+
+        return redirect()->route('admin.consultores')->with('success', "Consultor $request->name criado com sucesso");
     }
 
     public function login(Request $request)
@@ -76,7 +87,8 @@ class LoginConsultorController extends Controller
      */
     public function edit($id)
     {
-        //
+        $consultor = Consultor::findOrFail($id);
+        return view('painel.pages.consultores.edit', compact('consultor'));
     }
 
     /**
@@ -88,7 +100,43 @@ class LoginConsultorController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $consultor = Consultor::find($id);
+
+        $data = $request->all();
+
+        if ($request->image != '') {
+            $path = storage_path('app/public/comerciais/');
+
+            //code for remove old file
+            if ($consultor->image != ''  && $consultor->image != null) {
+                $file_old = $path . $consultor->image;
+                unlink($file_old);
+            }
+
+            //upload new file
+            $img = ImageManagerStatic::make($data['image']);
+
+
+            $name = Str::random() . '.jpg';
+
+            $originalPath = storage_path('app/public/comerciais/');
+
+            $img->save($originalPath . $name);
+
+            //for update in table
+            $consultor->update(['image' => $name]);
+        }
+        $consultor->name =     $request->get('name');
+        $consultor->lastname = $request->get('lastname');
+        $consultor->email = $request->get('email');
+        $consultor->password = Hash::make($request->get('password'));
+        $consultor->morada = $request->get('morada');
+        $consultor->iban = $request->get('iban');
+        // $consultor->image = $name;
+
+        $consultor->save();
+
+        return redirect()->route('admin.consultores')->with('success', "$request->name alterado com sucesso!");
     }
 
     /**

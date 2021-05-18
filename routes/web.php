@@ -68,6 +68,9 @@ Route::middleware(['auth'])->prefix('admin')->group( function () {
     Route::get('consultor-create', [ComercialController::class, 'create'])->name('admin.consultores.create');
     Route::post('consultor-store', [LoginConsultorController::class, 'store'])->name('admin.consultores.store');
     Route::any('consultor-delete/{id}', [LoginConsultorController::class, 'destroy'])->name('admin.consultores.delete');
+    Route::any('consultor-edit/{id}', [LoginConsultorController::class, 'edit'])->name('admin.consultores.edit');
+    Route::any('consultor-update/{id}', [LoginConsultorController::class, 'update'])->name('admin.consultores.update');
+    Route::get('consultor-clientes/{id}', [ComercialController::class, 'clientes'])->name('admin.consultores.clientes');
 });
     
 
