@@ -68,6 +68,7 @@ class LoginConsultorController extends Controller
 
             return redirect()->intended('consultor');
         }
+        return redirect('consultor-login');
     }
     /**
      * Display the specified resource.

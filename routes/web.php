@@ -74,7 +74,7 @@ Route::middleware(['auth'])->prefix('admin')->group( function () {
 });
     
 
-Route::get('consultor-login', [LoginConsultorController::class, 'index']);
+Route::get('consultor-login', [LoginConsultorController::class, 'index'])->name('consultor.login-page');
 Route::post('consultor-entrar', [LoginConsultorController::class, 'login'])->name('consultor.login');
 
 
