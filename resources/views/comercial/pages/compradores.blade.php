@@ -16,7 +16,13 @@
                   <tr>
                         <td data-label="Nome">{{ $comp1->nome }} {{ $comp1->sobrenome }}</td>
                         <td data-label="E-mail">{{ $comp1->email }}</td>
-                        <td data-label="Status">{{ $comp1->status }}</td>
+                        <td data-label="Status" class="@if($comp1->status == 0) bg-danger @else bg-success @endif">
+                              @if( $comp1->status == 0)
+                              Inátivo
+                              @else 
+                              Ativo
+                              @endif
+                        </td>
                         <td data-label="Acão">
                               <button class="btn btn-dark">Ver</button>
                         </td>
