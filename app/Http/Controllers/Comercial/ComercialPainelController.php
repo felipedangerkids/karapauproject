@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Comercial;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\CompradorColetivo;
+use App\Models\CompradorIndividual;
+use App\Http\Controllers\Controller;
 
 class ComercialPainelController extends Controller
 {
@@ -20,6 +22,8 @@ class ComercialPainelController extends Controller
 
     public function compradorList()
     {
-        return view('comercial.pages.compradores');
+        $comprador1 = CompradorIndividual::where('user_id', auth()->user()->id)->get();
+        $comprador2 = CompradorColetivo::where('user_id', auth()->user()->id)->get();
+        return view('comercial.pages.compradores', compact('comprador1', 'comprador2'));
     }
 }

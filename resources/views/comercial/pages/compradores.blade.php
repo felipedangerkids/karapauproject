@@ -5,29 +5,24 @@
       <table class="mt-4">
             <thead>
                   <tr>
-                        <th scope="col">Account</th>
-                        <th scope="col">Due Date</th>
-                        <th scope="col">Amount</th>
-                        <th scope="col">Period</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">E-mail</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Acão</th>
                   </tr>
             </thead>
             <tbody>
-                        <tr>
-                              <td data-label="Account">Visa - 3412</td>
-                              <td data-label="Due Date">04/01/2016</td>
-                              <td data-label="Amount">$1,190</td>
-                              <td data-label="Period">
-                                    <button class="btn btn-dark">Ver</button>
-                              </td>
-                        </tr>
-                        <tr>
-                              <td data-label="Account">Visa - 3412</td>
-                              <td data-label="Due Date">04/01/2016</td>
-                              <td data-label="Amount">$1,190</td>
-                              <td data-label="Period">
-                                    <button class="btn btn-dark">Ver</button>
-                              </td>
-                        </tr>
+                  @foreach ($comprador1 as $comp1)
+                  <tr>
+                        <td data-label="Nome">{{ $comp1->nome }} {{ $comp1->sobrenome }}</td>
+                        <td data-label="E-mail">{{ $comp1->email }}</td>
+                        <td data-label="Status">{{ $comp1->status }}</td>
+                        <td data-label="Acão">
+                              <button class="btn btn-dark">Ver</button>
+                        </td>
+                  </tr>
+                  @endforeach
+
             </tbody>
       </table>
 </div>
