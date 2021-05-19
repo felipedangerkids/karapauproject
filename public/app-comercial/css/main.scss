@@ -2,6 +2,9 @@ main {
       background-color: #03568a;
       // height: 100vh;
       font-family: "Poppins", sans-serif;
+      a{
+            text-decoration: none !important;
+      }
 }
 .header {
       background: #36a6d4;
