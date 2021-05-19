@@ -24,6 +24,10 @@ class ComercialPainelController extends Controller
     {
         $comprador1 = CompradorIndividual::where('user_id', auth()->user()->id)->get();
         $comprador2 = CompradorColetivo::where('user_id', auth()->user()->id)->get();
-        return view('comercial.pages.compradores', compact('comprador1', 'comprador2'));
+
+        $inativos_individual = CompradorIndividual::where('user_id', auth()->user()->id)->where('status', 0)->get();
+        $ativos_individual = CompradorIndividual::where('user_id', auth()->user()->id)->where('status', 1)->get();
+
+        return view('comercial.pages.compradores', compact('comprador1', 'comprador2', 'inativos_individual', 'ativos_individual'));
     }
 }
