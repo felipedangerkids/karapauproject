@@ -56,6 +56,7 @@ class LoginConsultorController extends Controller
             'image' => $name,
             'morada' => $request->morada,
             'iban' => $request->iban,
+            'nif' => $request->nif
         ]);
 
         return redirect()->route('admin.consultores')->with('success', "Consultor $request->name criado com sucesso");
@@ -132,6 +133,7 @@ class LoginConsultorController extends Controller
         $consultor->password = Hash::make($request->get('password'));
         $consultor->morada = $request->get('morada');
         $consultor->iban = $request->get('iban');
+        $consultor->nif = $request->get('nif');
         // $consultor->image = $name;
 
         $consultor->save();

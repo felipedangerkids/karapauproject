@@ -40,6 +40,10 @@
                               <label for="exampleInputEmail1">IBAN</label>
                               <input type="text" class="form-control" name="iban">
                         </div>
+                        <div class="form-group col-md-12">
+                              <label for="exampleInputEmail1">NIF</label>
+                              <input type="text" class="form-control" name="nif">
+                        </div>
 
                         <div class="form-group col-md-6">
                               <label for="exampleInputEmail1"></label>
