@@ -1,29 +1,38 @@
-@extends('layouts.app')
+@extends('layouts.app-comercial')
 
 @section('content')
 <div class="header">
       <div class="container">
             <div class="py-4 text-center">
-                  <img class="img-fluid " src="{{ url('painel/img/logo.svg') }}" alt="">
+                  <img class="img-fluid " src="{{ url('app-comercial/img/logo-img.svg') }}" alt="">
             </div>
       </div>
 </div>
-
 <div>
-      <div class="container">
-
-            <div class="d-flex flex-column">
-                  <div class="mx-auto my-4">
-                        <a href="{{ route('consultor.comprador-individual.create') }}"><button
-                                    class="btn btn-primary">Comprador
-                                    Individual</button></a>
-                  </div>
-                  <div class="mx-auto my-2">
-                        <a href="{{ route('consultor.comprador-coletivo.create') }}"> <button
-                                    class="btn btn-primary">Comprador
-                                    Coletivo</button></a>
-                  </div>
+      <div class="d-flex justify-content-between container voltar py-4 mb-5">
+            <div>
+                  <a href=""> <i class="fas fa-chevron-left"></i> Voltar</a>
             </div>
+            <div>
+                  <span>CADASTRO DE COMPRADOR</span>
+            </div>
+      </div>
+</div>
+<div>
+      <div class="container cadastro d-flex flex-column align-items-center">
+
+            <div class="cad text-center my-auto col-5">
+                  <a href="{{ route('consultor.comprador-individual.create') }}"> <img class="mb-3" src="{{ url('app-comercial/img/ind.svg') }}" alt="">
+                        <p>INDIVIDUAL</p>
+                  </a>
+            </div>
+
+            <div class="cad text-center col-5 ">
+                  <a href="{{ route('consultor.comprador-coletivo.create') }}"><img class="mb-3" src="{{ url('app-comercial/img/col.svg') }}" alt="">
+                        <p>COLETIVO</p>
+                  </a>
+            </div>
+
       </div>
 </div>
 

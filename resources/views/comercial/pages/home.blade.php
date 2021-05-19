@@ -40,7 +40,7 @@
       <div class="container pb-5 mt-3">
             <div class="menu justify-content-around row">
                   <div class="col-5 text-center pl">
-                        <a href=""><span class="iconify" data-inline="false" data-icon="bx:bx-user-plus"
+                        <a href="{{ url('comprador-cad') }}"><span class="iconify" data-inline="false" data-icon="bx:bx-user-plus"
                                     style="color: #36a6d4; font-size: 75.05713653564453px;"></span>
                               <p>CADASTRO DE COMPRADOR</p>
                         </a>
