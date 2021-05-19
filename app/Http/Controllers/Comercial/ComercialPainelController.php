@@ -10,11 +10,16 @@ class ComercialPainelController extends Controller
 
     public function index()
     {
-       return view('home');
+       return view('comercial.pages.home');
     }
 
     public function compradorCad()
     {
         return view('comercial.pages.cadastro');
+    }
+
+    public function compradorList()
+    {
+        return view('comercial.pages.compradores');
     }
 }

@@ -71,6 +71,7 @@ Route::middleware(['auth'])->prefix('admin')->group( function () {
     Route::any('consultor-edit/{id}', [LoginConsultorController::class, 'edit'])->name('admin.consultores.edit');
     Route::any('consultor-update/{id}', [LoginConsultorController::class, 'update'])->name('admin.consultores.update');
     Route::get('consultor-clientes/{id}', [ComercialController::class, 'clientes'])->name('admin.consultores.clientes');
+
 });
     
 
@@ -90,6 +91,8 @@ Route::middleware(['auth:consultor'])->group(function () {
 
         Route::get('comprador-coletivo-create', [CompradorColetivoController::class, 'index'])->name('consultor.comprador-coletivo.create');
         Route::post('comprador-coletivo-store', [CompradorColetivoController::class, 'store'])->name('consultor.comprador-coletivo.store');
+
+        Route::get('consultor-compradores', [ComercialPainelController::class, 'compradorList'])->name('consultor.compradores');
     });
 
 Route::get('teste', [TesteController::class, 'index']);

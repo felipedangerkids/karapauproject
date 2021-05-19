@@ -20,7 +20,7 @@
 </script>
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url('app-consultor/css/main.min.css') }}">
+    <link rel="stylesheet" href="{{ url('app/css/main.min.css') }}">
 
 </head>
 
