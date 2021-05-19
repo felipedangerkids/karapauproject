@@ -1,0 +1,60 @@
+main {
+      background-color: #03568a;
+      // height: 100vh;
+      font-family: 'Poppins', sans-serif;
+}
+
+.title {
+      h4 {
+            color: white;
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 1.5em;
+      }
+}
+.wallet {
+      background: #36a6d4 !important;
+      border-radius: 15px;
+      height: 136px;
+      a {
+            color: white;
+            font-size: 21.3333px;
+            font-weight: 800;
+            text-transform: uppercase;
+      }
+      h3 {
+            color: white;
+            font-size: 41.8667px;
+            font-weight: 800;
+            text-transform: uppercase;
+      }
+}
+.ativos {
+      background: #0472b7;
+      border-radius: 15px;
+      height: 136px;
+      a {
+            font-weight: 800;
+            font-size: 21.3333px;
+            color: white;
+            text-transform: uppercase;
+      }
+      h3 {
+            color: white;
+            font-size: 41.8667px;
+            font-weight: 800;
+            text-transform: uppercase;
+      }
+}
+.menu {
+      .pl {
+            background: #ffffff;
+            border-radius: 15.8571px;
+      }
+      a {
+            color: #03568a;
+            font-weight: 800;
+            font-size: 17.5855px;
+            line-height: 15px;
+      }
+}
