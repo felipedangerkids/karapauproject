@@ -19,7 +19,7 @@
       </div>
 </div>
 <div>
-      <div class="container cadastro d-flex flex-column align-items-center">
+      <div class="container cadastro d-flex flex-column align-items-center login-py">
 
             <div class="cad text-center my-auto col-5">
                   <a href="{{ route('consultor.comprador-individual.create') }}"> <img class="mb-3" src="{{ url('app-comercial/img/ind.svg') }}" alt="">

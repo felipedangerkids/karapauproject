@@ -22,7 +22,7 @@
             </div>
       </div>
 
-      <div class="container mt-3">
+      <div class="container mt-2">
             <div class="wallet px-4">
                   <div class="py-4">
                         <a href=""><i class="fas fa-wallet a-2"></i> Seu Wallet</a>
@@ -41,42 +41,42 @@
             </div>
       </div>
       <div class="container pb-5 mt-3">
-            <div class="menu justify-content-around row">
-                  <div class="col-5 text-center pl">
+            <div class="menu row">
+                  <div class="col-5 text-center altura pl">
                         <a href="{{ url('comprador-cad') }}"><span class="iconify" data-inline="false"
                                     data-icon="bx:bx-user-plus"
                                     style="color: #36a6d4; font-size: 75.05713653564453px;"></span>
                               <p>CADASTRO DE COMPRADOR</p>
                         </a>
                   </div>
-                  <div class="col-5 text-center pl">
+                  <div class="col-5 text-center altura pl">
                         <a href=""><span class="iconify mb-3 pt-2" data-inline="false" data-icon="vaadin:piggy-bank"
                                     style="color: #36a6d4; font-size: 56px;"></span>
                               <p>VER SEU
                                     EXTRACTO</p>
                         </a>
                   </div>
-                  <div class="col-5 text-center mt-3 pt-3 pl">
+                  <div class="col-5 text-center mt-3  altura pl">
                         <a href="{{ route('consultor.compradores.ativo') }}"><i style="color: #36a6d4; font-size: 56px;"
                                     class="fas fa-thumbs-up pb-2"></i>
                               <p>VER ATIVOS</p>
                         </a>
                   </div>
 
-                  <div class="col-5 text-center mt-3 pt-3 pl">
-                        <a href="{{ route('consultor.compradores.inativo') }}"><span class="iconify" data-inline="false"
+                  <div class="col-5 text-center mt-3 pt-4 altura pl">
+                        <a class="py-4" href="{{ route('consultor.compradores.inativo') }}"><span class="iconify" data-inline="false"
                                     data-icon="fluent:thumb-dislike-24-filled"
                                     style="color: #de1313; font-size: 53px;"></span>
                               <p>VER INATIVOS</p>
                         </a>
                   </div>
 
-                  <div class="col-5 text-center mt-3 pt-3 pl">
+                  <div class="col-5 text-center mt-3  altura pl">
                         <a href=""><i style="color: #36a6d4; font-size: 56px;" class="fas fa-book mb-2"></i>
                               <p>FAQ</p>
                         </a>
                   </div>
-                  <div class="col-5 text-center mt-3 pt-3 pl">
+                  <div class="col-5 text-center mt-3 altura pl">
                         <a href=""><span class="iconify mb-2" data-inline="false" data-icon="bi:chat-dots-fill"
                                     style="color: #36a6d4; font-size: 56px;"></span></span>
                               <p>SUPORTE</p>

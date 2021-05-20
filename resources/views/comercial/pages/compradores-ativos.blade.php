@@ -18,7 +18,7 @@
             </div>
       </div>
 </div>
-<div class="container">
+<div class="container login-py">
       <table class="mt-4">
             <thead>
                   <tr>
@@ -32,8 +32,8 @@
                   @foreach ($ativos_individual as $comp1)
                   <tr>
                         <td data-label="Nome">{{ $comp1->nome }} {{ $comp1->sobrenome }}</td>
-                        <td data-label="E-mail">{{ $comp1->email }}</td>
-                        <td data-label="Status" class="@if($comp1->status == 0) bg-danger @else bg-success @endif">
+                        <td data-label="E-mail" >{{ $comp1->email }}</td>
+                        <td data-label="Status"   class="@if($comp1->status == 0) bg-danger @else bg-success @endif">
                               @if( $comp1->status == 0)
                               Inátivo
                               @else

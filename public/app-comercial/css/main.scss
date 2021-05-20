@@ -61,9 +61,11 @@ main {
       }
 }
 .menu {
+  justify-content: space-evenly;
       .pl {
             background: #ffffff;
             border-radius: 15.8571px;
+            padding: 15px;
       }
       a {
             color: #03568a;
@@ -362,4 +364,7 @@ table th {
 }
 .login-py{
  padding-bottom: 80px;
+}
+.altura{
+  height: 148px;
 }
