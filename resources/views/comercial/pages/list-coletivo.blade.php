@@ -11,10 +11,10 @@
 <div>
       <div class="d-flex justify-content-between container voltar py-4 mb-5">
             <div>
-                  <a href=""> <i class="fas fa-chevron-left"></i> Voltar</a>
+                  <a href="javascript:history.back()"> <i class="fas fa-chevron-left"></i> Voltar</a>
             </div>
             <div>
-                  <span>COMPRADORES ATIVOS</span>
+                  <span>{{ $comprador1->nome }}</span>
             </div>
       </div>
 </div>
