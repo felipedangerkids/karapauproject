@@ -68,12 +68,12 @@
                   </div>
       
                   <div class="col-5 text-center mt-3 pt-3 pl">
-                        <a href=""><i style="color: #36a6d4; font-size: 56px;" class="fas fa-book"></i>
+                        <a href=""><i style="color: #36a6d4; font-size: 56px;" class="fas fa-book mb-2"></i>
                               <p>FAQ</p>
                         </a>
                   </div>
                   <div class="col-5 text-center mt-3 pt-3 pl">
-                        <a href=""><span class="iconify" data-inline="false" data-icon="bi:chat-dots-fill" style="color: #36a6d4; font-size: 56px;"></span></span>
+                        <a href=""><span class="iconify mb-2" data-inline="false" data-icon="bi:chat-dots-fill" style="color: #36a6d4; font-size: 56px;"></span></span>
                               <p>SUPORTE</p>
                         </a>
                   </div>
