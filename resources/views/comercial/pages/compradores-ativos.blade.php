@@ -41,7 +41,7 @@
                               @endif
                         </td>
                         <td data-label="Acão">
-                              <button class="btn btn-dark">Ver</button>
+                             <a href="{{ route('consultor.list.individual', $comp1->id) }}"><button class="btn btn-dark">Ver</button></a>
                         </td>
                   </tr>
                   @endforeach
@@ -58,7 +58,7 @@
                               @endif
                         </td>
                         <td data-label="Acão">
-                              <button class="btn btn-dark">Ver</button>
+                             <a href="{{ route('consultor.list.coletivo', $comp1->id) }}"> <button class="btn btn-dark">Ver</button></a>
                         </td>
                   </tr>
                   @endforeach

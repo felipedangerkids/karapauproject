@@ -94,6 +94,9 @@ Route::middleware(['auth:consultor'])->group(function () {
 
         Route::get('consultor-compradores-ativos', [ComercialPainelController::class, 'compradorListAtivo'])->name('consultor.compradores.ativo');
         Route::get('consultor-compradores-inativos', [ComercialPainelController::class, 'compradorListInativo'])->name('consultor.compradores.inativo');
+
+        Route::get('consultor-list-individual/{id}', [ComercialPainelController::class, 'listIndividual'])->name('consultor.list.individual');
+        Route::get('consultor-list-coletivo/{id}', [ComercialPainelController::class, 'listColetivo'])->name('consultor.list.coletivo');
     });
 
 Route::get('teste', [TesteController::class, 'index']);

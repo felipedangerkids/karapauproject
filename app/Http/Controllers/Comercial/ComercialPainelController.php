@@ -49,4 +49,17 @@ class ComercialPainelController extends Controller
 
         return view('comercial.pages.compradores-inativos', compact('inativos_individual', 'inativos_coletivo'));
     }
+
+    public function listIndividual($id)
+    {
+        $comprador1 = CompradorIndividual::where('user_id', auth()->user()->id)->find($id);
+      
+        return view('comercial.pages.list-individual', compact('comprador1'));
+    }
+    public function listColetivo($id)
+    {
+        $comprador1 = CompradorColetivo::where('user_id', auth()->user()->id)->find($id);
+      
+        return view('comercial.pages.list-coletivo', compact('comprador1'));
+    }
 }
