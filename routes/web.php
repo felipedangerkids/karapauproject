@@ -97,6 +97,9 @@ Route::middleware(['auth:consultor'])->group(function () {
 
         Route::get('consultor-list-individual/{id}', [ComercialPainelController::class, 'listIndividual'])->name('consultor.list.individual');
         Route::get('consultor-list-coletivo/{id}', [ComercialPainelController::class, 'listColetivo'])->name('consultor.list.coletivo');
+
+        Route::any('consultor-logout', [LoginConsultorController::class, 'logout'])->name('consultor.logout');
+
     });
 
 Route::get('teste', [TesteController::class, 'index']);

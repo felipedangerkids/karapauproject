@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Intervention\Image\ImageManagerStatic;
+use Session;
 
 class LoginConsultorController extends Controller
 {
@@ -153,5 +154,13 @@ class LoginConsultorController extends Controller
         $consultor = Consultor::findOrFail($id);
         $consultor->delete();
         return redirect()->back()->with('success', 'Consultor deletado com sucesso!');
+    }
+
+    public function logout()
+    {
+      
+        Auth::logout();
+
+        return redirect('consultor-login');
     }
 }

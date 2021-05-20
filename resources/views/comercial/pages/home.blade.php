@@ -15,8 +15,9 @@
                         <h4>Olá, {{ auth()->user()->name  }} {{ auth()->user()->lastname  }}</h4>
                   </div>
                   <div>
-                        <span class="iconify" data-inline="false" data-icon="ls:logout"
-                              style="color: #ffffff; font-size: 38.42677688598633px;"></span>
+                        <a href="{{ route('consultor.logout') }}"> <span class="iconify" data-inline="false"
+                                    data-icon="ls:logout"
+                                    style="color: #ffffff; font-size: 38.42677688598633px;"></span></a>
                   </div>
             </div>
       </div>
@@ -42,7 +43,8 @@
       <div class="container pb-5 mt-3">
             <div class="menu justify-content-around row">
                   <div class="col-5 text-center pl">
-                        <a href="{{ url('comprador-cad') }}"><span class="iconify" data-inline="false" data-icon="bx:bx-user-plus"
+                        <a href="{{ url('comprador-cad') }}"><span class="iconify" data-inline="false"
+                                    data-icon="bx:bx-user-plus"
                                     style="color: #36a6d4; font-size: 75.05713653564453px;"></span>
                               <p>CADASTRO DE COMPRADOR</p>
                         </a>
@@ -55,25 +57,28 @@
                         </a>
                   </div>
                   <div class="col-5 text-center mt-3 pt-3 pl">
-                        <a href="{{ route('consultor.compradores.ativo') }}"><i style="color: #36a6d4; font-size: 56px;" class="fas fa-thumbs-up pb-2"></i>
+                        <a href="{{ route('consultor.compradores.ativo') }}"><i style="color: #36a6d4; font-size: 56px;"
+                                    class="fas fa-thumbs-up pb-2"></i>
                               <p>VER ATIVOS</p>
                         </a>
                   </div>
-      
+
                   <div class="col-5 text-center mt-3 pt-3 pl">
-                        <a href="{{ route('consultor.compradores.inativo') }}"><span class="iconify" data-inline="false" data-icon="fluent:thumb-dislike-24-filled"
-                              style="color: #de1313; font-size: 53px;"></span>
+                        <a href="{{ route('consultor.compradores.inativo') }}"><span class="iconify" data-inline="false"
+                                    data-icon="fluent:thumb-dislike-24-filled"
+                                    style="color: #de1313; font-size: 53px;"></span>
                               <p>VER INATIVOS</p>
                         </a>
                   </div>
-      
+
                   <div class="col-5 text-center mt-3 pt-3 pl">
                         <a href=""><i style="color: #36a6d4; font-size: 56px;" class="fas fa-book mb-2"></i>
                               <p>FAQ</p>
                         </a>
                   </div>
                   <div class="col-5 text-center mt-3 pt-3 pl">
-                        <a href=""><span class="iconify mb-2" data-inline="false" data-icon="bi:chat-dots-fill" style="color: #36a6d4; font-size: 56px;"></span></span>
+                        <a href=""><span class="iconify mb-2" data-inline="false" data-icon="bi:chat-dots-fill"
+                                    style="color: #36a6d4; font-size: 56px;"></span></span>
                               <p>SUPORTE</p>
                         </a>
                   </div>
