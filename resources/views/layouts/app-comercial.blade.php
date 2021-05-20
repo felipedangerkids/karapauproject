@@ -55,7 +55,10 @@
                            text:"{{Session::get('success')}}",
                            timer:5000,
                            type:'success'
-                       });
+                       }).then((result) => {
+                    // Reload the Page
+                    location.reload();
+                    });
     </script>
     @endif
 </body>
