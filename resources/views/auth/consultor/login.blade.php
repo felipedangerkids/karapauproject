@@ -1,32 +1,30 @@
-@extends('layouts.app')
+@extends('layouts.app-comercial')
 
 
 @section('content')
 <div class="header">
       <div class="container">
             <div class="py-4 text-center">
-                  <img class="img-fluid " src="{{ url('painel/img/logo.svg') }}" alt="">
+                  <img class="img-fluid " src="{{ url('app-comercial/img/logo-img.svg') }}" alt="">
             </div>
+      </div>
+      <div class="text-center text-white p-5">
+            <h4>DEPARTAMENTO
+            COMERCIAL</h4>
       </div>
 </div>
 <div>
       <div class="container mt-3 px-5">
             <form action="{{ route('consultor.login') }}" method="POST">
                   @csrf
-                  <div class="row justify-content-center">
-                        <div class="form-group col-12">
-                              <label for="exampleInputEmail1">E-mail</label>
-                              <input type="email" name="email" class="form-control" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp">
-
-                        </div>
-                        <div class="form-group col-12">
-                              <label for="exampleInputPassword1">Senha</label>
-                              <input type="password" name="password" class="form-control" id="exampleInputPassword1">
-                        </div>
-                        <div class="form-group col-10">
-                              <input type="submit" class="form-control btn btn-dark" value="Entrar">
-                        </div>
+                  <div class="group"><input type="text" name="email" required="required" /><span class="highlight"></span><span
+                              class="bar"></span><label>Email</label>
+                  </div>
+                  <div class="group"><input type="password" name="password" required="required" /><span class="highlight"></span><span
+                              class="bar"></span><label>Senha</label>
+                  </div>
+                  <div class="btn-box py-4"><button class="btn btn-submit" type="submit">Entrar</button>
+                  
                   </div>
             </form>
       </div>

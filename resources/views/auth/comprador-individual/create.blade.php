@@ -24,22 +24,23 @@
             <div class="wrapper">
                   <form action="{{ route('consultor.comprador-individual.store') }}" method="POST">
                         @csrf
-                        <div class="group"><input type="text" required="required" /><span class="highlight"></span><span
-                                    class="bar"></span><label>Name</label>
+                        <div class="group"><input type="text" name="nome" required="required" /><span
+                                    class="highlight"></span><span class="bar"></span><label>Name</label>
                         </div>
-                        <div class="group"><input type="text" required="required" /><span class="highlight"></span><span
+                        <div class="group"><input type="text" name="sobrenome" /><span class="highlight"></span><span
                                     class="bar"></span><label>Sobrenome</label>
                         </div>
-                        <div class="group"><input type="text" required="required" /><span
-                                    class="highlight"></span><span class="bar"></span><label>Email</label></div>
-                        <div class="group"><input type="text" required="required" /><span class="highlight"></span><span
+                        <div class="group"><input type="text" name="email" required="required" /><span class="highlight"></span><span
+                                    class="bar"></span><label>Email</label>
+                        </div>
+                        <div class="group"><input type="text" name="telemovel"  /><span class="highlight"></span><span
                                     class="bar"></span><label>Telemovel</label>
                         </div>
-                        <div class="group"><input type="text" required="required" /><span class="highlight"></span><span
+                        <div class="group"><input type="text" name="morada" /><span class="highlight"></span><span
                                     class="bar"></span><label>Morada</label>
                         </div>
-                        <div class="group"><input type="number" required="required" /><span class="highlight"></span><span
-                                    class="bar"></span><label>NIF</label>
+                        <div class="group"><input type="number" name="nif" /><span
+                                    class="highlight"></span><span class="bar"></span><label>NIF</label>
                         </div>
 
 

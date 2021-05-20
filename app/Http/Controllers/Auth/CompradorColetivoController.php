@@ -54,6 +54,7 @@ class CompradorColetivoController extends Controller
             'telemovel' => $request->telemovel,
             'morada' => $request->morada,
             'tipo' => $request->tipo,
+            'nif' => $request->nif
         ]);
 
         $mails = new Mails();

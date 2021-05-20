@@ -50,6 +50,7 @@ class CompradorIndividualController extends Controller
             'password' => Hash::make($random),
             'telemovel' => $request->telemovel,
             'morada' => $request->morada,
+            'nif' => $request->nif
         ]);
 
 

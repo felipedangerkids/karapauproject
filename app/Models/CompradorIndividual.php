@@ -17,5 +17,6 @@ class CompradorIndividual extends Model
         'password',
         'telemovel',
         'morada',
+        'nif'
     ];
 }

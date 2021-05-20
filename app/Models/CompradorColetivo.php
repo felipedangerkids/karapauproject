@@ -17,6 +17,7 @@ class CompradorColetivo extends Model
         'password',
         'telemovel',
         'morada',
-        'tipo'
+        'tipo',
+        'nif'
     ];
 }
