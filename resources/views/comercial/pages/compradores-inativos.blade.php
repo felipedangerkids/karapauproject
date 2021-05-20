@@ -14,7 +14,7 @@
                   <a href="javascript:history.back()"> <i class="fas fa-chevron-left"></i> Voltar</a>
             </div>
             <div>
-                  <span>COMPRADORES ATIVOS</span>
+                  <span>COMPRADORES INATIVOS</span>
             </div>
       </div>
 </div>
