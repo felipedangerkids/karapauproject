@@ -33,7 +33,7 @@
                         <div class="group"><input type="text" name="email" required="required" /><span class="highlight"></span><span
                                     class="bar"></span><label>Email</label>
                         </div>
-                        <div class="group"><input type="text" name="telemovel" required="required" /><span class="highlight"></span><span
+                        <div class="group"><input type="number" name="telemovel" required="required" /><span class="highlight"></span><span
                                     class="bar"></span><label>Telemovel</label>
                         </div>
                         <div class="group"><input type="text" name="morada" required="required"/><span class="highlight"></span><span
