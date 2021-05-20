@@ -50,7 +50,7 @@
                         </a>
                   </div>
                   <div class="col-5 text-center pl">
-                        <a href=""><span class="iconify" data-inline="false" data-icon="vaadin:piggy-bank"
+                        <a href=""><span class="iconify mb-3" data-inline="false" data-icon="vaadin:piggy-bank"
                                     style="color: #36a6d4; font-size: 56px;"></span>
                               <p>VER SEU
                                     EXTRACTO</p>

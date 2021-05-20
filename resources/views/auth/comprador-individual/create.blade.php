@@ -19,7 +19,7 @@
             </div>
       </div>
 </div>
-<div class="container">
+<div class="container login-py">
       <div class="mt-3">
             <div class="wrapper">
                   <form action="{{ route('consultor.comprador-individual.store') }}" method="POST">
@@ -44,8 +44,7 @@
                         </div>
 
 
-                        <div class="btn-box py-4"><button class="btn btn-submit" type="submit">Cadastrar</button><button
-                                    class="btn btn-cancel" type="button">Cancelar</button>
+                        <div class="btn-box py-4"><button class="btn btn-submit" type="submit">Cadastrar</button>
 
                         </div>
                   </form>

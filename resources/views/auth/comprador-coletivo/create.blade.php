@@ -19,7 +19,7 @@
             </div>
       </div>
 </div>
-<div class="container">
+<div class="container login-py">
       <form action="{{ route('consultor.comprador-coletivo.store') }}" method="POST">
             @csrf
             <div class="group"><input type="text" name="nome" required="required" /><span class="highlight"></span><span
@@ -121,8 +121,7 @@
                   </div>
    
             </div>
-            <div class="btn-box py-4"><button class="btn btn-submit" type="submit">Cadastrar</button><button
-                        class="btn btn-cancel" type="button">Cancelar</button>
+            <div class="btn-box py-4"><button class="btn btn-submit" type="submit">Cadastrar</button>
 
             </div>
       </form>
