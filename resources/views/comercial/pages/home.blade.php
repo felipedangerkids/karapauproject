@@ -1,7 +1,7 @@
 @extends('layouts.app-comercial')
 
 @section('content')
-<div class="header">
+<div class="">
       <div class="container">
             <div class="py-4 text-center">
                   <img class="img-fluid " src="{{ url('app-comercial/img/logo.svg') }}" alt="">
