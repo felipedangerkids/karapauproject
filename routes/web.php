@@ -92,7 +92,8 @@ Route::middleware(['auth:consultor'])->group(function () {
         Route::get('comprador-coletivo-create', [CompradorColetivoController::class, 'index'])->name('consultor.comprador-coletivo.create');
         Route::post('comprador-coletivo-store', [CompradorColetivoController::class, 'store'])->name('consultor.comprador-coletivo.store');
 
-        Route::get('consultor-compradores', [ComercialPainelController::class, 'compradorList'])->name('consultor.compradores');
+        Route::get('consultor-compradores-ativos', [ComercialPainelController::class, 'compradorListAtivo'])->name('consultor.compradores.ativo');
+        Route::get('consultor-compradores-inativos', [ComercialPainelController::class, 'compradorListInativo'])->name('consultor.compradores.inativo');
     });
 
 Route::get('teste', [TesteController::class, 'index']);

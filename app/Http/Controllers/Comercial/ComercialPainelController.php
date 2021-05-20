@@ -12,7 +12,15 @@ class ComercialPainelController extends Controller
 
     public function index()
     {
-       return view('comercial.pages.home');
+        $comprador1 = CompradorIndividual::where('user_id', auth()->user()->id)->get();
+        $comprador2 = CompradorColetivo::where('user_id', auth()->user()->id)->get();
+
+        $inativos_individual = CompradorIndividual::where('user_id', auth()->user()->id)->where('status', 0)->get();
+        $ativos_individual = CompradorIndividual::where('user_id', auth()->user()->id)->where('status', 1)->get();
+        $inativos_coletivo = CompradorColetivo::where('user_id', auth()->user()->id)->where('status', 0)->get();
+        $ativos_coletivo = CompradorColetivo::where('user_id', auth()->user()->id)->where('status', 1)->get();
+
+        return view('comercial.pages.home', compact('comprador1', 'comprador2', 'inativos_individual', 'ativos_individual', 'inativos_coletivo', 'ativos_coletivo'));
     }
 
     public function compradorCad()
@@ -20,14 +28,25 @@ class ComercialPainelController extends Controller
         return view('comercial.pages.cadastro');
     }
 
-    public function compradorList()
+    public function compradorListAtivo()
     {
         $comprador1 = CompradorIndividual::where('user_id', auth()->user()->id)->get();
         $comprador2 = CompradorColetivo::where('user_id', auth()->user()->id)->get();
 
         $inativos_individual = CompradorIndividual::where('user_id', auth()->user()->id)->where('status', 0)->get();
         $ativos_individual = CompradorIndividual::where('user_id', auth()->user()->id)->where('status', 1)->get();
+        $ativos_coletivo = CompradorColetivo::where('user_id', auth()->user()->id)->where('status', 1)->get();
 
-        return view('comercial.pages.compradores', compact('comprador1', 'comprador2', 'inativos_individual', 'ativos_individual'));
+        return view('comercial.pages.compradores-ativos', compact('comprador1', 'comprador2', 'ativos_coletivo', 'ativos_individual'));
+    }
+    public function compradorListInativo()
+    {
+        $comprador1 = CompradorIndividual::where('user_id', auth()->user()->id)->get();
+        $comprador2 = CompradorColetivo::where('user_id', auth()->user()->id)->get();
+
+        $inativos_individual = CompradorIndividual::where('user_id', auth()->user()->id)->where('status', 0)->get();
+        $inativos_coletivo = CompradorColetivo::where('user_id', auth()->user()->id)->where('status', 0)->get();
+
+        return view('comercial.pages.compradores-inativos', compact('inativos_individual', 'inativos_coletivo'));
     }
 }

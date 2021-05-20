@@ -29,11 +29,13 @@
                   </div>
             </div>
       </div>
+      @php $comp = $comprador1->count() + $comprador2->count() @endphp
+      @php $comp_ativo = $ativos_individual->count() + $ativos_coletivo->count() @endphp
       <div class="container mt-3">
             <div class="ativos px-4">
                   <div class="py-4">
                         <a href=""> <i class="fas fa-thumbs-up"></i> Compradores Ativos</a>
-                        <h3>0/0</h3>
+                        <h3>{{ $comp_ativo }}/{{ $comp }}</h3>
                   </div>
             </div>
       </div>
@@ -53,13 +55,13 @@
                         </a>
                   </div>
                   <div class="col-5 text-center mt-3 pt-3 pl">
-                        <a href=""><i style="color: #36a6d4; font-size: 56px;" class="fas fa-thumbs-up pb-2"></i>
+                        <a href="{{ route('consultor.compradores.ativo') }}"><i style="color: #36a6d4; font-size: 56px;" class="fas fa-thumbs-up pb-2"></i>
                               <p>VER ATIVOS</p>
                         </a>
                   </div>
       
                   <div class="col-5 text-center mt-3 pt-3 pl">
-                        <a href=""><span class="iconify" data-inline="false" data-icon="fluent:thumb-dislike-24-filled"
+                        <a href="{{ route('consultor.compradores.inativo') }}"><span class="iconify" data-inline="false" data-icon="fluent:thumb-dislike-24-filled"
                               style="color: #de1313; font-size: 53px;"></span>
                               <p>VER INATIVOS</p>
                         </a>
