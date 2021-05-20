@@ -13,8 +13,8 @@
             COMERCIAL</h4>
       </div>
 </div>
-<div>
-      <div class="container mt-3 px-5">
+<div class="">
+      <div class="container mt-3 px-5 login-px">
             <form action="{{ route('consultor.login') }}" method="POST">
                   @csrf
                   <div class="group"><input type="text" name="email" required="required" /><span class="highlight"></span><span
