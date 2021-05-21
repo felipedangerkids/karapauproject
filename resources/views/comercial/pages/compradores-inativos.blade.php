@@ -37,7 +37,7 @@
                       0
                   </div>
                   <div class="col-4">
-                       {{ $comp->nome }} {{ $comp->sobrenome }}
+                       {{ $comp->nome }} 
                   </div>
                   <div class="col-4">
                       <span>Inativo</span> 
@@ -52,7 +52,7 @@
                       0
                   </div>
                   <div class="col-4">
-                       {{ $comp->nome }} {{ $comp->sobrenome }}
+                       {{ $comp->nome }}
                   </div>
                   <div class="col-4">
                       <span>Inativo</span> 
