@@ -95,7 +95,7 @@
                         </a>
                   </div>
                   <div class="col-5 text-center mt-3 altura pl">
-                        <a href=""><i style="color: #35A40E; font-size: 56px;" class="fab fa-envira"></i></span>
+                        <a href="{{ route('consultor.lead') }}"><i style="color: #35A40E; font-size: 56px;" class="fab fa-envira"></i></span>
                               <p>CADASTRAR LEAD</p>
                         </a>
                   </div>

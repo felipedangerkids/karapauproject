@@ -104,6 +104,11 @@ Route::middleware(['auth:consultor'])->group(function () {
 
         Route::get('consultor-incompletos-individual', [ComercialPainelController::class, 'incompletoIndividual'])->name('consultor.list.incompleto.individual');
 
+        Route::get('consultor-lead', [ComercialPainelController::class, 'lead'])->name('consultor.lead');
+        Route::get('consultor-lead-form1', [ComercialPainelController::class, 'leadForm1'])->name('consultor.lead.individual');
+        Route::get('consultor-lead-form2', [ComercialPainelController::class, 'leadForm2'])->name('consultor.lead.coletivo');
+
+
     });
 
 Route::get('teste', [TesteController::class, 'index']);

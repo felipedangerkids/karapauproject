@@ -68,4 +68,18 @@ class ComercialPainelController extends Controller
         $imcompletos = CompradorIndividual::orWhereNull('nif')->orWhereNull('sobrenome')->orWhereNull('telemovel')->orWhereNull('morada')->where('user_id', 1)->get();
         dd($imcompletos);
     }
+
+    public function lead()
+    {
+        return view('comercial.pages.lead');
+    }
+
+    public function leadForm1()
+    {
+        return view('comercial.pages.lead-individual');
+    }
+    public function leadForm2()
+    {
+        return view('comercial.pages.lead-coletivo');
+    }
 }
