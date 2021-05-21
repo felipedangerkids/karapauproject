@@ -26,7 +26,7 @@
             <div class="wallet px-4">
                   <div class="py-4">
                         <a href=""><i class="fas fa-wallet a-2"></i> Seu Wallet</a>
-                        <input type="password" value="00,00">
+                        <h3>€ 00,00</h3>
                   </div>
             </div>
       </div>
