@@ -29,7 +29,7 @@
                               @endif
                         </td>
                         <td>
-                              <div class="d-flex justify-content-between">
+                              <div class="d-flex ac">
                                     <div>
                                           <button class="btn btn-sm btn-dark">Email Boas Vindas</button>
                                     </div>
@@ -75,7 +75,7 @@
                               @endif
                         </td>
                         <td>
-                              <div class="d-flex justify-content-between">
+                              <div class="d-flex ac">
                                     <div>
                                           <button class="btn btn-sm btn-dark">Email Boas Vindas</button>
                                     </div>
