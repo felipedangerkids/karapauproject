@@ -31,7 +31,7 @@
                         <td>
                               <div class="d-flex ac">
                                     <div>
-                                          <button class="btn btn-sm btn-dark">Email Boas Vindas</button>
+                                          <a href="{{ route('admin.consultores.email.individual', $comp1->id) }}"><button class="btn btn-sm btn-dark">Email Boas Vindas</button></a>
                                     </div>
                                     <div>
                                           <button class="btn btn-sm btn-dark">Email 2</button>
@@ -77,7 +77,7 @@
                         <td>
                               <div class="d-flex ac">
                                     <div>
-                                          <button class="btn btn-sm btn-dark">Email Boas Vindas</button>
+                                        <a href="{{ route('admin.consultores.email.coletivo', $comp2->id) }}"> <button class="btn btn-sm btn-dark">Email Boas Vindas</button></a>
                                     </div>
                                     <div>
                                           <button class="btn btn-sm btn-dark">Email 2</button>

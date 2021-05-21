@@ -71,6 +71,8 @@ Route::middleware(['auth'])->prefix('admin')->group( function () {
     Route::any('consultor-edit/{id}', [LoginConsultorController::class, 'edit'])->name('admin.consultores.edit');
     Route::any('consultor-update/{id}', [LoginConsultorController::class, 'update'])->name('admin.consultores.update');
     Route::get('consultor-clientes/{id}', [ComercialController::class, 'clientes'])->name('admin.consultores.clientes');
+    Route::get('consultor-email-individual/{id}', [ComercialController::class, 'emailIndividual'])->name('admin.consultores.email.individual');
+    Route::get('consultor-email-coletivo/{id}', [ComercialController::class, 'emailColetivo'])->name('admin.consultores.email.coletivo');
 
 });
     

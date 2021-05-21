@@ -31,11 +31,9 @@ class CompradorColetivoMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('mails.comprador-coletivo')->subject('Inscrição feita com sucesso!')->with(
+        return $this->markdown('mails.comprador-coletivo')->subject('Boas vindas ao Karapau!')->with(
             [
-                'nome' => $this->mail->name,
-                'email' => $this->mail->email,
-                'senha' => $this->mail->senha,
+                
             ]
         );
     }
