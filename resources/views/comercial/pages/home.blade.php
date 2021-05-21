@@ -45,7 +45,7 @@
       <div class="container mt-3">
             <div class="inativos px-4">
                   <div class="py-4">
-                        <a href=""> <i class="fas fa-thumbs-up"></i> Compradores Inativos</a>
+                        <a href=""> <i class="fas fa-thumbs-down"></i> Compradores Inativos</a>
                         <h3>{{ $comp_inativo }}/{{ $comp }}</h3>
                   </div>
             </div>
