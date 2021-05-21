@@ -15,7 +15,7 @@
                   <a href="javascript:history.back()"> <i class="fas fa-chevron-left"></i> Voltar</a>
             </div>
             <div>
-                  <span>CADASTRO DE COMPRADOR</span>
+                  <span>UPDATE COMPRADOR</span>
             </div>
       </div>
 </div>
@@ -156,7 +156,7 @@
                   </div>
 
             </div>
-            <div class="btn-box py-4"><button class="btn btn-submit" type="submit">Cadastrar</button>
+            <div class="btn-box py-4"><button class="btn btn-submit" type="submit">SALVAR</button>
 
             </div>
       </form>
