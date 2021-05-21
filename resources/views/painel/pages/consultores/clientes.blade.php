@@ -14,7 +14,7 @@
                         <th scope="col">Nome</th>
                         <th scope="col">Email</th>
                         <th scope="col">Status</th>
-                       
+                        <th scope="col">Acão</th>
                   </tr>
             </thead>
             <tbody>
@@ -28,7 +28,20 @@
                               Ativo
                               @endif
                         </td>
-                      
+                        <td>
+                              <div class="d-flex justify-content-between">
+                                    <div>
+                                          <button class="btn btn-sm btn-dark">Email Boas Vindas</button>
+                                    </div>
+                                    <div>
+                                          <button class="btn btn-sm btn-dark">Email 2</button>
+                                    </div>
+                                    <div>
+                                          <button class="btn btn-sm btn-dark">Email 3</button>
+                                    </div>
+                              </div>
+
+                        </td>
                   </tr>
                   @endforeach
 
@@ -47,7 +60,7 @@
                         <th scope="col">Nome</th>
                         <th scope="col">Email</th>
                         <th scope="col">Status</th>
-                        
+
                   </tr>
             </thead>
             <tbody>
@@ -61,7 +74,7 @@
                               Ativo
                               @endif
                         </td>
-                    
+
                   </tr>
                   @endforeach
 
