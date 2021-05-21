@@ -31,7 +31,7 @@
             <div class="cad text-center col-5 ">
                   <a href="{{ route('consultor.lead.coletivo') }}"><img class="mb-3"
                               src="{{ url('app-comercial/img/col.svg') }}" alt="">
-                        <p>EMPRESA</p>
+                        <p>COLETIVO</p>
                   </a>
             </div>
 
