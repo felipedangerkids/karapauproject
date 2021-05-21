@@ -4,7 +4,8 @@ $primary-color: rgb(12, 112, 180);
 $secondary-color: rgb(240, 139, 59);
 $medium-color: rgb(84, 103, 117);
 $standard-font: normal 400 18px "PT Sans", sans-serif;
-body, html{
+body,
+html {
   height: 100%;
 }
 main {
@@ -365,8 +366,17 @@ table th {
 .altura {
   height: 148px;
 }
-.pad{
+.pad {
   padding-bottom: 150px;
+}
+
+.dia {
+  p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 .inativo {
   padding: 50px 0;
@@ -375,14 +385,18 @@ table th {
   font-weight: 500;
   font-size: 15.5798px;
   line-height: 23px;
-  a{
+  a {
     text-decoration: none;
     color: white;
   }
-  span{
+  span {
     background-color: red;
     padding: 8px;
     border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 .in-p {
@@ -395,101 +409,100 @@ table th {
   }
 }
 .form-group.input-material {
-  
-    // variables (normally global variables in Bootstrap scss)
-    $gray-400: #ffffff;
-    $primary: #ffffff;
-    $danger: #dc3545;
-    $black: rgb(255, 255, 255);
-    // local variables
-    $inactive-color: $gray-400;
-  
-    position: relative;
-    margin-top: 50px;
-    margin-bottom: 25px;
-  
-    label {
-        color: darken($inactive-color, 10%);
-        font-size: 16px;
-        font-weight: normal;
-        position: absolute;
-        pointer-events: none;
-        left: 5px;
-        bottom: 1px;
-        transition: 0.1s ease all;
-        -moz-transition: 0.1s ease all;
-        -webkit-transition: 0.1s ease all;
+  // variables (normally global variables in Bootstrap scss)
+  $gray-400: #ffffff;
+  $primary: #ffffff;
+  $danger: #dc3545;
+  $black: rgb(255, 255, 255);
+  // local variables
+  $inactive-color: $gray-400;
+
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 25px;
+
+  label {
+    color: darken($inactive-color, 10%);
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    bottom: 1px;
+    transition: 0.1s ease all;
+    -moz-transition: 0.1s ease all;
+    -webkit-transition: 0.1s ease all;
+  }
+
+  /* textarea label */
+  textarea.form-control {
+    & ~ label {
+      bottom: 90%; // fallback for browsers that do not support calc()
+      bottom: calc(100% - 38px);
+    }
+  }
+
+  .form-control,
+  .form-select {
+    border: none;
+    border-bottom: 2px solid $inactive-color;
+    border-radius: 0px;
+    background-color: transparent;
+    padding-left: 5px;
+    box-shadow: none;
+
+    /* required fields */
+    &:required ~ label::after {
+      content: "*";
+      color: $danger;
+      padding-left: 2px;
+      font-size: 0.8em;
     }
 
-    /* textarea label */
-    textarea.form-control {
-        &~ label {
-            bottom: 90%; // fallback for browsers that do not support calc()
-            bottom: calc(100% - 38px);
-        }
-    }
-  
-    .form-control, .form-select {
-        border: none;
-        border-bottom: 2px solid $inactive-color;
-        border-radius: 0px;
-        background-color: transparent;
-        padding-left: 5px;
-        box-shadow: none;
-
-        /* required fields */
-        &:required ~ label::after {
-            content: '*';
-            color: $danger;
-            padding-left: 2px;
-            font-size: 0.8em;
-        }
-    
-        /* active state */
-        &:focus,
-        &[value]:not([value=""]) {
-            border-bottom-color: $primary;
-            color: $black;
-        }
-    
-        &:focus ~ label,
-        &[value]:not([value=""]) ~ label {
-            top: unset;
-            bottom: 100%; // fallback for browsers without calc() support
-            bottom: calc(100% - 16px);
-            font-size: 14px;
-            color: $primary;
-            font-weight: 500;
-        }
-    
-        /* invalid state */
-        &:focus.invalid,
-        &.invalid,
-        &:focus.parsley-error,
-        &[value]:not([value=""]).parsley-error {
-            border-bottom-color: $danger;
-        }
-        
-        &:focus.invalid ~ label,
-        &.invalid ~ label,
-        &:focus.parsley-error ~ label,
-        &[value]:not([value=""]).parsley-error ~ label {
-            color: $danger;
-        }
+    /* active state */
+    &:focus,
+    &[value]:not([value=""]) {
+      border-bottom-color: $primary;
+      color: $black;
     }
 
-    .form-select {
-        background-position: right 0 center;
-        padding-left: 0;
+    &:focus ~ label,
+    &[value]:not([value=""]) ~ label {
+      top: unset;
+      bottom: 100%; // fallback for browsers without calc() support
+      bottom: calc(100% - 16px);
+      font-size: 14px;
+      color: $primary;
+      font-weight: 500;
     }
-  
-    .parsley-errors-list {
-        color: $danger;
-        list-style: none;
-        font-size: 0.7em;
-        padding-left: 5px;
-        position: absolute;
-        top: 107%;
+
+    /* invalid state */
+    &:focus.invalid,
+    &.invalid,
+    &:focus.parsley-error,
+    &[value]:not([value=""]).parsley-error {
+      border-bottom-color: $danger;
     }
-    
+
+    &:focus.invalid ~ label,
+    &.invalid ~ label,
+    &:focus.parsley-error ~ label,
+    &[value]:not([value=""]).parsley-error ~ label {
+      color: $danger;
+    }
+  }
+
+  .form-select {
+    background-position: right 0 center;
+    padding-left: 0;
+  }
+
+  .parsley-errors-list {
+    color: $danger;
+    list-style: none;
+    font-size: 0.7em;
+    padding-left: 5px;
+    position: absolute;
+    top: 107%;
+  }
 }

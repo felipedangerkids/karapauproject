@@ -33,8 +33,8 @@
       @foreach ($inativos_individual as $comp)
       <div class="inativo my-3 text-center py-3">
             <div class="container row">
-                  <div class="col-4">
-                      0
+                  <div class="col-4 dia">
+                   <p>0</p> 
                   </div>
                   <div class="col-4">
                        {{ $comp->nome }} 
@@ -48,8 +48,8 @@
       @foreach ($inativos_coletivo as $comp)
       <div class="inativo my-3 text-center py-3">
             <div class="container row">
-                  <div class="col-4">
-                      0
+                  <div class="col-4 dia">
+                     <p>0</p>
                   </div>
                   <div class="col-4">
                        {{ $comp->nome }}
