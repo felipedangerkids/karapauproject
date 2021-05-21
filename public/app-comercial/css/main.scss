@@ -1,115 +1,116 @@
 $color1: #f4f4f4;
-$color2: #3197EE;
-$primary-color: rgb(12,112,180);
-$secondary-color: rgb(240,139,59);
-$medium-color: rgb(84,103,117);
-$standard-font: normal 400 18px 'PT Sans', sans-serif;
-
+$color2: #3197ee;
+$primary-color: rgb(12, 112, 180);
+$secondary-color: rgb(240, 139, 59);
+$medium-color: rgb(84, 103, 117);
+$standard-font: normal 400 18px "PT Sans", sans-serif;
+body, html{
+  height: 100%;
+}
 main {
-      background-color: #03568a;
-      // height: 100vh;
-      font-family: "Poppins", sans-serif;
-      a{
-            text-decoration: none !important;
-      }
+  background-color: #03568a;
+  // height: 100vh;
+  font-family: "Poppins", sans-serif;
+  a {
+    text-decoration: none !important;
+  }
 }
 
 .header {
-      background: #36a6d4;
+  background: #36a6d4;
 }
 
 .title {
-      h4 {
-            color: white;
-            font-weight: 800;
-            text-transform: uppercase;
-            font-size: 1.5em;
-      }
+  h4 {
+    color: white;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 1.5em;
+  }
 }
 .wallet {
-      background: #36a6d4 !important;
-      border-radius: 15px;
-      height: 136px;
-      a {
-            color: white;
-            font-size: 21.3333px;
-            font-weight: 800;
-            text-transform: uppercase;
-      }
-      h3 {
-            color: white;
-            font-size: 41.8667px;
-            font-weight: 800;
-            text-transform: uppercase;
-      }
+  background: #36a6d4 !important;
+  border-radius: 15px;
+  height: 136px;
+  a {
+    color: white;
+    font-size: 21.3333px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  h3 {
+    color: white;
+    font-size: 41.8667px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
 }
 .ativos {
-      background: #0472b7;
-      border-radius: 15px;
-      height: 136px;
-      a {
-            font-weight: 800;
-            font-size: 21.3333px;
-            color: white;
-            text-transform: uppercase;
-      }
-      h3 {
-            color: white;
-            font-size: 41.8667px;
-            font-weight: 800;
-            text-transform: uppercase;
-      }
+  background: #0472b7;
+  border-radius: 15px;
+  height: 136px;
+  a {
+    font-weight: 800;
+    font-size: 21.3333px;
+    color: white;
+    text-transform: uppercase;
+  }
+  h3 {
+    color: white;
+    font-size: 41.8667px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
 }
 .menu {
   justify-content: space-evenly;
-      .pl {
-            background: #ffffff;
-            border-radius: 15.8571px;
-            padding: 15px;
-      }
-      a {
-            color: #03568a;
-            font-weight: 800;
-            font-size: 17.5855px;
-            line-height: 15px;
-      }
+  .pl {
+    background: #ffffff;
+    border-radius: 15.8571px;
+    padding: 15px;
+  }
+  a {
+    color: #03568a;
+    font-weight: 800;
+    font-size: 17.5855px;
+    line-height: 15px;
+  }
 }
 .voltar {
-      background: #0472b7;
-      a {
-            font-weight: 800;
-            font-size: 18px;
-            line-height: 32px;
-            color: white;
-      }
-      font-weight: 800;
-      font-size: 18px;
-      line-height: 32px;
-      color: white;
+  background: #0472b7;
+  a {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 32px;
+    color: white;
+  }
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 32px;
+  color: white;
 }
-.cadastro{
-      height: 100%;
+.cadastro {
+  height: 100%;
 }
 .cad {
-      background: #ffffff;
-      border-radius: 15.8571px;
-      height: 148px;
-      padding: 35px 0;
-      margin: 50px 0;
-      p {
-            font-weight: 800;
-            font-size: 17.5855px;
-            line-height: 15px;
-            text-align: center;
+  background: #ffffff;
+  border-radius: 15.8571px;
+  height: 148px;
+  padding: 35px 0;
+  margin: 50px 0;
+  p {
+    font-weight: 800;
+    font-size: 17.5855px;
+    line-height: 15px;
+    text-align: center;
 
-            color: #03568a;
-      }
+    color: #03568a;
+  }
 }
-
 
 // VARIABLES // ============================== //
 $bg-color: #424242;
-$hl-color: #2196F3;
+$hl-color: #2196f3;
 $muted-color: mix(white, $bg-color, 70%);
 $trans-time: 300ms;
 $width: 320px;
@@ -128,7 +129,7 @@ body {
 form {
   width: $width;
   margin: 45px auto;
-  
+
   h1 {
     font-size: 3em;
     font-weight: 300;
@@ -208,7 +209,7 @@ label {
   display: block;
   width: $width;
   &:before {
-    content: '';
+    content: "";
     height: 2px;
     width: 0;
     bottom: 0px;
@@ -218,7 +219,6 @@ label {
     left: 0%;
   }
 }
-
 
 // BUTTONS // ============================== //
 .btn {
@@ -232,7 +232,7 @@ label {
   text-decoration: none;
   outline: none;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   &:hover {
     color: mix(black, $muted-color, 30%);
     box-shadow: 0 7px 14px rgba(0, 0, 0, 0.18), 0 5px 5px rgba(0, 0, 0, 0.12);
@@ -267,16 +267,13 @@ label {
   margin: 50px 0;
 }
 
-
-
-// radio 
-.mdc-form-field{
-      label{
-            position: relative;
-            top: 6px;
-      }
+// radio
+.mdc-form-field {
+  label {
+    position: relative;
+    top: 6px;
+  }
 }
-
 
 table {
   border: 1px solid #ccc;
@@ -289,24 +286,24 @@ table {
 
 table caption {
   font-size: 1.5em;
-  margin: .5em 0 .75em;
+  margin: 0.5em 0 0.75em;
 }
 
 table tr {
   background-color: #f8f8f8;
   border: 1px solid #ddd;
-  padding: .35em;
+  padding: 0.35em;
 }
 
 table th,
 table td {
-  padding: .625em;
+  padding: 0.625em;
   text-align: center;
 }
 
 table th {
-  font-size: .85em;
-  letter-spacing: .1em;
+  font-size: 0.85em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
@@ -318,7 +315,7 @@ table th {
   table caption {
     font-size: 1.3em;
   }
-  
+
   table thead {
     border: none;
     clip: rect(0 0 0 0);
@@ -329,20 +326,20 @@ table th {
     position: absolute;
     width: 1px;
   }
-  
+
   table tr {
     border-bottom: 3px solid #ddd;
     display: block;
-    margin-bottom: .625em;
+    margin-bottom: 0.625em;
   }
-  
+
   table td {
     border-bottom: 1px solid #ddd;
     display: block;
-    font-size: .8em;
+    font-size: 0.8em;
     text-align: right;
   }
-  
+
   table td::before {
     /*
     * aria-label has no advantage, it won't be read inside a table
@@ -353,18 +350,146 @@ table th {
     font-weight: bold;
     text-transform: uppercase;
   }
-  
+
   table td:last-child {
     border-bottom: 0;
   }
 }
 
-.login-px{
- padding: 80px 0;
+.login-px {
+  padding: 80px 0;
 }
-.login-py{
- padding-bottom: 80px;
+.login-py {
+  padding-bottom: 80px;
 }
-.altura{
+.altura {
   height: 148px;
+}
+.pad{
+  padding-bottom: 150px;
+}
+.inativo {
+  height: 50px;
+  background-color: #0472b7;
+  color: white;
+  font-weight: 500;
+  font-size: 15.5798px;
+  line-height: 23px;
+  a{
+    text-decoration: none;
+    color: white;
+  }
+  span{
+    background-color: red;
+    padding: 8px;
+    border-radius: 15px;
+  }
+}
+.in-p {
+  p {
+    color: white;
+    font-weight: 600;
+    font-size: 15.5798px;
+    line-height: 23px;
+    text-transform: uppercase;
+  }
+}
+.form-group.input-material {
+  
+    // variables (normally global variables in Bootstrap scss)
+    $gray-400: #ffffff;
+    $primary: #ffffff;
+    $danger: #dc3545;
+    $black: rgb(255, 255, 255);
+    // local variables
+    $inactive-color: $gray-400;
+  
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 25px;
+  
+    label {
+        color: darken($inactive-color, 10%);
+        font-size: 16px;
+        font-weight: normal;
+        position: absolute;
+        pointer-events: none;
+        left: 5px;
+        bottom: 1px;
+        transition: 0.1s ease all;
+        -moz-transition: 0.1s ease all;
+        -webkit-transition: 0.1s ease all;
+    }
+
+    /* textarea label */
+    textarea.form-control {
+        &~ label {
+            bottom: 90%; // fallback for browsers that do not support calc()
+            bottom: calc(100% - 38px);
+        }
+    }
+  
+    .form-control, .form-select {
+        border: none;
+        border-bottom: 2px solid $inactive-color;
+        border-radius: 0px;
+        background-color: transparent;
+        padding-left: 5px;
+        box-shadow: none;
+
+        /* required fields */
+        &:required ~ label::after {
+            content: '*';
+            color: $danger;
+            padding-left: 2px;
+            font-size: 0.8em;
+        }
+    
+        /* active state */
+        &:focus,
+        &[value]:not([value=""]) {
+            border-bottom-color: $primary;
+            color: $black;
+        }
+    
+        &:focus ~ label,
+        &[value]:not([value=""]) ~ label {
+            top: unset;
+            bottom: 100%; // fallback for browsers without calc() support
+            bottom: calc(100% - 16px);
+            font-size: 14px;
+            color: $primary;
+            font-weight: 500;
+        }
+    
+        /* invalid state */
+        &:focus.invalid,
+        &.invalid,
+        &:focus.parsley-error,
+        &[value]:not([value=""]).parsley-error {
+            border-bottom-color: $danger;
+        }
+        
+        &:focus.invalid ~ label,
+        &.invalid ~ label,
+        &:focus.parsley-error ~ label,
+        &[value]:not([value=""]).parsley-error ~ label {
+            color: $danger;
+        }
+    }
+
+    .form-select {
+        background-position: right 0 center;
+        padding-left: 0;
+    }
+  
+    .parsley-errors-list {
+        color: $danger;
+        list-style: none;
+        font-size: 0.7em;
+        padding-left: 5px;
+        position: absolute;
+        top: 107%;
+    }
+    
 }

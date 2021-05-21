@@ -18,53 +18,51 @@
             </div>
       </div>
 </div>
-<div class="container">
-      <table class="mt-4">
-            <thead>
-                  <tr>
-                        <th scope="col">Nome</th>
-                        <th scope="col">E-mail</th>
-                        <th scope="col">Status</th>
-                        <th scope="col">Acão</th>
-                  </tr>
-            </thead>
-            <tbody>
-                  @foreach ($inativos_coletivo as $comp1)
-                  <tr>
-                        <td data-label="Nome">{{ $comp1->nome }} {{ $comp1->sobrenome }}</td>
-                        <td data-label="E-mail">{{ $comp1->email }}</td>
-                        <td data-label="Status" class="@if($comp1->status == 0) bg-danger @else bg-success @endif">
-                              @if( $comp1->status == 0)
-                              Inátivo
-                              @else
-                              Ativo
-                              @endif
-                        </td>
-                        <td data-label="Acão">
-                           <a href="{{ route('consultor.list.coletivo', $comp1->id) }}"> <button class="btn btn-dark">Ver</button></a>
-                        </td>
-                  </tr>
-                  @endforeach
-
-                  @foreach ($inativos_individual as $comp1)
-                  <tr>
-                        <td data-label="Nome">{{ $comp1->nome }} {{ $comp1->sobrenome }}</td>
-                        <td data-label="E-mail">{{ $comp1->email }}</td>
-                        <td data-label="Status" class="@if($comp1->status == 0) bg-danger @else bg-success @endif">
-                              @if( $comp1->status == 0)
-                              Inátivo
-                              @else
-                              Ativo
-                              @endif
-                        </td>
-                        <td data-label="Acão">
-                            <a href="{{ route('consultor.list.individual', $comp1->id) }}"><button class="btn btn-dark">Ver</button></a>
-                        </td>
-                  </tr>
-                  @endforeach
+<div class="in-p pad">
+      <div class="row container text-center">
+            <div class="col-4">
+                  <p>Dias</p>
+            </div>
+            <div class="col-4">
+                  <p>COMPRADOR</p>
+            </div>
+            <div class="col-4">
+                  <p>STATUS</p>
+            </div>
+      </div>
+      @foreach ($inativos_individual as $comp)
+      <div class="inativo my-3 text-center py-3">
+            <div class="container row">
+                  <div class="col-4">
+                      0
+                  </div>
+                  <div class="col-4">
+                       {{ $comp->nome }} {{ $comp->sobrenome }}
+                  </div>
+                  <div class="col-4">
+                      <span>Inativo</span> 
+                  </div>
+            </div>
+      </div>
+      @endforeach
+      @foreach ($inativos_coletivo as $comp)
+      <div class="inativo my-3 text-center py-3">
+            <div class="container row">
+                  <div class="col-4">
+                      0
+                  </div>
+                  <div class="col-4">
+                       {{ $comp->nome }} {{ $comp->sobrenome }}
+                  </div>
+                  <div class="col-4">
+                      <span>Inativo</span> 
+                  </div>
+            </div>
+      </div>
+      @endforeach
 
 
-            </tbody>
-      </table>
+
+
 </div>
 @endsection

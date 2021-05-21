@@ -19,32 +19,62 @@
             </div>
       </div>
 </div>
+@if ($errors->any())
+<div class="alert alert-danger">
+      <ul>
+            @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach
+      </ul>
+</div>
+@endif
 <div class="container login-py">
       <form action="{{ route('consultor.comprador-coletivo.store') }}" method="POST">
             @csrf
-            <div class="group"><input type="text" name="nome" required="required" /><span class="highlight"></span><span
-                        class="bar"></span><label>Name</label>
+            <div class="form-group input-material">
+                  <input type="text" class="form-control" name="nome" id="name-field">
+                  <label for="name-field">Nome da Empresa</label>
             </div>
-            <div class="group"><input type="text" name="sobrenome"  required="required" /><span class="highlight"></span><span
-                        class="bar"></span><label>Sobrenome</label>
+          
+            <div class="form-group input-material">
+                  <input type="text" class="form-control" name="telefone" id="name-field">
+                  <label for="name-field">Telefone da Empresa</label>
             </div>
-            <div class="group"><input type="text" name="email" required="required" /><span class="highlight"></span><span
-                        class="bar"></span><label>Email</label></div>
-            <div class="group"><input type="number" name="telemovel" required="required" /><span class="highlight"></span><span
-                        class="bar"></span><label>Telemovel</label>
+          
+            <div class="form-group input-material">
+                  <input type="text" class="form-control" name="telemovel_empresa" id="name-field">
+                  <label for="name-field">Telemovel da Empresa</label>
             </div>
-            <div class="group"><input type="text" name="morada" required="required" /><span class="highlight"></span><span
-                        class="bar"></span><label>Morada</label>
+          
+            <div class="form-group input-material">
+                  <input type="text" class="form-control" name="email"  id="name-field">
+                  <label for="name-field">E-mail</label>
             </div>
-            <div class="group"><input type="number" name="nif" required="required" /><span class="highlight"></span><span
-                        class="bar"></span><label>NIF</label>
+            <div class="form-group input-material">
+                  <input type="text" class="form-control" name="morada" id="name-field">
+                  <label for="name-field">Morada</label>
             </div>
+          
+            <div class="form-group input-material">
+                  <input type="text" class="form-control" name="nif" id="name-field">
+                  <label for="name-field">Nif da Empresa</label>
+            </div>
+            <div class="form-group input-material">
+                  <input type="text" class="form-control" name="contato" id="name-field">
+                  <label for="name-field">Contato</label>
+            </div>
+            <div class="form-group input-material">
+                  <input type="text" class="form-control" name="telemovel" id="name-field">
+                  <label for="name-field">Telemóvel</label>
+            </div>
+          
 
             <div class="row">
                   <div class="col-6">
                         <div class="mdc-form-field">
                               <div class="mdc-radio">
-                                    <input class="mdc-radio__native-control" value="peixaria" type="radio" id="radio-1" name="tipo">
+                                    <input class="mdc-radio__native-control" value="peixaria" type="radio" id="radio-1"
+                                          name="tipo">
                                     <div class="mdc-radio__background">
                                           <div class="mdc-radio__outer-circle"></div>
                                           <div class="mdc-radio__inner-circle"></div>
@@ -57,7 +87,8 @@
                   <div class="col-6">
                         <div class="mdc-form-field">
                               <div class="mdc-radio">
-                                    <input class="mdc-radio__native-control" value="retalho" type="radio" id="radio-1" name="tipo">
+                                    <input class="mdc-radio__native-control" value="retalho" type="radio" id="radio-1"
+                                          name="tipo">
                                     <div class="mdc-radio__background">
                                           <div class="mdc-radio__outer-circle"></div>
                                           <div class="mdc-radio__inner-circle"></div>
@@ -70,7 +101,8 @@
                   <div class="col-6">
                         <div class="mdc-form-field">
                               <div class="mdc-radio">
-                                    <input class="mdc-radio__native-control" value="outros" type="radio" id="radio-1" name="tipo">
+                                    <input class="mdc-radio__native-control" value="outros" type="radio" id="radio-1"
+                                          name="tipo">
                                     <div class="mdc-radio__background">
                                           <div class="mdc-radio__outer-circle"></div>
                                           <div class="mdc-radio__inner-circle"></div>
@@ -83,7 +115,8 @@
                   <div class="col-6">
                         <div class="mdc-form-field">
                               <div class="mdc-radio">
-                                    <input class="mdc-radio__native-control" value="restauracao" type="radio" id="radio-1" name="tipo">
+                                    <input class="mdc-radio__native-control" value="restauracao" type="radio"
+                                          id="radio-1" name="tipo">
                                     <div class="mdc-radio__background">
                                           <div class="mdc-radio__outer-circle"></div>
                                           <div class="mdc-radio__inner-circle"></div>
@@ -96,7 +129,8 @@
                   <div class="col-6">
                         <div class="mdc-form-field">
                               <div class="mdc-radio">
-                                    <input class="mdc-radio__native-control" value="varina" type="radio" id="radio-1" name="tipo">
+                                    <input class="mdc-radio__native-control" value="varina" type="radio" id="radio-1"
+                                          name="tipo">
                                     <div class="mdc-radio__background">
                                           <div class="mdc-radio__outer-circle"></div>
                                           <div class="mdc-radio__inner-circle"></div>
@@ -109,7 +143,8 @@
                   <div class="col-6">
                         <div class="mdc-form-field">
                               <div class="mdc-radio">
-                                    <input class="mdc-radio__native-control" value="hotelaria" type="radio" id="radio-1" name="tipo">
+                                    <input class="mdc-radio__native-control" value="hotelaria" type="radio" id="radio-1"
+                                          name="tipo">
                                     <div class="mdc-radio__background">
                                           <div class="mdc-radio__outer-circle"></div>
                                           <div class="mdc-radio__inner-circle"></div>
@@ -119,7 +154,7 @@
                               <label class="" for="radio-1">HOTELARIA</label>
                         </div>
                   </div>
-   
+
             </div>
             <div class="btn-box py-4"><button class="btn btn-submit" type="submit">Cadastrar</button>
 

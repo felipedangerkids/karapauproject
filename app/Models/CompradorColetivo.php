@@ -10,14 +10,15 @@ class CompradorColetivo extends Model
     use HasFactory;
 
     protected $fillable = [
-        'user_id',
+        'user_id', 
         'nome',
-        'sobrenome',
+        'telefone', 
+        'telemovel_empresa',
         'email',
         'password',
+        'nif',
+        'contato',
         'telemovel',
-        'morada',
         'tipo',
-        'nif'
     ];
 }

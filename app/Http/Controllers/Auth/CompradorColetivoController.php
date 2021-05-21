@@ -42,19 +42,25 @@ class CompradorColetivoController extends Controller
      */
     public function store(Request $request)
     {
+        $validated = $request->validate([
+            'email' => 'required|unique:posts|max:255',
+        ]);
+
         $random = Str::random(9);
         $user = auth()->user()->id;
         $dados = $request->all();
         $save = CompradorColetivo::create([
             'user_id' => $user,
             'nome' => $request->nome,
-            'sobrenome' => $request->sobrenome,
+            'telefone' => $request->telefone,
+            'telemovel_empresa' => $request->telemovel_empresa,
             'email' => $request->email,
             'password' => Hash::make($random),
-            'telemovel' => $request->telemovel,
             'morada' => $request->morada,
+            'nif' => $request->nif,
+            'contato' => $request->contato,
+            'telemovel' => $request->telemovel,
             'tipo' => $request->tipo,
-            'nif' => $request->nif
         ]);
 
         $mails = new Mails();

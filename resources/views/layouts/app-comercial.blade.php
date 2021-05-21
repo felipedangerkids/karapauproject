@@ -47,6 +47,7 @@
     <script src="{{ url('js/jquery.countdown.min.js') }}"></script>
     <script src="{{ url('painel/js/timer.js') }}"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="{{ url('app-comercial/js/script.js') }}"></script>
     @if(Session::has('success'))
     <script type="text/javascript">
         Swal.fire({
