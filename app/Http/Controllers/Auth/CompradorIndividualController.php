@@ -59,20 +59,20 @@ class CompradorIndividualController extends Controller
         ]);
 
 
-        $mails = new Mails();
-        $mails['consultor'] = auth()->user()->name;
-        $mails['nome'] = $request->nome;
-        $mails['email'] = $request->email;
-        $mails['senha'] = $random;
+        // $mails = new Mails();
+        // $mails['consultor'] = auth()->user()->name;
+        // $mails['nome'] = $request->nome;
+        // $mails['email'] = $request->email;
+        // $mails['senha'] = $random;
 
-        Mail::to('cadastros@karapau.pt')->send(new AdminMail($mails));
+        // Mail::to('cadastros@karapau.pt')->send(new AdminMail($mails));
 
-        $mails = new Mails();
-        $mails['nome'] = $request->nome;
-        $mails['email'] = $request->email;
-        $mails['senha'] = $random;
+        // $mails = new Mails();
+        // $mails['nome'] = $request->nome;
+        // $mails['email'] = $request->email;
+        // $mails['senha'] = $random;
 
-        Mail::to($request->email)->send(new CompradorIndividualMail($mails));
+        // Mail::to($request->email)->send(new CompradorIndividualMail($mails));
 
         return redirect()->route('consultor')->with('success', 'Comprador criado com sucesso!');
     }
