@@ -36,7 +36,7 @@
             <div class="ativos px-4">
                   <div class="py-4">
                         <a href=""> <i class="fas fa-thumbs-up"></i> Compradores Ativos</a>
-                        <h3>{{ $comp_ativo }}/{{ $comp }}</h3>
+                        <h3>{{ $comp_ativo }}/100</h3>
                   </div>
             </div>
       </div>
