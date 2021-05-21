@@ -47,7 +47,7 @@
             </div>
           
             <div class="form-group input-material">
-                  <input type="text" class="form-control" name="email"  id="name-field">
+                  <input type="email" class="form-control" name="email"  id="name-field">
                   <label for="name-field">E-mail</label>
             </div>
             <div class="form-group input-material">
@@ -64,7 +64,7 @@
                   <label for="name-field">Contato</label>
             </div>
             <div class="form-group input-material">
-                  <input type="text" class="form-control" name="telemovel" id="name-field">
+                  <input type="number" class="form-control" name="telemovel" id="name-field">
                   <label for="name-field">Telemóvel</label>
             </div>
           

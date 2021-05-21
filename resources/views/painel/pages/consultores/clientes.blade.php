@@ -14,7 +14,7 @@
                         <th scope="col">Nome</th>
                         <th scope="col">Email</th>
                         <th scope="col">Status</th>
-                        <th scope="col">Acão</th>
+                       
                   </tr>
             </thead>
             <tbody>
@@ -28,9 +28,7 @@
                               Ativo
                               @endif
                         </td>
-                        <td>
-                              <button class="btn btn-sm btn-dark">Fallow Up</button>
-                        </td>
+                      
                   </tr>
                   @endforeach
 
@@ -49,7 +47,7 @@
                         <th scope="col">Nome</th>
                         <th scope="col">Email</th>
                         <th scope="col">Status</th>
-                        <th scope="col">Acão</th>
+                        
                   </tr>
             </thead>
             <tbody>
@@ -63,9 +61,7 @@
                               Ativo
                               @endif
                         </td>
-                        <td>
-                              <button class="btn btn-sm btn-dark">Fallow Up</button>
-                        </td>
+                    
                   </tr>
                   @endforeach
 
