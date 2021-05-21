@@ -102,6 +102,8 @@ Route::middleware(['auth:consultor'])->group(function () {
 
         Route::any('consultor-logout', [LoginConsultorController::class, 'logout'])->name('consultor.logout');
 
+        Route::get('consultor-incompletos-individual', [ComercialPainelController::class, 'incompletoIndividual'])->name('consultor.list.incompleto.individual');
+
     });
 
 Route::get('teste', [TesteController::class, 'index']);

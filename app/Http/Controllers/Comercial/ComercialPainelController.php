@@ -62,4 +62,10 @@ class ComercialPainelController extends Controller
       
         return view('comercial.pages.list-coletivo', compact('comprador1'));
     }
+
+    public function incompletoIndividual()
+    {
+        $imcompletos = CompradorIndividual::orWhereNull('nif')->orWhereNull('sobrenome')->orWhereNull('telemovel')->orWhereNull('morada')->where('user_id', 1)->get();
+        dd($imcompletos);
+    }
 }

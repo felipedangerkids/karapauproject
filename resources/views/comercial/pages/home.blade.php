@@ -50,6 +50,14 @@
                   </div>
             </div>
       </div>
+      <div class="container mt-3">
+            <div class="incompletos px-4">
+                  <div class="py-4">
+                        <a href=""> <i class="fas fa-ban"></i> CADASTROS INCOMPLETOS</a>
+                        <h3>{{ $comp_inativo }}/{{ $comp }}</h3>
+                  </div>
+            </div>
+      </div>
       <div class="container pb-5 mt-3">
             <div class="menu row">
                   <div class="col-5 text-center altura pl">
@@ -82,14 +90,13 @@
                   </div>
 
                   <div class="col-5 text-center mt-3  altura pl">
-                        <a href=""><i style="color: #36a6d4; font-size: 56px;" class="fas fa-book mb-2 "></i>
-                              <p>FAQ</p>
+                        <a href=""><i style="color: #35A40E; font-size: 56px;" class="fas fa-ban"></i></i>
+                              <p>VER INCOMPLETOS</p>
                         </a>
                   </div>
                   <div class="col-5 text-center mt-3 altura pl">
-                        <a href=""><span class="iconify mb-2" data-inline="false" data-icon="bi:chat-dots-fill"
-                                    style="color: #36a6d4; font-size: 56px;"></span></span>
-                              <p>SUPORTE</p>
+                        <a href=""><i style="color: #35A40E; font-size: 56px;" class="fab fa-envira"></i></span>
+                              <p>CADASTRAR LEAD</p>
                         </a>
                   </div>
             </div>

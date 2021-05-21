@@ -80,6 +80,23 @@ main {
     text-transform: uppercase;
   }
 }
+.incompletos {
+  background:#35A40E;
+  border-radius: 15px;
+  height: 136px;
+  a {
+    font-weight: 800;
+    font-size: 21.3333px;
+    color: white; 
+    text-transform: uppercase;
+  }
+  h3 {
+    color: white;
+    font-size: 41.8667px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+}
 .menu {
   justify-content: space-evenly;
   .pl {
