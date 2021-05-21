@@ -40,6 +40,16 @@
                   </div>
             </div>
       </div>
+      @php $comp = $comprador1->count() + $comprador2->count() @endphp
+      @php $comp_inativo = $inativos_individual->count() + $inativos_coletivo->count() @endphp
+      <div class="container mt-3">
+            <div class="inativos px-4">
+                  <div class="py-4">
+                        <a href=""> <i class="fas fa-thumbs-up"></i> Compradores Inativos</a>
+                        <h3>{{ $comp_inativo }}/{{ $comp }}</h3>
+                  </div>
+            </div>
+      </div>
       <div class="container pb-5 mt-3">
             <div class="menu row">
                   <div class="col-5 text-center altura pl">
