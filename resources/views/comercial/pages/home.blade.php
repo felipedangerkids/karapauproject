@@ -56,7 +56,7 @@
             <div class="incompletos px-4">
                   <div class="py-4">
                         <a href=""> <i class="fas fa-ban"></i> CADASTROS INCOMPLETOS</a>
-                        <h3>{{ $comp_incompleto }}/{{ $comp }}</h3>
+                        <h3>{{ $comp_incompleto }}</h3>
                   </div>
             </div>
       </div>
