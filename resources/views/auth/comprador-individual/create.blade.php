@@ -24,25 +24,30 @@
             <div class="wrapper">
                   <form action="{{ route('consultor.comprador-individual.store') }}" method="POST">
                         @csrf
-                        <div class="group"><input type="text" name="nome" required="required" /><span
-                                    class="highlight"></span><span class="bar"></span><label>Name</label>
+                        <div class="form-group input-material">
+                              <input type="text" class="form-control" name="nome" id="name-field">
+                              <label for="name-field">Nome</label>
                         </div>
-                        <div class="group"><input type="text" name="sobrenome" required="required" /><span class="highlight"></span><span
-                                    class="bar"></span><label>Sobrenome</label>
+                        <div class="form-group input-material">
+                              <input type="text" class="form-control" name="sobrenome" id="name-field">
+                              <label for="name-field">Sobrenome</label>
                         </div>
-                        <div class="group"><input type="text" name="email" required="required" /><span class="highlight"></span><span
-                                    class="bar"></span><label>Email</label>
+                        <div class="form-group input-material">
+                              <input type="email" class="form-control" name="email" id="name-field">
+                              <label for="name-field">Email</label>
                         </div>
-                        <div class="group"><input type="number" name="telemovel" required="required" /><span class="highlight"></span><span
-                                    class="bar"></span><label>Telemovel</label>
+                        <div class="form-group input-material">
+                              <input type="text" class="form-control" name="telemovel" id="name-field">
+                              <label for="name-field">Telemovel</label>
                         </div>
-                        <div class="group"><input type="text" name="morada" required="required"/><span class="highlight"></span><span
-                                    class="bar"></span><label>Morada</label>
+                        <div class="form-group input-material">
+                              <input type="text" class="form-control" name="morada" id="name-field">
+                              <label for="name-field">Morada</label>
                         </div>
-                        <div class="group"><input type="number" name="nif" required="required"/><span
-                                    class="highlight"></span><span class="bar"></span><label>NIF</label>
+                        <div class="form-group input-material">
+                              <input type="text" class="form-control" name="nif" id="name-field">
+                              <label for="name-field">NIF</label>
                         </div>
-
 
                         <div class="btn-box py-4"><button class="btn btn-submit" type="submit">Cadastrar</button>
 
