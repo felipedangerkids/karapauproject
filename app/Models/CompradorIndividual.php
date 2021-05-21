@@ -18,6 +18,6 @@ class CompradorIndividual extends Model
         'telemovel',
         'morada',
         'nif',
-        'codigo'
+        'codigo',
     ];
 }
