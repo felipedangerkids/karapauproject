@@ -16,6 +16,7 @@ class CompradorColetivo extends Model
         'telemovel_empresa',
         'email',
         'password',
+        'morada',
         'nif',
         'contato',
         'telemovel',

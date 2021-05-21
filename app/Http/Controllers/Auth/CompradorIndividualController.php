@@ -39,6 +39,11 @@ class CompradorIndividualController extends Controller
      */
     public function store(Request $request)
     {
+        $validated = $request->validate([
+            'email' => 'required|unique:comprador_individuals|max:255',
+            'nome' => 'required',
+        ]);
+
         $random = Str::random(9);
         $user = auth()->user()->id;
         $dados = $request->all();

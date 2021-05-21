@@ -43,7 +43,8 @@ class CompradorColetivoController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'email' => 'required|unique:posts|max:255',
+            'email' => 'required',
+            'nome' => 'required',
         ]);
 
         $random = Str::random(9);
