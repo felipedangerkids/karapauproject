@@ -57,6 +57,7 @@ class CompradorColetivoController extends Controller
             'telemovel_empresa' => $request->telemovel_empresa,
             'email' => $request->email,
             'password' => Hash::make($random),
+            'codigo' =>  $random,
             'morada' => $request->morada,
             'nif' => $request->nif,
             'contato' => $request->contato,

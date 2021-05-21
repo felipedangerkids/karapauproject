@@ -21,5 +21,6 @@ class CompradorColetivo extends Model
         'contato',
         'telemovel',
         'tipo',
+        'codigo'
     ];
 }
