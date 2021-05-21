@@ -50,11 +50,13 @@
                   </div>
             </div>
       </div>
+      @php $comp = $comprador1->count() + $comprador2->count() @endphp
+      @php $comp_incompleto = $imcompletos_col->count() + $imcompletos_ind->count() @endphp
       <div class="container mt-3">
             <div class="incompletos px-4">
                   <div class="py-4">
                         <a href=""> <i class="fas fa-ban"></i> CADASTROS INCOMPLETOS</a>
-                        <h3>{{ $comp_inativo }}/{{ $comp }}</h3>
+                        <h3>{{ $comp_incompleto }}/{{ $comp }}</h3>
                   </div>
             </div>
       </div>
@@ -90,7 +92,7 @@
                   </div>
 
                   <div class="col-5 text-center mt-3  altura pl">
-                        <a href=""><i style="color: #35A40E; font-size: 56px;" class="fas fa-ban"></i></i>
+                        <a href="{{ route('consultor.list.incompletos') }}"><i style="color: #35A40E; font-size: 56px;" class="fas fa-ban"></i></i>
                               <p>VER INCOMPLETOS</p>
                         </a>
                   </div>

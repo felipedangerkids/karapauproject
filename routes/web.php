@@ -102,12 +102,19 @@ Route::middleware(['auth:consultor'])->group(function () {
 
         Route::any('consultor-logout', [LoginConsultorController::class, 'logout'])->name('consultor.logout');
 
-        Route::get('consultor-incompletos-individual', [ComercialPainelController::class, 'incompletoIndividual'])->name('consultor.list.incompleto.individual');
+        Route::get('consultor-incompletos', [ComercialPainelController::class, 'incompleto'])->name('consultor.list.incompletos');
+        
+        Route::get('consultor-ind-edit/{id}', [ComercialPainelController::class, 'editIndividual'])->name('consultor.edit.individual');
+        Route::get('consultor-col-edit/{id}', [ComercialPainelController::class, 'editColetivo'])->name('consultor.edit.coletivo');
+
+        Route::post('consultor-ind-update/{id}', [ComercialPainelController::class, 'updateIndividual'])->name('consultor.update.individual');
+        Route::post('consultor-col-update/{id}', [ComercialPainelController::class, 'updateColetivo'])->name('consultor.update.coletivo');
 
         Route::get('consultor-lead', [ComercialPainelController::class, 'lead'])->name('consultor.lead');
         Route::get('consultor-lead-form1', [ComercialPainelController::class, 'leadForm1'])->name('consultor.lead.individual');
         Route::get('consultor-lead-form2', [ComercialPainelController::class, 'leadForm2'])->name('consultor.lead.coletivo');
 
+      
 
     });
 

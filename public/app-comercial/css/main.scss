@@ -437,6 +437,27 @@ table th {
     transform: translate(-50%, -50%);
   }
 }
+.ativo {
+  padding: 50px 0;
+  background-color: #0472b7;
+  color: white;
+  font-weight: 500;
+  font-size: 15.5798px;
+  line-height: 23px;
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  span {
+    background-color: #3EED00;
+    padding: 8px;
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
 .in-p {
   p {
     color: white;
