@@ -20,8 +20,8 @@ class ComercialPainelController extends Controller
         $inativos_coletivo = CompradorColetivo::where('user_id', auth()->user()->id)->where('status', 0)->get();
         $ativos_coletivo = CompradorColetivo::where('user_id', auth()->user()->id)->where('status', 1)->get();
 
-        $imcompletos_ind = CompradorIndividual::orWhereNull('nif')->orWhereNull('sobrenome')->orWhereNull('telemovel')->orWhereNull('morada')->where('user_id', auth()->user()->id)->get();
-        $imcompletos_col = CompradorColetivo::orWhereNull('telefone')->orWhereNull('telemovel_empresa')->orWhereNull('morada')->orWhereNull('tipo')->orWhereNull('nif')->orWhereNull('contato')->orWhereNull('telemovel')->where('user_id', auth()->user()->id)->get();
+        $imcompletos_ind = CompradorIndividual::orWhereNull('nif')->orWhereNull('sobrenome')->orWhereNull('telemovel')->orWhereNull('morada')->orWhere('user_id', auth()->user()->id)->get();
+        $imcompletos_col = CompradorColetivo::orWhereNull('telefone')->orWhereNull('telemovel_empresa')->orWhereNull('morada')->orWhereNull('tipo')->orWhereNull('nif')->orWhereNull('contato')->orWhereNull('telemovel')->orWhere('user_id', auth()->user()->id)->get();
 
         return view('comercial.pages.home', compact('imcompletos_col', 'imcompletos_ind', 'comprador1', 'comprador2', 'inativos_individual', 'ativos_individual', 'inativos_coletivo', 'ativos_coletivo'));
     }
