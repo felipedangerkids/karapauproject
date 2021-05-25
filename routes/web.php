@@ -124,7 +124,7 @@ Route::get('teste', [TesteController::class, 'index']);
 
 /*  Login Pescador */
 
-Route::get('login-pescador', [PescadorController::class, 'index']);
+Route::get('login-pescador', [PescadorController::class, 'index'])->name('login.pescador');
 Route::get('pescador-create', [PescadorRegController::class, 'index']);
 Route::post('pescadores-store', [PescadorRegController::class, 'store'])->name('pescador.store');
 Route::post('pescador-login', [PescadorController::class, 'store'])->name('pescador.login');

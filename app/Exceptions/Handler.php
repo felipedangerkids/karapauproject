@@ -52,6 +52,9 @@ class Handler extends ExceptionHandler
             case 'consultor':
                 $login = 'consultor.login-page';
                 break;
+            case 'pescador':
+                $login = 'login.pescador';
+                break;
             default:
                 $login = 'login';
                 break;
