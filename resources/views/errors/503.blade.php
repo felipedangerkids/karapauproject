@@ -13,7 +13,7 @@
 <body>
       <div class="container mt-5 pt-5">
             <div class="alert alert-danger text-center">
-                  <h2 class="display-3">Manutenção</h2>
+                  <h2 class="display-3">503</h2>
                   <p class="display-5">Logo voltaremos, aguarde!</p>
             </div>
       </div>
