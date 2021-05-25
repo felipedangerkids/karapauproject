@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Comercial;
 
 use Illuminate\Http\Request;
 use App\Models\CompradorColetivo;
+use Illuminate\Support\Facades\DB;
 use App\Models\CompradorIndividual;
 use App\Http\Controllers\Controller;
 
@@ -20,9 +21,15 @@ class ComercialPainelController extends Controller
         $inativos_coletivo = CompradorColetivo::where('user_id', auth()->guard('consultor')->user()->id)->where('status', 0)->get();
         $ativos_coletivo = CompradorColetivo::where('user_id', auth()->guard('consultor')->user()->id)->where('status', 1)->get();
 
-        $imcompletos_ind = CompradorIndividual::orWhereNull('nif')->orWhereNull('sobrenome')->orWhereNull('telemovel')->orWhereNull('morada')->where('user_id', auth()->guard('consultor')->user()->id)->get();
-        $imcompletos_col = CompradorColetivo::orWhereNull('telefone')->orWhereNull('telemovel_empresa')->orWhereNull('morada')->orWhereNull('tipo')->orWhereNull('nif')->orWhereNull('contato')->orWhereNull('telemovel')->where('user_id', auth()->guard('consultor')->user()->id)->get();
+        // $imcompletos_ind = CompradorIndividual::where('user_id', '=', 5)->orWhereNull('nif')->orWhereNull('sobrenome')->orWhereNull('telemovel')->orWhereNull('morada')->get();
+        $imcompletos_ind = CompradorIndividual::where('nif')->where('user_id', auth()->guard('consultor')->user()->id)->get()->filter(function ($value) {
+            return !empty($value);
+        });
 
+        $imcompletos_col = CompradorColetivo::where('nif')->where('user_id', auth()->guard('consultor')->user()->id)->get()->filter(function ($value) {
+            return !empty($value);
+        });
+        // dd($imcompletos_ind);
         return view('comercial.pages.home', compact('imcompletos_col', 'imcompletos_ind', 'comprador1', 'comprador2', 'inativos_individual', 'ativos_individual', 'inativos_coletivo', 'ativos_coletivo'));
     }
 
@@ -68,10 +75,13 @@ class ComercialPainelController extends Controller
 
     public function incompleto()
     {
-        // $imcompletos_col = CompradorColetivo::orWhereNull('telefone')->orWhereNull('telemovel_empresa')->orWhereNull('morada')->orWhereNull('tipo')->orWhereNull('nif')->orWhereNull('contato')->orWhereNull('telemovel')->where('user_id', auth()->guard('consultor')->user()->id)->get();
+        $imcompletos_ind = CompradorIndividual::where('nif')->where('user_id', auth()->guard('consultor')->user()->id)->get()->filter(function ($value) {
+            return !empty($value);
+        });
 
-        $imcompletos_col = CompradorColetivo::where()->get();
-        $imcompletos_ind = CompradorIndividual::orWhereNull('nif')->orWhereNull('sobrenome')->orWhereNull('telemovel')->orWhereNull('morada')->where('user_id', auth()->guard('consultor')->user()->id)->get();
+        $imcompletos_col = CompradorColetivo::where('nif')->where('user_id', auth()->guard('consultor')->user()->id)->get()->filter(function ($value) {
+            return !empty($value);
+        });
         return view('comercial.pages.lead-list', compact('imcompletos_col', 'imcompletos_ind'));
     }
 
@@ -111,7 +121,7 @@ class ComercialPainelController extends Controller
         $comprador->telemovel = $request->get('telemovel');
         $comprador->morada = $request->get('morada');
         $comprador->nif = $request->get('nif');
-   
+
         $comprador->save();
 
 
@@ -132,7 +142,7 @@ class ComercialPainelController extends Controller
         $comprador->contato = $request->get('contato');
         $comprador->telemovel = $request->get('telemovel');
         $comprador->tipo = $request->get('tipo');
-   
+
         $comprador->save();
 
 
