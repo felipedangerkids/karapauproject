@@ -45,7 +45,7 @@ class CompradorIndividualController extends Controller
         ]);
 
         $random = Str::random(9);
-        $user = auth()->user()->id;
+        $user = auth()->guard('consultor')->user()->id;
         $dados = $request->all();
         $save = CompradorIndividual::create([
             'user_id' => $user,
