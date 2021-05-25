@@ -52,11 +52,11 @@
                         @csrf
                         <div class="px-4 pt-4">
                               <div class="form-group input-material">
-                                    <input type="text" class="form-control" name="nome" id="name-field">
+                                    <input type="text" class="form-control" name="name" id="name-field">
                                     <label for="name-field">Nome</label>
                               </div>
                               <div class="form-group input-material">
-                                    <input type="text" class="form-control" name="sobrenome" id="name-field">
+                                    <input type="text" class="form-control" name="lastname" id="name-field">
                                     <label for="name-field">Sobrenome</label>
                               </div>
                               <div class="form-group input-material">
@@ -70,7 +70,7 @@
                               </div>
 
                               <div class="form-group input-material">
-                                    <input type="password-confirm" class="form-control" name="password-confirm"
+                                    <input type="password" class="form-control" name="password-confirm"
                                           id="name-field">
                                     <label for="name-field">Confirmar Senha</label>
                               </div>
@@ -89,7 +89,7 @@
                                           <label for="name-field">NIF</label>
                                     </div>
                                     <div class="form-group input-material col-6">
-                                          <input type="number" class="form-control" name="IBAN" id="name-field">
+                                          <input type="number" class="form-control" name="iban" id="name-field">
                                           <label for="name-field">IBAN</label>
                                     </div>
                               </div>

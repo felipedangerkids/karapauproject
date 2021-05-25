@@ -39,17 +39,16 @@ class PescadorRegController extends Controller
     {
         $data = $request->all();
         $dados = Pescador::create([
-            'name' =>           $data['name'],
-            'lastname' =>       $data['lastname'],
-            'email' =>          $data['email'],
-            'password' => Hash::make($request['password']),
-            'telefone' =>       $data['telefone'],
-            'morada' =>         $data['morada'],
-            'nif' =>            $data['nif'],
-            'iban' =>           $data['iban'],
-            'porto' =>          $data['porto'],
-            'fishing_zone' =>   $data['fishing_zone'],
-            'nome_embarcacao' => $data['nome_embarcacao'],
+            'name' =>          $request->name,
+            'lastname' =>       $request->lastname,
+            'email' =>         $request->email,
+            'password' => Hash::make($request->password),
+            'telefone' =>       $request->telefone,
+            'morada' =>         $request->morada,
+            'nif' =>            $request->nif,
+            'iban' =>           $request->iban,
+            'porto' =>          $request->porto,
+            'nome_embarcacao' => $request->nome_embarcacao,
 
         ]);
 
