@@ -37,7 +37,14 @@ class PescadorRegController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->all();
+
+        $validated = $request->validate([
+            'email' => 'required',
+            'name' => 'required',
+            'nif' => 'required',
+            'iban' => 'required',
+        ]);
+    
         $dados = Pescador::create([
             'name' =>          $request->name,
             'lastname' =>       $request->lastname,

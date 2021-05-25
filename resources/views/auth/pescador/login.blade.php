@@ -27,7 +27,15 @@
             </div>
       </div>
 </div>
-
+@if ($errors->any())
+<div class="alert alert-danger">
+      <ul>
+            @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach
+      </ul>
+</div>
+@endif
 <div class="tab-content" id="myTabContent">
       <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
             <div class="container login-px">
@@ -70,8 +78,7 @@
                               </div>
 
                               <div class="form-group input-material">
-                                    <input type="password" class="form-control" name="password-confirm"
-                                          id="name-field">
+                                    <input type="password" class="form-control" name="password-confirm" id="name-field">
                                     <label for="name-field">Confirmar Senha</label>
                               </div>
                               <div class="form-group input-material">
@@ -94,7 +101,7 @@
                                     </div>
                               </div>
                               <div class="form-group input-material">
-                                  
+
                                     <select class="form-control" name="porto" id="name-field">
                                           <option>Escolha o Porto de Registo</option>
                                           @foreach ($portos as $porto)
@@ -107,8 +114,8 @@
                                     <input type="text" class="form-control" name="nome_embarcacao" id="name-field">
                                     <label for="name-field">Nome da Embarcação</label>
                               </div>
-                            <div class="btn-box py-4"><button class="btn btn-submit" type="submit">Cadastrar</button>
-                              
+                              <div class="btn-box py-4"><button class="btn btn-submit" type="submit">Cadastrar</button>
+
                               </div>
                         </div>
                   </form>
