@@ -8,8 +8,7 @@
             </div>
       </div>
       <div class="text-center text-white p-5">
-            <h4>DEPARTAMENTO
-                  COMERCIAL</h4>
+            <h4>PESCADOR</h4>
       </div>
       <div class="container d-flex">
             <div class="mx-auto">
