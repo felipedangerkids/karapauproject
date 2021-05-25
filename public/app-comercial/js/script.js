@@ -23,3 +23,15 @@ $.fn.materializeInputs = function (selectors) {
  * Material Inputs
  */
 $('body').materializeInputs();
+
+
+function hide() {
+      $('.balance').addClass('d-none');
+      $('.eye').addClass('d-none');
+      $('.eye-close').removeClass('d-none');
+}
+function show() {
+      $('.balance').removeClass('d-none');
+      $('.eye').removeClass('d-none');
+      $('.eye-close').addClass('d-none');
+}
