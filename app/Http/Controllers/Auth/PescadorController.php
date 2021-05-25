@@ -42,6 +42,8 @@ class PescadorController extends Controller
 
             return redirect()->intended('pescador');
         }
+
+        return redirect('login-pescador');
     }
 
     /**
