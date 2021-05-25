@@ -1,11 +1,17 @@
-@extends('layouts.app')
+@extends('layouts.app-pescador')
 
 @section('content')
 <div class="header">
-      <div class="container d-flex flex-column pt-3">
-            <div class="text-center">
-                  <img src="{{ url('painel/img/logo.svg') }}" alt="">
+      <div class="container">
+            <div class="py-4 text-center">
+                  <img class="img-fluid " src="{{ url('app-comercial/img/logo-img.svg') }}" alt="">
             </div>
+      </div>
+      <div class="text-center text-white p-5">
+            <h4>DEPARTAMENTO
+                  COMERCIAL</h4>
+      </div>
+      <div class="container d-flex">
             <div class="mx-auto">
                   <ul class="nav nav-tabs mt-4" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
@@ -18,34 +24,25 @@
                         </li>
 
                   </ul>
-             
 
             </div>
-         
       </div>
 </div>
+
 <div class="tab-content" id="myTabContent">
       <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-            <div class="container">
+            <div class="container login-px">
                   <form action="{{ route('pescador.login') }}" method="POST">
                         @csrf
-                        <div class="px-4 pt-4">
-                              <div class="form-group">
-                                    <label for="exampleInputEmail1">Email</label>
-                                    <input type="email" name="email" class="form-control" id="exampleInputEmail1"
-                                          aria-describedby="emailHelp">
-                              </div>
-                              <div class="form-group">
-                                    <label for="exampleInputPassword1">Senha</label>
-                                    <input type="password" name="password" class="form-control" id="exampleInputPassword1">
-                              </div>
-                              <div class="form-group form-check">
-                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                    <label class="form-check-label" for="exampleCheck1">Lembrar-me</label>
-                              </div>
-                              <div class="text-center">
-                                    <button type="submit" class="btn btn-primary ">Entrar</button>
-                              </div>
+                        @csrf
+                        <div class="group"><input type="email" name="email" required="required" /><span
+                                    class="highlight"></span><span class="bar"></span><label>Email</label>
+                        </div>
+                        <div class="group"><input type="password" name="password" required="required" /><span
+                                    class="highlight"></span><span class="bar"></span><label>Senha</label>
+                        </div>
+                        <div class="btn-box py-4"><button class="btn btn-submit" type="submit">Entrar</button>
+
                         </div>
                   </form>
             </div>
@@ -55,67 +52,64 @@
                   <form action="{{ route('pescador.store') }}" method="POST">
                         @csrf
                         <div class="px-4 pt-4">
-                              <div class="form-group">
-                                    <label for="exampleInputEmail1">Nome</label>
-                                    <input type="text" name="name" class="form-control">
+                              <div class="form-group input-material">
+                                    <input type="text" class="form-control" name="nome" id="name-field">
+                                    <label for="name-field">Nome</label>
                               </div>
-                              <div class="form-group">
-                                    <label for="exampleInputEmail1">Sobrenome</label>
-                                    <input type="text" name="lastname" class="form-control">
+                              <div class="form-group input-material">
+                                    <input type="text" class="form-control" name="sobrenome" id="name-field">
+                                    <label for="name-field">Sobrenome</label>
                               </div>
-                              <div class="form-group">
-                                    <label for="exampleInputEmail1">E-mail</label>
-                                    <input type="email" name="email" class="form-control">
+                              <div class="form-group input-material">
+                                    <input type="email" class="form-control" name="email" id="name-field">
+                                    <label for="name-field">E-mail</label>
                               </div>
-                              <div class="form-group">
-                                    <label for="exampleInputPassword1">Senha</label>
-                                    <input type="password" name="password" class="form-control"
-                                          id="exampleInputPassword1">
+
+                              <div class="form-group input-material">
+                                    <input type="password" class="form-control" name="password" id="name-field">
+                                    <label for="name-field">Senha</label>
                               </div>
-                              <div class="form-group">
-                                    <label for="exampleInputPassword1">Confirmar Senha</label>
-                                    <input type="password" name="confirm-password" class="form-control"
-                                          id="exampleInputPassword1">
+
+                              <div class="form-group input-material">
+                                    <input type="password-confirm" class="form-control" name="password-confirm"
+                                          id="name-field">
+                                    <label for="name-field">Confirmar Senha</label>
                               </div>
-                              <div class="form-group">
-                                    <label for="exampleInputEmail1">Telemovel</label>
-                                    <input type="text" name="telefone" class="form-control">
+                              <div class="form-group input-material">
+                                    <input type="number" class="form-control" name="telefone" id="name-field">
+                                    <label for="name-field">Telemóvel</label>
                               </div>
-                              <div class="form-group">
-                                    <label for="exampleInputEmail1">Morada</label>
-                                    <input type="text" name="morada" class="form-control">
+                              <div class="form-group input-material">
+                                    <input type="text" class="form-control" name="morada" id="name-field">
+                                    <label for="name-field">Morada</label>
                               </div>
 
                               <div class="row">
-                                    <div class="form-group col-6">
-                                          <label for="exampleInputEmail1">NIF</label>
-                                          <input type="text" name="nif" class="form-control">
+                                    <div class="form-group input-material col-6">
+                                          <input type="number" class="form-control" name="nif" id="name-field">
+                                          <label for="name-field">NIF</label>
                                     </div>
-                                    <div class="form-group col-6">
-                                          <label for="exampleInputEmail1">IBAN</label>
-                                          <input type="text" name="iban" class="form-control">
+                                    <div class="form-group input-material col-6">
+                                          <input type="number" class="form-control" name="IBAN" id="name-field">
+                                          <label for="name-field">IBAN</label>
                                     </div>
                               </div>
-                              <div class="form-group">
-                                    <label for="exampleFormControlSelect1">Porto de Registo</label>
-                                    <select class="form-control" name="porto" id="exampleFormControlSelect1">
-                                          <option>Escolha o Porto</option>
+                              <div class="form-group input-material">
+                                  
+                                    <select class="form-control" name="porto" id="name-field">
+                                          <option>Escolha o Porto de Registo</option>
                                           @foreach ($portos as $porto)
                                           <option value="{{ $porto->id }}">{{ $porto->nome }}</option>
                                           @endforeach
 
                                     </select>
                               </div>
-                              <div class="form-group">
-                                    <label for="exampleInputEmail1">Zona de Pesca</label>
-                                    <input type="text" name="fishing_zone" class="form-control">
+                              <div class="form-group input-material">
+                                    <input type="text" class="form-control" name="nome_embarcacao" id="name-field">
+                                    <label for="name-field">Nome da Embarcação</label>
                               </div>
-                              <div class="form-group">
-                                    <label for="exampleInputEmail1">Nome da Embarcação</label>
-                                    <input type="text" name="nome_embarcacao" class="form-control">
-                              </div>
-                              <div class="text-center">
-                                    <input type="submit" class="btn btn-primary" value="Cadastrar">
+                            <div class="btn-box py-4"><button class="btn btn-submit" type="submit">Cadastrar</button>
+                              
                               </div>
                         </div>
                   </form>
