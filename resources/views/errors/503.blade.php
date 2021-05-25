@@ -14,7 +14,7 @@
       <div class="container mt-5 pt-5">
             <div class="alert alert-danger text-center">
                   <h2 class="display-3">503</h2>
-                  <p class="display-5">Manutenção Logo voltaremos, aguarde!</p>
+                  <p class="display-5">Em Manutenção, aguarde!</p>
                   <div>
                         <img src="{{ url('painel/img/logo.svg') }}" alt="">
                   </div>
