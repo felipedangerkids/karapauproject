@@ -119,6 +119,8 @@
       </script>
       <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
       <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+      <script src="{{ url('js/jquery.countdown.min.js') }}"></script>
+      <script src="{{ url('painel/js/timer.js') }}"></script>
       <script src="{{ url('painel/js/script.js') }}"></script>
       <script type="text/javascript">
             $(document).ready(function () {

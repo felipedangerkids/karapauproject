@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
+use App\Models\Produto;
 use App\Models\Pescador;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class PescadorController extends Controller
 {
@@ -26,9 +27,16 @@ class PescadorController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function showProducts($id)
+    {
+        $produtos = Produto::with('especies')->where('pescador_id', $id)->get();
+        return view('painel.pages.pescador.produtos', compact('produtos'));
+    }
+
+
     public function create()
     {
-        //
     }
 
     /**

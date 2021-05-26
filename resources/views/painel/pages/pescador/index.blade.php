@@ -24,7 +24,7 @@
                         <td>
                               <div class="d-flex">
                                     <div class="mx-1">
-                                          <button class="btn btn-dark btn-sm">Ver Produtos</button>
+                                         <a href="{{ route('admin.pescador.produtos', $pescador->id) }}"><button class="btn btn-dark btn-sm">Ver Produtos</button></a>
                                     </div>
                                     <div class="mx-1">
                                           <button class="btn btn-primary btn-sm">Editar</button>
