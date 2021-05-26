@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\EspecieController;
 use App\Http\Controllers\Auth\LoginConsultorController;
 
 use App\Http\Controllers\Admin\EstatiscaDiariaController;
+use App\Http\Controllers\Admin\PescadorController as AdminPescadorController;
 use App\Http\Controllers\Auth\CompradorColetivoController;
 use App\Http\Controllers\Auth\CompradorIndividualController;
 use App\Http\Controllers\Auth\PescadorController;
@@ -51,6 +52,8 @@ Route::middleware(['auth'])->prefix('admin')->group( function () {
     Route::post('especies/update/{id}', [EspecieController::class, 'update'])->name('admin.especies.update');
     Route::any('especies/delete/{id}', [EspecieController::class, 'destroy'])->name('admin.especies.delete');
 
+
+    Route::get('pescador', [AdminPescadorController::class, 'index'])->name('admin.pescador');
 
     Route::get('porto', [PainelController::class, 'porto'])->name('admin.porto');
     Route::get('porto/create', [PortoController::class, 'create'])->name('admin.porto.create');

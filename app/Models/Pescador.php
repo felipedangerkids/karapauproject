@@ -27,4 +27,9 @@ class Pescador extends Authenticatable
         'status',
         'nome_embarcacao',
     ];
+
+    public function produtos()
+    {
+        return $this->hasMany(Produto::class, 'pescador_id');
+    }
 }
