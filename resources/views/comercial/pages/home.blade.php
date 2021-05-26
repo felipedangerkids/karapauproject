@@ -58,7 +58,7 @@
             </div>
       </div>
       @php $comp = $comprador1->count() + $comprador2->count() @endphp
-      @php $comp_incompleto = $imcompletos_col->count() + $imcompletos_ind->count() @endphp
+      @php $comp_incompleto = count($incomplete_col) + count($incomplete_ind) @endphp
       <div class="container mt-3">
             <div class="incompletos px-4">
                   <div class="py-4">

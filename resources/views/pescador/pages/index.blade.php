@@ -36,22 +36,19 @@
                   </div>
             </div>
       </div>
-      <div class="">
-            <div class="container menu-ic">
-                  <div class="row pt-3 text-center">
-                        <div class="col-4 text-center mt-3">
-                              <a href="{{ route('pescador.produto') }}"><i class="fas fa-cart-plus a-1"></i>Vender
-                              </a>
+      <div class="container mt-3">
+            <div class="ativos px-4">
+                  <div class="py-4 text-center">
+                        <a href="">PEIXES A VENDA NA PLATAFORMA</a>
+                  </div>
+                  <div class="d-flex">
+                        <div>
+                              <span>000</span>
                         </div>
-                        <div class="col-4 mt-3">
-                              <a href="{{ route('pescador.produto.list') }}"><i class="fas fa-fish a-2"></i>Produtos</a>
+                        <div>
+                              <a href="">Ver Todos</a>
                         </div>
-                        <div class="col-4 mt-3">
-                              <a href=""><i class="fas fa-wallet a-2"></i>Wallet</a>
-                        </div>
-                        <div class="col-4 mt-3">
-                              <a href=""><i class="fas fa-history a-3"></i>Histórico</a>
-                        </div>
+
                   </div>
             </div>
       </div>

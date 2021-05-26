@@ -22,15 +22,42 @@ class ComercialPainelController extends Controller
         $ativos_coletivo = CompradorColetivo::where('user_id', auth()->guard('consultor')->user()->id)->where('status', 1)->get();
 
         // $imcompletos_ind = CompradorIndividual::where('user_id', '=', 5)->orWhereNull('nif')->orWhereNull('sobrenome')->orWhereNull('telemovel')->orWhereNull('morada')->get();
-        $imcompletos_ind = CompradorIndividual::where('nif')->where('user_id', auth()->guard('consultor')->user()->id)->get()->filter(function ($value) {
-            return !empty($value);
-        });
+        $imcompletos_inds = CompradorIndividual::where('user_id', auth()->guard('consultor')->user()->id)->get();
+   
+        $incomplete_ind = [];
 
-        $imcompletos_col = CompradorColetivo::where('nif')->where('user_id', auth()->guard('consultor')->user()->id)->get()->filter(function ($value) {
-            return !empty($value);
-        });
-        // dd($imcompletos_ind);
-        return view('comercial.pages.home', compact('imcompletos_col', 'imcompletos_ind', 'comprador1', 'comprador2', 'inativos_individual', 'ativos_individual', 'inativos_coletivo', 'ativos_coletivo'));
+        foreach($imcompletos_inds as $imcompletos_ind){
+            $isValid = false;
+            
+            // printf('<pre>%s</pre>', print_r($imcompletos_ind[]));
+            foreach(json_decode(json_encode($imcompletos_ind)) as $key => $value){
+                // printf('<pre>%s</pre>', print_r($key.'=>'.$value, 1));
+                if($value == null) $isValid = true;
+           
+            }
+            if($isValid){
+                $incomplete_ind[] = $imcompletos_ind;
+            }
+        }
+
+        $imcompletos_col = CompradorColetivo::where('user_id', auth()->guard('consultor')->user()->id)->get();
+
+
+        $incomplete_col = [];
+
+        foreach ($imcompletos_col as $imcompletos_col) {
+            $isValid = false;
+
+            // printf('<pre>%s</pre>', print_r($imcompletos_ind[]));
+            foreach (json_decode(json_encode($imcompletos_col)) as $key => $value) {
+                // printf('<pre>%s</pre>', print_r($key.'=>'.$value, 1));
+                if ($value == null) $isValid = true;
+            }
+            if ($isValid) {
+                $incomplete_col[] = $imcompletos_col;
+            }
+        }
+        return view('comercial.pages.home', compact('incomplete_col', 'incomplete_ind', 'comprador1', 'comprador2', 'inativos_individual', 'ativos_individual', 'inativos_coletivo', 'ativos_coletivo'));
     }
 
     public function compradorCad()
@@ -75,14 +102,41 @@ class ComercialPainelController extends Controller
 
     public function incompleto()
     {
-        $imcompletos_ind = CompradorIndividual::where('nif')->where('user_id', auth()->guard('consultor')->user()->id)->get()->filter(function ($value) {
-            return !empty($value);
-        });
+        $imcompletos_inds = CompradorIndividual::where('user_id', auth()->guard('consultor')->user()->id)->get();
 
-        $imcompletos_col = CompradorColetivo::where('nif')->where('user_id', auth()->guard('consultor')->user()->id)->get()->filter(function ($value) {
-            return !empty($value);
-        });
-        return view('comercial.pages.lead-list', compact('imcompletos_col', 'imcompletos_ind'));
+        $incomplete_ind = [];
+
+        foreach ($imcompletos_inds as $imcompletos_ind) {
+            $isValid = false;
+
+            // printf('<pre>%s</pre>', print_r($imcompletos_ind[]));
+            foreach (json_decode(json_encode($imcompletos_ind)) as $key => $value) {
+                // printf('<pre>%s</pre>', print_r($key.'=>'.$value, 1));
+                if ($value == null) $isValid = true;
+            }
+            if ($isValid) {
+                $incomplete_ind[] = $imcompletos_ind;
+            }
+        }
+
+        $imcompletos_col = CompradorColetivo::where('user_id', auth()->guard('consultor')->user()->id)->get();
+
+
+        $incomplete_col = [];
+
+        foreach ($imcompletos_col as $imcompletos_col) {
+            $isValid = false;
+
+            // printf('<pre>%s</pre>', print_r($imcompletos_ind[]));
+            foreach (json_decode(json_encode($imcompletos_col)) as $key => $value) {
+                // printf('<pre>%s</pre>', print_r($key.'=>'.$value, 1));
+                if ($value == null) $isValid = true;
+            }
+            if ($isValid) {
+                $incomplete_col[] = $imcompletos_col;
+            }
+        }
+        return view('comercial.pages.lead-list', compact('incomplete_col', 'incomplete_ind'));
     }
 
     public function lead()

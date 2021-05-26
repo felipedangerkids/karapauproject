@@ -30,7 +30,7 @@
                   <p>STATUS</p>
             </div>
       </div>
-      @foreach ($imcompletos_ind as $comp)
+      @foreach ($incomplete_ind as $comp)
       <div class="ativo my-3 text-center py-3">
             <div class="container row">
                   <div class="col-4 dia">
@@ -45,7 +45,7 @@
             </div>
       </div>
       @endforeach
-      @foreach ($imcompletos_col as $comp)
+      @foreach ($incomplete_col as $comp)
       <div class="ativo my-3 text-center py-3">
             <div class="container row">
                   <div class="col-4 dia">
