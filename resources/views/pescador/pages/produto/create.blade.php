@@ -36,8 +36,8 @@
             <div class="mt-3">
                   <div class="form-group input-material">
                         <select class="form-control" name="especie_id" id="name_field">
-                              @foreach ($especies as $especie)
                               <option>Escolha a Espécie</option>
+                              @foreach ($especies as $especie)
                               <option value="{{ $especie->id }}">{{ $especie->nome_portugues }}</option>
                               @endforeach
 
@@ -47,8 +47,8 @@
                   <div class="form-group input-material">
 
                         <select class="form-control" name="porto_id" id="exampleFormControlSelect1">
-                              @foreach ($portos as $porto)
                               <option>Escolha o Porto</option>
+                              @foreach ($portos as $porto)
                               <option value="{{ $porto->id }}">{{ $porto->nome }}</option>
                               @endforeach
 
