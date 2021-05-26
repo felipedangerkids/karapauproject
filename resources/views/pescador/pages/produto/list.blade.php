@@ -29,7 +29,60 @@
       </ul>
 </div>
 @endif
-<div>
+
+<div class="list ">
+      <div class="container">
+            <div class="d-flex justify-content-around text-center">
+                  <div>
+                        <p>Espécie</p>
+                  </div>
+                  <div>
+                        <p>Quant</p>
+                  </div>
+                  <div>
+                        <p>Valor</p>
+                  </div>
+                  <div>
+                        <p>Tempo</p>
+                  </div>
+            </div>
+      </div>
+      @foreach ($produtos as $produto)
+      <div class="repeat">
+            <div class="for">
+                  <div class="container">
+                        <div class="d-flex  justify-content-around text-center">
+                              <div>
+                                    <h5>{{ $produto->especies->nome_portugues }}</h5>
+                              </div>
+                              <div>
+                                    <h5>{{ $produto->quantidade }}{{ $produto->unidade }}</h5>
+                              </div>
+                              <div>
+                                    <h5>{{ $produto->preco }}</h5>
+                              </div>
+                              <div>
+                                    <div id="clock"
+                                          data-countdown="{{ date('Y-m-d H:i:s', strtotime("+1 days", strtotime($produto->created_at))) }}">
+
+                                    </div>
+                              </div>
+                        </div>
+
+                  </div>
+
+            </div>
+            <div class="">
+                  <div class="remove">
+                        <a href="">REMOVER</a>
+                  </div>
+            </div>
+      </div>
+      @endforeach
+</div>
+
+
+{{-- <div>
       <table class="table">
             <thead>
                   <tr>
@@ -45,22 +98,21 @@
                   <tr>
                         <th scope="row">
                               {{ $produto->especies->nome_portugues }}
-                        </th>
-                        <td><img width="40" src="{{ url('storage/especies/'.$produto->especies->image) }}" alt=""></td>
-                        <td>{{ $produto->preco }}</td>
-                        <td>
-                              <div id="clock" data-countdown="{{ date('Y-m-d H:i:s', strtotime("+1 days", strtotime($produto->created_at))) }}"> </div>
-                        </td>
-                        <td>
-                              <button disabled class="btn btn-danger">Apagar</button>
-                        </td>
-                  </tr>
-                  @endforeach
+</th>
+<td><img width="40" src="{{ url('storage/especies/'.$produto->especies->image) }}" alt=""></td>
+<td>{{ $produto->preco }}</td>
+<td>
+      <div id="clock" data-countdown="{{ date('Y-m-d H:i:s', strtotime("+1 days", strtotime($produto->created_at))) }}">
+      </div>
+</td>
+<td>
+      <button disabled class="btn btn-danger">Apagar</button>
+</td>
+</tr>
+@endforeach
 
-            </tbody>
-      </table>
-</div>
-<script>
+</tbody>
+</table>
+</div> --}}
 
-</script>
 @endsection

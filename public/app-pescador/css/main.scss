@@ -218,3 +218,56 @@
             text-transform: uppercase;
       }
 }
+.list {
+      padding-bottom: 80px;
+      p {
+            font-weight: 800;
+            font-size: 15.5798px;
+            line-height: 23px;
+            color: #ffffff;
+            text-transform: uppercase;
+      }
+
+      h5 {
+            font-weight: 500;
+            font-size: 15.5798px;
+            line-height: 23px;
+            color: #ffffff;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+      }
+
+      .for {
+            background-color: #0472b7;
+            padding: 10px 0;
+      }
+      .remove {
+            width: 155px;
+            padding: 10px 50px;
+            background: #de1313;
+            border-radius: 18px;
+            margin: auto;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            a {
+                  font-weight: 800;
+                  font-size: 16px;
+                  line-height: 32px;
+                  color: white;
+            }
+      }
+}
+#clock {
+      
+            font-weight: 500;
+            font-size: 15.5798px;
+            line-height: 23px;
+            color: #ffffff;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+      
+}
