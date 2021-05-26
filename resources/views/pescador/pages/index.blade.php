@@ -74,7 +74,7 @@
                         <h3 href="">PEDIDOS QUE VOCÊ RECEBEU</h3>
                   </div>
                   <div class="button text-center">
-                        <a href="">INICIAR VENDA</a>
+                        <a href="{{ route('pescador.produto') }}">INICIAR VENDA</a>
                   </div>
             </div>
       </div>
