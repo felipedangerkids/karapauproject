@@ -73,8 +73,8 @@
 
             </div>
             <div class="">
-                  <div class="remove">
-                        <a  href="{{ route('pescador.produto.delete', $produto->id) }}">REMOVER</a>
+                  <div class="text-center mt-4 mb-4">
+                        <a class="btn btn-danger bg-danger text-white" href="{{ route('pescador.produto.delete', $produto->id) }}">Apagar</a>
                   </div>
             </div>
       </div>
