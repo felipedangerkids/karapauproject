@@ -37,7 +37,7 @@
                               <a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
                         </li>
                         <li>
-                              <a href="{{ route('admin.pescador') }}"><i class="fas fa-boxes"></i> Produtos</a>
+                              <a href="{{ route('admin.pescador') }}"><i class="fas fa-boxes"></i> Pescadores</a>
                         </li>
                         <li>
                               <a href="#"><i class="fas fa-box"></i> Encomendas</a>
