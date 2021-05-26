@@ -39,7 +39,7 @@
       <div class="container mt-3">
             <div class="ativos px-4">
                   <div class="py-4 text-center">
-                        <a href="">PEIXES A VENDA NA PLATAFORMA</a>
+                        <h3 href="">PEIXES A VENDA NA PLATAFORMA</h3>
                   </div>
                   <div class="d-flex">
                         <div>
@@ -49,6 +49,32 @@
                               <a href="">Ver Todos</a>
                         </div>
 
+                  </div>
+            </div>
+      </div>
+      <div class="container mt-3">
+            <div class="inativos px-4">
+                  <div class="py-4 text-center">
+                        <h3 href="">PEDIDOS QUE VOCÊ RECEBEU</h3>
+                  </div>
+                  <div class="d-flex">
+                        <div>
+                              <span>000</span>
+                        </div>
+                        <div>
+                              <a href="">Ver Pedidos</a>
+                        </div>
+
+                  </div>
+            </div>
+      </div>
+      <div class="container mt-3">
+            <div class="peixes px-4">
+                  <div class="py-4 text-center">
+                        <h3 href="">PEDIDOS QUE VOCÊ RECEBEU</h3>
+                  </div>
+                  <div class="button text-center">
+                        <a href="">INICIAR VENDA</a>
                   </div>
             </div>
       </div>

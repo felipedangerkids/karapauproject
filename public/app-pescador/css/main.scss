@@ -1,3 +1,7 @@
+.main{
+      padding-bottom: 50px;
+}
+
 .nav-tabs .nav-link {
       color: white !important;
       font-weight: 600;
@@ -11,16 +15,95 @@
       background-color: white;
       height: 177px;
 
-      a {
+      h3 {
             color: #03568a;
             font-weight: 800;
             font-size: 20px;
             line-height: 19px;
             text-align: center;
       }
-      span{
-            background-color: #35A40E;
-            padding: 10px;
+      a {
+            background-color: #35a40e;
+            padding: 14px;
             border-radius: 18px;
+            color: white;
+            font-size: 22px;
+            font-weight: 700;
+            margin-left: 18px;
+      }
+      span {
+            background-color: #35a40e;
+            padding: 32px 25px;
+            border-radius: 50%;
+            color: white;
+            font-size: 28px;
+            font-weight: 700;
+      }
+}
+.inativos {
+      background-color: white;
+      height: 177px;
+
+      h3 {
+            color: #03568a;
+            font-weight: 800;
+            font-size: 20px;
+            line-height: 19px;
+            text-align: center;
+      }
+      a {
+            background-color: #de1313;
+            padding: 14px;
+            border-radius: 18px;
+            color: white;
+            font-size: 22px;
+            font-weight: 700;
+            margin-left: 18px;
+      }
+      span {
+            background-color: #de1313;
+            padding: 32px 25px;
+            border-radius: 50%;
+            color: white;
+            font-size: 28px;
+            font-weight: 700;
+      }
+}
+.peixes {
+      background-color: white;
+      height: 137px;
+      border-radius: 15px;
+
+      h3 {
+            color: #03568a;
+            font-weight: 800;
+            font-size: 20px;
+            line-height: 19px;
+            text-align: center;
+      }
+      a {
+            background-color: #de1313;
+            padding: 14px;
+            border-radius: 18px;
+            color: white;
+            font-size: 22px;
+            font-weight: 700;
+            margin-left: 18px;
+      }
+      span {
+            background-color: #de1313;
+            padding: 32px 25px;
+            border-radius: 50%;
+            color: white;
+            font-size: 28px;
+            font-weight: 700;
+      }
+      .button {
+            a {
+                  width: 237px;
+                  height: 47px;
+                  background: #03568a;
+                  border-radius: 18px;
+            }
       }
 }
