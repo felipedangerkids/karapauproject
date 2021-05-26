@@ -52,7 +52,7 @@
             <div class="for">
                   <div class="container">
                         <div class="d-flex  justify-content-around text-center">
-                              <div>
+                              <div class="nome">
                                     <h5 class="text-center">{{ $produto->especies->nome_portugues }}</h5>
                               </div>
                               <div >
