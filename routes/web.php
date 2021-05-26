@@ -135,4 +135,5 @@ Route::middleware('auth:pescador')->group(function(){
     Route::get('produto', [ProdutoController::class, 'index'])->name('pescador.produto');
     Route::post('produto-store', [ProdutoController::class, 'store'])->name('pescador.produto.store');
     Route::get('produto-list', [ProdutoController::class, 'list'])->name('pescador.produto.list');
+    Route::get('pescador-logout', [PescadorController::class, 'logout'])->name('pescador.logout');
 });

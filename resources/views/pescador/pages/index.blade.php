@@ -15,7 +15,7 @@
                         <h4>Olá, {{ auth()->user()->name  }} {{ auth()->user()->lastname  }}</h4>
                   </div>
                   <div>
-                        <a href="{{ route('consultor.logout') }}"> <span class="iconify" data-inline="false"
+                        <a href="{{ route('pescador.logout') }}"> <span class="iconify" data-inline="false"
                                     data-icon="ls:logout"
                                     style="color: #ffffff; font-size: 38.42677688598633px;"></span></a>
                   </div>
