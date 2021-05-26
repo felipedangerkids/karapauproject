@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app-pescador')
 
 @section('content')
 
@@ -6,10 +6,29 @@
 <div class="header">
       <div class="container">
             <div class="py-4 text-center">
-                  <img class="img-fluid " src="{{ url('painel/img/logo.svg') }}" alt="">
+                  <img class="img-fluid " src="{{ url('app-comercial/img/logo-img.svg') }}" alt="">
             </div>
       </div>
 </div>
+<div>
+      <div class="d-flex justify-content-between container voltar py-4 mb-5">
+            <div>
+                  <a href="javascript:history.back()"> <i class="fas fa-chevron-left"></i> Voltar</a>
+            </div>
+            <div>
+                  <span>LISTA DE PEIXES</span>
+            </div>
+      </div>
+</div>
+@if ($errors->any())
+<div class="alert alert-danger">
+      <ul>
+            @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach
+      </ul>
+</div>
+@endif
 <div>
       <table class="table">
             <thead>
