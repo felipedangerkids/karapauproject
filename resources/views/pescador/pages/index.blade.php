@@ -46,7 +46,7 @@
                               <span>000</span>
                         </div>
                         <div>
-                              <a href="">Ver Todos</a>
+                              <a href="{{ route('pescador.produto.list') }}">Ver Todos</a>
                         </div>
 
                   </div>
