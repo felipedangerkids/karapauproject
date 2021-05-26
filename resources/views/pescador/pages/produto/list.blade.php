@@ -53,7 +53,7 @@
                   <div class="container">
                         <div class="d-flex  justify-content-around text-center">
                               <div>
-                                    <h5>{{ $produto->especies->nome_portugues }}</h5>
+                                    <h5 class="nome">{{ $produto->especies->nome_portugues }}</h5>
                               </div>
                               <div>
                                     <h5>{{ $produto->quantidade }}{{ $produto->unidade }}</h5>

@@ -232,13 +232,16 @@
             font-weight: 500;
             font-size: 15.5798px;
             line-height: 23px;
-            padding: 0 20px;
+
             color: #ffffff;
             position: relative;
             display: block;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+      }
+      .nome {
+            padding: 0 40px;
       }
 
       .for {
@@ -262,14 +265,12 @@
       }
 }
 #clock {
-      
-            font-weight: 500;
-            font-size: 15.5798px;
-            line-height: 23px;
-            color: #ffffff;
-            position: relative;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-      
+      font-weight: 500;
+      font-size: 15.5798px;
+      line-height: 23px;
+      color: #ffffff;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
 }
