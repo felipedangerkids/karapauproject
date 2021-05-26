@@ -44,6 +44,6 @@
             </tbody>
       </table>
 
-
+      {{ $pescadores->links() }}
 </div>
 @endsection

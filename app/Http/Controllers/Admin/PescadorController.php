@@ -16,7 +16,7 @@ class PescadorController extends Controller
     public function index()
     {
 
-        $pescadores = Pescador::with('produtos')->get();
+        $pescadores = Pescador::with('produtos')->paginate(15);
 
         return view('painel.pages.pescador.index', compact('pescadores'));
     }
