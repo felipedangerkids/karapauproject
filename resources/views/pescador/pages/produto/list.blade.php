@@ -74,7 +74,7 @@
             </div>
             <div class="">
                   <div class="remove">
-                        <a href="">REMOVER</a>
+                        <a onclick="return confirm('Você tem certeza que deseja deletar este produto?');" href="{{ route('pescador.produto.delete', $produto->id) }}">REMOVER</a>
                   </div>
             </div>
       </div>
