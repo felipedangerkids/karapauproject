@@ -53,15 +53,15 @@
                   <div class="container">
                         <div class="d-flex  justify-content-around text-center">
                               <div>
-                                    <h5 class="nome">{{ $produto->especies->nome_portugues }}</h5>
+                                    <h5 class="text-center">{{ $produto->especies->nome_portugues }}</h5>
                               </div>
-                              <div>
+                              <div >
                                     <h5>{{ $produto->quantidade }}{{ $produto->unidade }}</h5>
                               </div>
-                              <div>
+                              <div >
                                     <h5>{{ $produto->preco }}</h5>
                               </div>
-                              <div>
+                              <div >
                                     <div id="clock"
                                           data-countdown="{{ date('Y-m-d H:i:s', strtotime("+1 days", strtotime($produto->created_at))) }}">
 
