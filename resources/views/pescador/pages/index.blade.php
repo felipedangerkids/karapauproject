@@ -43,7 +43,7 @@
                   </div>
                   <div class="d-flex">
                         <div>
-                              <span>000</span>
+                              <span>00{{ $produtos->count() }}</span>
                         </div>
                         <div>
                               <a href="{{ route('pescador.produto.list') }}">Ver Todos</a>
