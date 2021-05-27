@@ -57,6 +57,7 @@ Route::middleware(['auth'])->prefix('admin')->group( function () {
     Route::get('pescador/produtos/{id}', [AdminPescadorController::class, 'showProducts'])->name('admin.pescador.produtos');
     Route::get('pescador/edit/{id}', [AdminPescadorController::class, 'show'])->name('admin.pescador.edit');
     Route::post('pescador/update/{id}', [AdminPescadorController::class, 'update'])->name('admin.pescador.update');
+    Route::any('pescador/update/status/{id}', [AdminPescadorController::class, 'updateStatus'])->name('admin.pescador.update.status');
 
     Route::get('porto', [PainelController::class, 'porto'])->name('admin.porto');
     Route::get('porto/create', [PortoController::class, 'create'])->name('admin.porto.create');

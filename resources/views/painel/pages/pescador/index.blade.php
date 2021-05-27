@@ -24,13 +24,26 @@
                         <td>
                               <div class="d-flex">
                                     <div class="mx-1">
-                                         <a href="{{ route('admin.pescador.produtos', $pescador->id) }}"><button class="btn btn-dark btn-sm">Ver Produtos</button></a>
+                                          <a href="{{ route('admin.pescador.produtos', $pescador->id) }}"><button
+                                                      class="btn btn-dark btn-sm">Ver Produtos</button></a>
                                     </div>
                                     <div class="mx-1">
-                                         <a href="{{ route('admin.pescador.edit', $pescador->id) }}"><button class="btn btn-primary btn-sm">Editar</button></a>
+                                          <a href="{{ route('admin.pescador.edit', $pescador->id) }}"><button
+                                                      class="btn btn-primary btn-sm">Editar</button></a>
                                     </div>
                                     <div class="mx-1">
-                                          <button class="btn btn-danger btn-sm">Inativar</button>
+                                          <form action="{{ route('admin.pescador.update.status', $pescador->id) }}">
+                                                @csrf
+                                                @if($pescador->status == 0)
+                                                <input type="hidden" value="1" name="status">
+                                                <button type="submit" class="btn btn-danger btn-sm">Desativar</button>
+                                                @else
+                                                <input type="hidden" value="0" name="status">
+                                                <button type="submit" class="btn btn-success btn-sm">Ativar</button>
+                                                @endif
+
+
+                                          </form>
                                     </div>
                                     <div class="mx-1">
                                           <button class="btn btn-info btn-sm">Ver Encomendas</button>

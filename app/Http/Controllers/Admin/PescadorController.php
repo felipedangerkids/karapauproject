@@ -101,12 +101,17 @@ class PescadorController extends Controller
         return redirect()->route('admin.pescador')->with('success', 'Pescador alterado com sucesso!');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
+    public function updateStatus(Request $request, $id)
+    {
+        $pescador = Pescador::find($id);
+        $pescador->status = $request->get('status');
+        $pescador->save();
+        return redirect()->back();
+
+    }
+
+
     public function destroy($id)
     {
         //
