@@ -31,5 +31,9 @@ class Produto extends Model
     {
         return $this->belongsTo(Especie::class, 'especie_id');
     }
+    public function portos()
+    {
+        return $this->belongsTo(Porto::class, 'porto_id');
+    }
     
 }

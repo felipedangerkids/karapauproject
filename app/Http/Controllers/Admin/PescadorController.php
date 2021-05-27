@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Porto;
+use App\Models\Especie;
 use App\Models\Produto;
 use App\Models\Pescador;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Especie;
 use Illuminate\Support\Facades\Hash;
 
 class PescadorController extends Controller
@@ -115,9 +116,28 @@ class PescadorController extends Controller
     public function editProduto($id)
     {
         $especies = Especie::all();
-        $produto = Produto::with('especies')->find($id);
+        $portos = Porto::all();
+        $produto = Produto::with('especies', 'portos')->find($id);
 
-        return view('painel.pages.pescador.edit-produto', compact('produto', 'especies'));
+        return view('painel.pages.pescador.edit-produto', compact('produto', 'especies', 'portos'));
+    }
+
+    public function updateProduto(Request $request, $id)
+    {
+        $pescador = Produto::find($id);
+
+        $pescador->especie_id =     $request->get('especie_id');
+        $pescador->porto_id = $request->get('porto_id');
+        $pescador->embarcacao = $request->get('embarcacao');
+        $pescador->zona = $request->get('zona');
+        $pescador->tamanho = $request->get('tamanho');
+        $pescador->quantidade = $request->get('quantidade');
+        $pescador->preco = $request->get('preco');
+        $pescador->unidade = $request->get('unidade');
+
+        $pescador->save();
+
+        return redirect()->route('admin.pescador')->with('success', 'Produto alterado com sucesso!');
     }
 
     public function updateProdutoStatus(Request $request, $id)
