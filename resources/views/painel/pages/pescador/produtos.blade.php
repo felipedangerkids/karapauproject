@@ -30,7 +30,9 @@
                         </td>
                         <td>
                               <div class="d-flex">
-
+                                    <div class="mx-1">
+                                         <a href="{{ route('admin.pescador.produto.edit', $item->id) }}"> <button class="btn btn-info btn-sm">Editar</button></a>
+                                    </div>
                                     <div class="mx-1">
                                           <form action="{{ route('admin.pescador.produto.status', $item->id) }}">
                                                 @csrf

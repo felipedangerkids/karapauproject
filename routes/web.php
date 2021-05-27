@@ -59,6 +59,7 @@ Route::middleware(['auth'])->prefix('admin')->group( function () {
     Route::post('pescador/update/{id}', [AdminPescadorController::class, 'update'])->name('admin.pescador.update');
     Route::any('pescador/update/status/{id}', [AdminPescadorController::class, 'updateStatus'])->name('admin.pescador.update.status');
     Route::any('pescador/update/produto/status/{id}', [AdminPescadorController::class, 'updateProdutoStatus'])->name('admin.pescador.produto.status');
+    Route::get('pescador/update/produto/{id}', [AdminPescadorController::class, 'editProduto'])->name('admin.pescador.produto.edit');
 
 
 

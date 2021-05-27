@@ -6,6 +6,7 @@ use App\Models\Produto;
 use App\Models\Pescador;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Especie;
 use Illuminate\Support\Facades\Hash;
 
 class PescadorController extends Controller
@@ -110,6 +111,15 @@ class PescadorController extends Controller
         return redirect()->back();
 
     }
+
+    public function editProduto($id)
+    {
+        $especies = Especie::all();
+        $produto = Produto::with('especies')->find($id);
+
+        return view('painel.pages.pescador.edit-produto', compact('produto', 'especies'));
+    }
+
     public function updateProdutoStatus(Request $request, $id)
     {
         $produto = Produto::find($id);
