@@ -27,7 +27,7 @@
                                          <a href="{{ route('admin.pescador.produtos', $pescador->id) }}"><button class="btn btn-dark btn-sm">Ver Produtos</button></a>
                                     </div>
                                     <div class="mx-1">
-                                          <button class="btn btn-primary btn-sm">Editar</button>
+                                         <a href="{{ route('admin.pescador.edit', $pescador->id) }}"><button class="btn btn-primary btn-sm">Editar</button></a>
                                     </div>
                                     <div class="mx-1">
                                           <button class="btn btn-danger btn-sm">Inativar</button>

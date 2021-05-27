@@ -6,6 +6,7 @@ use App\Models\Produto;
 use App\Models\Pescador;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
 
 class PescadorController extends Controller
 {
@@ -58,7 +59,9 @@ class PescadorController extends Controller
      */
     public function show($id)
     {
-        //
+        $pescador = Pescador::findOrFail($id);
+
+        return view('painel.pages.pescador.edit-pescador', compact('pescador'));
     }
 
     /**
@@ -81,7 +84,21 @@ class PescadorController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $pescador = Pescador::find($id);
+
+        $pescador->name =     $request->get('name');
+        $pescador->lastname = $request->get('lastname');
+        $pescador->email = $request->get('email');
+        $pescador->password = Hash::make($request->get('password'));
+        $pescador->telefone = $request->get('telefone');
+        $pescador->morada = $request->get('morada');
+        $pescador->nif = $request->get('nif');
+        $pescador->iban = $request->get('iban');
+        $pescador->nome_embarcacao = $request->get('nome_embarcacao');
+
+        $pescador->save();
+
+        return redirect()->route('admin.pescador')->with('success', 'Pescador alterado com sucesso!');
     }
 
     /**
