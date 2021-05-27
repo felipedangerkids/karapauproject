@@ -24,25 +24,36 @@
                         <td>{{ $item->preco }}</td>
                         <td>
                               <div id="clock"
-                                          data-countdown="{{ date('Y-m-d H:i:s', strtotime("+1 days", strtotime($item->created_at))) }}">
+                                    data-countdown="{{ date('Y-m-d H:i:s', strtotime("+1 days", strtotime($item->created_at))) }}">
 
                               </div>
                         </td>
                         <td>
                               <div class="d-flex">
-                      
-                              <div class="mx-1">
-                                    <button class="btn btn-danger btn-sm">Inativar</button>
+
+                                    <div class="mx-1">
+                                          <form action="{{ route('admin.pescador.produto.status', $item->id) }}">
+                                                @csrf
+                                                @if($item->status == 0)
+                                                <input type="hidden" value="1" name="status">
+                                                <button type="submit" class="btn btn-danger btn-sm">Desativar</button>
+                                                @else
+                                                <input type="hidden" value="0" name="status">
+                                                <button type="submit" class="btn btn-success btn-sm">Ativar</button>
+                                                @endif
+
+
+                                          </form>
+                                    </div>
+
                               </div>
-                             
-                        </div>
-</td>
-</tr>
+                        </td>
+                  </tr>
 
-@endforeach
+                  @endforeach
 
-</tbody>
-</table>
+            </tbody>
+      </table>
 
 
 </div>

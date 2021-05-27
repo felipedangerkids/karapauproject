@@ -110,6 +110,14 @@ class PescadorController extends Controller
         return redirect()->back();
 
     }
+    public function updateProdutoStatus(Request $request, $id)
+    {
+        $produto = Produto::find($id);
+        $produto->status = $request->get('status');
+        $produto->save();
+        return redirect()->back();
+
+    }
 
 
     public function destroy($id)
