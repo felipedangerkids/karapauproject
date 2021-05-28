@@ -40,7 +40,7 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
-        
+
         'consultor' => [
             'driver' => 'session',
             'provider' => 'consultors',
@@ -50,6 +50,16 @@ return [
             'driver' => 'session',
             'provider' => 'pescadores',
         ],
+        'compradorind' => [
+            'driver' => 'session',
+            'provider' => 'compredoresinds',
+        ],
+
+        'buyer' => [
+            'driver' => 'session',
+            'provider' => 'buyers',
+        ],
+
 
         'api' => [
             'driver' => 'token',
@@ -84,10 +94,22 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\Consultor::class,
         ],
+
         'pescadores' => [
             'driver' => 'eloquent',
             'model' => App\Models\Pescador::class,
         ],
+
+        'compredoresinds' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\CompradorIndividual::class,
+        ],
+        'buyers' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\CompradorColetivo::class,
+        ],
+
+
 
         // 'users' => [
         //     'driver' => 'database',

@@ -16,9 +16,11 @@ use App\Http\Controllers\Auth\CompradorColetivoController;
 use App\Http\Controllers\Auth\CompradorIndividualController;
 use App\Http\Controllers\Auth\PescadorController;
 use App\Http\Controllers\Auth\PescadorRegController;
+use App\Http\Controllers\Auth\StoreLoginController;
 use App\Http\Controllers\Comercial\ComercialPainelController;
 use App\Http\Controllers\Pescador\PainelPescadorController;
 use App\Http\Controllers\Pescador\ProdutoController;
+use App\Http\Controllers\Store\StoreController;
 
 /*
 |--------------------------------------------------------------------------
@@ -149,4 +151,12 @@ Route::middleware('auth:pescador')->group(function(){
     Route::any('produto-delete/{id}', [ProdutoController::class, 'destroy'])->name('pescador.produto.delete');
     Route::get('produto-list', [ProdutoController::class, 'list'])->name('pescador.produto.list');
     Route::get('pescador-logout', [PescadorController::class, 'logout'])->name('pescador.logout');
+});
+
+Route::get('store-login-page', [StoreLoginController::class, 'index'])->name('store.login');
+Route::post('store-login', [StoreLoginController::class, 'login'])->name('store.login.post');
+
+Route::middleware('auth:compradorind')->group(function(){
+    Route::get('store-index', [StoreController::class, 'index'])->name('store.index');
+    Route::get('store-porto', [StoreController::class, 'porto'])->name('store.porto');
 });
