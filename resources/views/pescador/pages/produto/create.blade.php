@@ -56,9 +56,15 @@
                   </div>
 
                   <div class="form-group input-material">
-                        <input type="text" class="form-control" value="{{ auth()->user()->nome_embarcacao }}"
-                              name="embarcacao">
-                        <label for="name-field">Nome da Embarcação</label>
+                    <select class="form-control" name="embarcacao" id="exampleFormControlSelect1">
+                        <option>Escolha a Embarcação</option>
+                     
+                        <option value="{{ auth()->user()->nome_embarcacao }}">{{ auth()->user()->nome_embarcacao }}</option>
+                        <option value="{{ auth()->user()->nome_embarcacao2 }}">{{ auth()->user()->nome_embarcacao2 }}</option>
+                        <option value="{{ auth()->user()->nome_embarcacao3 }}">{{ auth()->user()->nome_embarcacao3 }}</option>
+                   
+                  
+                  </select>
                   </div>
                   <div class="form-group input-material">
                         <input type="text" class="form-control" name="zona">
@@ -118,7 +124,7 @@
             var input1 = $("#price").val();
             var valor = 0;
             var value = input1 - input1 * (40/100);
-            var input2 = $("#percent").val(value);
+            var input2 = $("#percent").val("Vai receber"+" "+value);
             }
 </script>
 @endsection

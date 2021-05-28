@@ -56,6 +56,8 @@ class PescadorRegController extends Controller
             'iban' =>           $request->iban,
             'porto' =>          $request->porto,
             'nome_embarcacao' => $request->nome_embarcacao,
+            'nome_embarcacao2' => $request->nome_embarcacao2,
+            'nome_embarcacao3' => $request->nome_embarcacao3,
 
         ]);
 

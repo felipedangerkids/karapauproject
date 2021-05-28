@@ -112,7 +112,15 @@
                               </div>
                               <div class="form-group input-material">
                                     <input type="text" class="form-control" name="nome_embarcacao" id="name-field">
-                                    <label for="name-field">Nome da Embarcação</label>
+                                    <label for="name-field">Nome da Embarcação 1</label>
+                              </div>
+                              <div class="form-group input-material">
+                                    <input type="text" class="form-control" name="nome_embarcacao2" id="name-field">
+                                    <label for="name-field">Nome da Embarcação 2</label>
+                              </div>
+                              <div class="form-group input-material">
+                                    <input type="text" class="form-control" name="nome_embarcacao3" id="name-field">
+                                    <label for="name-field">Nome da Embarcação 3</label>
                               </div>
                               <div class="btn-box py-4"><button class="btn btn-submit" type="submit">Cadastrar</button>
 

@@ -26,6 +26,8 @@ class Pescador extends Authenticatable
         'fishing_zone',
         'status',
         'nome_embarcacao',
+        'nome_embarcacao2',
+        'nome_embarcacao3',
     ];
 
     public function produtos()
