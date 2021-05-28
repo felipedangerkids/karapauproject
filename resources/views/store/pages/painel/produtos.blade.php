@@ -13,7 +13,7 @@
 <div class="container">
       <div class="d-flex top mt-3 justify-content-around">
             <div>
-                  <h3>Escolha<br> um Porto</h3>
+                  <h3>{{ $porto->nome }}</h3>
             </div>
             <div>
                   <button class="btn btn-info">FILTRAR</button>
@@ -22,10 +22,13 @@
 
       <div class="portos mt-4">
             <div class="row">
-                  @foreach ($portos as $porto)
+                  @foreach ($produtos as $produto)
                   <div class="col-6">
-                      <a href="{{ route('store.produto', $porto->id) }}"> <img src="{{ url('storage/portos/'.$porto->image) }}" alt=""></a>
-                        <p>{{ $porto->nome }}</p>
+                      
+                        <img src="{{ url('storage/especies/'.$produto->especies->image) }}" alt="">
+                        <p>{{ $produto->especies->nome_portugues }}</p>
+                        <p id="clock"
+                                          data-countdown="{{ date('Y-m-d H:i:s', strtotime("+1 days", strtotime($produto->created_at))) }}"></p>
                   </div>
                   @endforeach
 
@@ -34,5 +37,6 @@
             </div>
       </div>
 </div>
+
 
 @endsection

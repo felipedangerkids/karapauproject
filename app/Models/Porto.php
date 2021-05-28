@@ -24,6 +24,11 @@ class Porto extends Model
     {
         return $this->belongsToMany(Especie::class, EspecieToPorto::class, 'porto_id', 'especie_id');
     }
+
+    public function produtos()
+    {
+        return $this->hasMany(Produto::class, 'porto_id');
+    }
     // public function estatisticas()
     // {
     //     return $this->belongsToMany(Especie::class,  EstatisticaDiaria::class, 'porto_id', 'especie_id');

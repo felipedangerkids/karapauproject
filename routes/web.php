@@ -159,4 +159,5 @@ Route::post('store-login', [StoreLoginController::class, 'login'])->name('store.
 Route::middleware('auth:compradorind')->group(function(){
     Route::get('store-index', [StoreController::class, 'index'])->name('store.index');
     Route::get('store-porto', [StoreController::class, 'porto'])->name('store.porto');
+    Route::get('store-produto/{id}', [StoreController::class, 'produtos'])->name('store.produto');
 });

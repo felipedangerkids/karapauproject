@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Store;
 
-use App\Http\Controllers\Controller;
 use App\Models\Porto;
+use App\Models\Produto;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class StoreController extends Controller
 {
@@ -17,5 +18,12 @@ class StoreController extends Controller
     {
         $portos = Porto::all();
         return view('store.pages.painel.porto', compact('portos'));
+    }
+
+    public function produtos($id)
+    {
+        $produtos = Produto::where('porto_id', $id)->with('especies')->get();
+        $porto = Porto::find($id);
+        return view('store.pages.painel.produtos', compact('produtos', 'porto'));
     }
 }
