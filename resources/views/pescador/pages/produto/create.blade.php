@@ -97,7 +97,7 @@
                   </div>
                   <div id="unidade" class="form-group d-none input-material">
                         <input type="number" class="form-control" name="unidade">
-                        <label for="name-field">Coloque aqui quantas unidades</label>
+                        <label for="name-field">Quantos peixes tem</label>
                   </div>
                   <div class="form-group input-material">
                         <input type="number" id="price" class="form-control" onkeyup="getPriceValue()" name="preco">
