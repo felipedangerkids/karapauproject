@@ -23,7 +23,7 @@
       <div class="portos produtos mt-4">
             <div class="row">
                   @foreach ($produtos as $produto)
-                  <div class="col-6">
+                  <div class="col-6 my-4">
 
                         <img src="{{ url('storage/especies/'.$produto->especies->image) }}" alt="">
                         <p>{{ $produto->especies->nome_portugues }}</p>
