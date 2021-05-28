@@ -37,9 +37,9 @@
             </div>
       </div>
       <div class="container mt-3">
-            <div class="ativos px-4">
+            <div class="ativos text-uppercase px-4">
                   <div class="py-4 text-center">
-                        <h3 href="">PEIXES A VENDA NA PLATAFORMA</h3>
+                        <h3 href="">Peixes à venda na plataforma</h3>
                   </div>
                   <div class="d-flex">
                         <div>
@@ -55,7 +55,7 @@
       <div class="container mt-3">
             <div class="inativos px-4">
                   <div class="py-4 text-center">
-                        <h3 href="">PEDIDOS QUE VOCÊ RECEBEU</h3>
+                        <h3 href="">Pedidos recebidos</h3>
                   </div>
                   <div class="d-flex">
                         <div>
@@ -69,9 +69,9 @@
             </div>
       </div>
       <div class="container mt-3">
-            <div class="peixes px-4">
+            <div class="peixes text-uppercase px-4">
                   <div class="py-4 text-center">
-                        <h3 href="">PEDIDOS QUE VOCÊ RECEBEU</h3>
+                        <h3 href="">Vender o seu peixe</h3>
                   </div>
                   <div class="button text-center">
                         <a href="{{ route('pescador.produto') }}">INICIAR VENDA</a>

@@ -47,7 +47,7 @@
                   <div class="form-group input-material">
 
                         <select class="form-control" name="porto_id" id="exampleFormControlSelect1">
-                              <option>Escolha o Porto</option>
+                              <option>Escolha o Porto de descarga</option>
                               @foreach ($portos as $porto)
                               <option value="{{ $porto->id }}">{{ $porto->nome }}</option>
                               @endforeach
@@ -83,20 +83,26 @@
                   </div>
                   <div class="form-group input-material">
                         <input type="number" class="form-control" name="quantidade">
-                        <label for="name-field">Quantidade</label>
+                        <label for="name-field">Quantidade Kg</label>
                   </div>
                   <div class="form-group input-material">
-                        <select class="form-control" name="unidade" id="exampleFormControlSelect1">
-                              <option value="unid">Unid</option>
-                              <option value="kg">Kg</option>
-                        </select>
+                        <label for="name-field">Unidade</label>
+                        <input id="check_unidade" class="form-control" name="check_unidade" type="checkbox">
+                  </div>
+                  <div id="unidade" class="form-group d-none input-material">
+                        <input type="text" class="form-control" name="unidade">
+                        <label for="name-field">Coloque aqui quantas unidades</label>
                   </div>
                   <div class="form-group input-material">
-                        <input type="number" class="form-control" name="preco">
-                        <label for="name-field">Preço</label>
+                        <input type="number" id="price" class="form-control" onkeyup="getPriceValue()" name="preco">
+                        <label for="name-field">Preço por KG</label>
+                  </div>
+                  <div class="receber">
+
+                        <input id="percent" disabled placeholder="Vai Receber" type="text" value="">
                   </div>
             </div>
-            <div class="btn-box py-4"><button class="btn btn-submit" type="submit">Cadastrar E Vender</button>
+            <div class="btn-box py-4"><button class="btn btn-submit" type="submit">Iniciar venda</button>
 
             </div>
 
@@ -104,5 +110,15 @@
 </form>
 
 </div>
+<script>
 
+
+      function getPriceValue()
+            {
+            var input1 = $("#price").val();
+            var valor = 0;
+            var value = input1 - input1 * (40/100);
+            var input2 = $("#percent").val(value);
+            }
+</script>
 @endsection

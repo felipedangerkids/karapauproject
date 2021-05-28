@@ -261,7 +261,7 @@
                   color: white;
             }
       }
-      .nome{
+      .nome {
             width: 80px;
       }
 }
@@ -274,4 +274,29 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+}
+.receber {
+      color: #ffffff;
+      background-color: #35a40e;
+      border-radius: 8px;
+      input {
+            color: white;
+            border: none;
+      }
+
+      ::-webkit-input-placeholder {
+   color: white !important;
+}
+ 
+:-moz-placeholder { /* Firefox 18- */
+   color: white !important;  
+}
+ 
+::-moz-placeholder {  /* Firefox 19+ */
+   color: white !important;  
+}
+ 
+:-ms-input-placeholder {  
+   color: white !important;  
+}
 }

@@ -26,4 +26,10 @@ class StoreController extends Controller
         $porto = Porto::find($id);
         return view('store.pages.painel.produtos', compact('produtos', 'porto'));
     }
+
+    public function produto($id)
+    {
+        $produto = Produto::with('especies')->find($id);
+        return view('store.pages.painel.produto-single', compact('produto'));
+    }
 }
