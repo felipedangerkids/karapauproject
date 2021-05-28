@@ -20,15 +20,19 @@
             </div>
       </div>
 
-      <div class="portos mt-4">
+      <div class="portos produtos mt-4">
             <div class="row">
                   @foreach ($produtos as $produto)
                   <div class="col-6">
-                      
+
                         <img src="{{ url('storage/especies/'.$produto->especies->image) }}" alt="">
                         <p>{{ $produto->especies->nome_portugues }}</p>
                         <p id="clock"
-                                          data-countdown="{{ date('Y-m-d H:i:s', strtotime("+1 days", strtotime($produto->created_at))) }}"></p>
+                              data-countdown="{{ date('Y-m-d H:i:s', strtotime("+1 days", strtotime($produto->created_at))) }}">
+                        </p>
+
+                        <p class="unid">{{ $produto->preco }} - {{ $produto->unidade }}</p>
+                        <p>STOCK - {{ $produto->quantidade }}{{ $produto->unidade }}</p>
                   </div>
                   @endforeach
 
