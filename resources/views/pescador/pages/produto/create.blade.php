@@ -90,7 +90,7 @@
                         <input id="check_unidade" class="form-control" name="check_unidade" type="checkbox">
                   </div>
                   <div id="unidade" class="form-group d-none input-material">
-                        <input type="text" class="form-control" name="unidade">
+                        <input type="number" class="form-control" name="unidade">
                         <label for="name-field">Coloque aqui quantas unidades</label>
                   </div>
                   <div class="form-group input-material">
