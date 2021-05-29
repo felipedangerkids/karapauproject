@@ -58,7 +58,7 @@ class ProdutoController extends Controller
             'arte' => $request->arte,
             'preco' => $request->preco,
             'unidade' => $request->unidade,
-            'kg' => $request->kg,
+     
             // 'image' => $request->image,
             // 'status' => $request->status,
         ]);
