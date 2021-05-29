@@ -20,7 +20,7 @@
             </div>
       </div>
 
-      <div class="produtos mt-4">
+      <div class="produtos-single mt-4">
             <div class="row">
  
                   <div class="mx-auto">
