@@ -32,4 +32,9 @@ class StoreController extends Controller
         $produto = Produto::with('especies')->find($id);
         return view('store.pages.painel.produto-single', compact('produto'));
     }
+    public function produtoInfo($id)
+    {
+        $produto = Produto::with('especies')->find($id);
+        return view('store.pages.painel.info-produto', compact('produto'));
+    }
 }

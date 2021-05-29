@@ -157,3 +157,31 @@ body {
             color: #ffffff;
       }
 }
+.row-1 {
+      background: #ffffff;
+      margin: -15px 0;
+      p {
+            font-weight: 900;
+            font-size: 21.375px;
+            line-height: 94%;
+            text-transform: uppercase;
+            text-align: center;
+             padding: 15px 0;
+            letter-spacing: -0.015em;
+            color: #4f3a57;
+      }
+}
+.row-2 {
+      background: #36a6d4;
+      p {
+            font-weight: 900;
+            font-size: 21.375px;
+            line-height: 94%;
+            /* identical to box height, or 20px */
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: -0.015em;
+            padding: 15px 0;
+            color: #ffffff;
+      }
+}

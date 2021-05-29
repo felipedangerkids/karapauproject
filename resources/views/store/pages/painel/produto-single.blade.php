@@ -35,7 +35,7 @@
                                     data-countdown="{{ date('Y-m-d H:i:s', strtotime("+1 days", strtotime($produto->created_at))) }}"></h2>
             </div>
             <div class="text-center mt-4">
-                  <button class="btn btn-red">INFORMAÇÕES GERAIS</button>
+                  <a href="{{ route('store.produto.info', $produto->id) }}"><button class="btn btn-red">INFORMAÇÕES GERAIS</button></a>
             </div>
             <div class="text-center mt-4">
                   <button class="btn btn-blue">{{  '€ '.number_format($produto->preco, 2, ',', '.') }} - Kg</button>
