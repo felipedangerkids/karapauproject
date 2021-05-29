@@ -35,10 +35,10 @@
             @csrf
             <div class="mt-3">
                   <div class="form-group input-material">
-                        <select class="form-control" name="especie_id" id="name_field">
+                        <select class="form-control" name="especie_id" id="margem">
                               <option>Escolha a Espécie</option>
                               @foreach ($especies as $especie)
-                              <option value="{{ $especie->id }}">{{ $especie->nome_portugues }}</option>
+                              <option value="{{ $especie->id }}" data-margem="{{ $especie->margem }}">{{ $especie->nome_portugues }}</option>
                               @endforeach
 
                         </select>
@@ -135,9 +135,12 @@
       function getPriceValue()
             {
             var input1 = $("#price").val();
+            var margem = $("#margem").find(":selected").data("margem");
+            // var margem = $("#margem");
+            console.log(margem);
             var valor = 0;
-            var value = input1 - input1 * (40/100);
-            var input2 = $("#percent").val("Vai receber"+" "+value);
+            var value = input1 - input1 * (margem/100);
+            var input2 = $("#percent").val("Vai receber"+" "+value.toFixed(2));
             }
 </script>
 @endsection
