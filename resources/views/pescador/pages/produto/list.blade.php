@@ -40,7 +40,7 @@
                         <p>Quant</p>
                   </div>
                   <div>
-                        <p>Valor</p>
+                        <p>Preço</p>
                   </div>
                   <div>
                         <p>Tempo</p>
