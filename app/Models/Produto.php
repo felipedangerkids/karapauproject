@@ -18,10 +18,12 @@ class Produto extends Model
         'embarcacao',
         'zona',
         'tamanho',
-        'quantidade',
+        'quantidade_kg',
+        'quantidade_unidade',
         'arte',
         'preco',
         'unidade',
+        'kg',
         'image',
         'status'
 

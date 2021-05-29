@@ -52,10 +52,12 @@ class ProdutoController extends Controller
             'embarcacao' => $request->embarcacao,
             'zona' => $request->zona,
             'tamanho' => $request->tamanho,
-            'quantidade' => $request->quantidade,
+            'quantidade_kg' => $request->quantidade_kg,
+            'quantidade_unidade' => $request->quantidade_unidade,
             'arte' => $request->arte,
             'preco' => $request->preco,
             'unidade' => $request->unidade,
+            'kg' => $request->kg,
             // 'image' => $request->image,
             // 'status' => $request->status,
         ]);

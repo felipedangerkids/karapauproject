@@ -56,15 +56,18 @@
                   </div>
 
                   <div class="form-group input-material">
-                    <select class="form-control" name="embarcacao" id="exampleFormControlSelect1">
-                        <option>Escolha a Embarcação</option>
-                     
-                        <option value="{{ auth()->user()->nome_embarcacao }}">{{ auth()->user()->nome_embarcacao }}</option>
-                        <option value="{{ auth()->user()->nome_embarcacao2 }}">{{ auth()->user()->nome_embarcacao2 }}</option>
-                        <option value="{{ auth()->user()->nome_embarcacao3 }}">{{ auth()->user()->nome_embarcacao3 }}</option>
-                   
-                  
-                  </select>
+                        <select class="form-control" name="embarcacao" id="exampleFormControlSelect1">
+                              <option>Escolha a Embarcação</option>
+
+                              <option value="{{ auth()->user()->nome_embarcacao }}">
+                                    {{ auth()->user()->nome_embarcacao }}</option>
+                              <option value="{{ auth()->user()->nome_embarcacao2 }}">
+                                    {{ auth()->user()->nome_embarcacao2 }}</option>
+                              <option value="{{ auth()->user()->nome_embarcacao3 }}">
+                                    {{ auth()->user()->nome_embarcacao3 }}</option>
+
+
+                        </select>
                   </div>
                   <div class="form-group input-material">
                         <input type="text" class="form-control" name="zona">
@@ -87,19 +90,27 @@
 
                         </select>
                   </div>
-                  <div class="form-group input-material">
-                        <input type="number" class="form-control" name="quantidade">
-                        <label for="name-field">Quantidade Kg</label>
+                  <div class="row">
+                        <div class="form-group col-6 input-material">
+                              <label for="name-field">Kg</label>
+                              <input id="check_kg" class="form-control" value="1" name="kg" type="checkbox">
+                        </div>
+                        <div class="form-group col-6 input-material">
+                              <label for="name-field">Unidade</label>
+                              <input id="check_unidade" value="1" class="form-control" name="unidade" type="checkbox">
+                        </div>
                   </div>
-                  <div class="form-group input-material">
-                        <label for="name-field">Unidade</label>
-                        <input id="check_unidade" class="form-control" name="check_unidade" type="checkbox">
+
+                  <div id="kg" class="form-group d-none input-material">
+                        <input type="number" class="form-control" name="quantidade_kg">
+                        <label for="name-field">Quantos Kg</label>
                   </div>
+
                   <div id="unidade" class="form-group d-none input-material">
-                        <input type="number" class="form-control" name="unidade">
+                        <input type="number" class="form-control" name="quantidade_unidade">
                         <label for="name-field">Quantos peixes tem</label>
                   </div>
-                  <div class="form-group input-material">
+                  <div id="price_div" class="form-group d-none input-material">
                         <input type="number" id="price" class="form-control" onkeyup="getPriceValue()" name="preco">
                         <label for="name-field">Preço por KG</label>
                   </div>
@@ -117,8 +128,6 @@
 
 </div>
 <script>
-
-
       function getPriceValue()
             {
             var input1 = $("#price").val();
