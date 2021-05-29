@@ -37,7 +37,18 @@
                   <p>Tamanho</p>
             </div>
             <div class="row-2">
-                  <p>{{ $produto->tamanho }}</p>
+                  <p>
+                        @if($produto->tamanho == 'tamanho1')
+                        Tamanho 1 (T1)
+                        @elseif($produto->tamanho == 'tamanho2')
+                        Tamanho 2 (T2)
+                        @elseif($produto->tamanho == 'tamanho3')
+                        Tamanho 3 (T3)
+                        @elseif($produto->tamanho == 'tamanho4')
+                        Tamanho 4 (T4)
+                        @endif
+
+                  </p>
             </div>
             <div class="row-1">
                   <p>Zona de Pesca</p>
