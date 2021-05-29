@@ -45,6 +45,7 @@ class ProdutoController extends Controller
     {
  
         $user = auth()->user()->id;
+     
         $produto = Produto::create([
             'pescador_id' => $user,
             'especie_id' => $request->especie_id,
@@ -52,7 +53,7 @@ class ProdutoController extends Controller
             'embarcacao' => $request->embarcacao,
             'zona' => $request->zona,
             'tamanho' => $request->tamanho,
-            'quantidade_kg' => $request->quantidade_kg,
+            'quantidade_kg' => $request->quantidade_kg ? $request->quantidade_kg : $request->total_kg,
             'quantidade_unidade' => $request->quantidade_unidade,
             'arte' => $request->arte,
             'preco' => $request->preco,

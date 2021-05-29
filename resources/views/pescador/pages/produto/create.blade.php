@@ -93,11 +93,11 @@
                   <div class="row">
                         <div class="form-group col-6 input-material">
                               <label for="name-field">Kg</label>
-                              <input id="check_kg" class="form-control" value="1" name="kg" type="checkbox">
+                              <input id="check_kg" class="form-control" value="Kg" name="unidade" type="radio">
                         </div>
                         <div class="form-group col-6 input-material">
                               <label for="name-field">Unidade</label>
-                              <input id="check_unidade" value="1" class="form-control" name="unidade" type="checkbox">
+                              <input id="check_unidade" value="Unidade" class="form-control" name="unidade" type="radio">
                         </div>
                   </div>
 
@@ -111,7 +111,7 @@
                         <label for="name-field">Quantos peixes tem</label>
                   </div>
                   <div id="kg_total" class="form-group d-none input-material">
-                        <input type="number" class="form-control" name="quantidade_kg">
+                        <input type="number" class="form-control" name="total_kg">
                         <label for="name-field">Total de Kg</label>
                   </div>
                   <div id="price_div" class="form-group d-none input-material">
