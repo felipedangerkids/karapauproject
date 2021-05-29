@@ -32,8 +32,8 @@
                                     data-countdown="{{ date('Y-m-d H:i:s', strtotime("+1 days", strtotime($produto->created_at))) }}">
                               </p>
 
-                              <p class="unid">{{ $produto->preco }} - {{ $produto->unidade }}</p>
-                              <p>STOCK - {{ $produto->quantidade }}{{ $produto->unidade }}</p>
+                              <p class="unid">{{  '€ '.number_format($produto->preco, 2, ',', '.') }} - Kg</p>
+                              <p>STOCK - {{ $produto->quantidade_kg }} Kg</p>
                         </a>
                   </div>
 

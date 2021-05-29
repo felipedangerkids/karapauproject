@@ -10,7 +10,7 @@
             </div>
       </div>
 </div>
-<div class="container">
+<div class="container pb-5">
       <div class="d-flex top mt-3 justify-content-around">
             <div>
                   <h3>{{ $produto->especies->nome_portugues }}</h3>
@@ -21,11 +21,30 @@
       </div>
 
       <div class="portos produtos mt-4">
-            <div class="d-flex">
+            <div class="row">
  
-                  <div class="justify-content-center">
-                        <img src="{{ url('storage/especies/'.$produto->especies->image) }}" alt="">
+                  <div class="mx-auto">
+                        <img class="mx-auto" src="{{ url('storage/especies/'.$produto->especies->image) }}" alt="">
                   </div>
+            </div>
+            <div>
+                  <h2>{{ $produto->especies->nome_portugues }}</h2>
+            </div>
+            <div>
+                  <h2 id="clock"
+                                    data-countdown="{{ date('Y-m-d H:i:s', strtotime("+1 days", strtotime($produto->created_at))) }}"></h2>
+            </div>
+            <div class="text-center mt-4">
+                  <button class="btn btn-red">INFORMAÇÕES GERAIS</button>
+            </div>
+            <div class="text-center mt-4">
+                  <button class="btn btn-blue">{{  '€ '.number_format($produto->preco, 2, ',', '.') }} - Kg</button>
+            </div>
+            <div>
+                  <h4>STOCK {{ $produto->quantidade_kg }} Kg</h4>
+            </div>
+            <div class="text-center mt-4">
+                  <button class="btn btn-green">COMPRAR</button>
             </div>
       </div>
 </div>

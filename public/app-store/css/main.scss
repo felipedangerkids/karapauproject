@@ -82,8 +82,77 @@ body {
 
 .unid {
       color: #ffffff !important;
-      background-color: #03568A;
+      background-color: #03568a;
       padding: 12px 5px;
       border-radius: 13.7288px;
       margin: 15px 0;
+}
+.produtos {
+      img {
+            width: 308px;
+            height: 218px;
+      }
+      h2 {
+            font-weight: 900;
+            font-size: 31.5306px;
+            line-height: 94%;
+            text-align: center;
+            letter-spacing: -0.015em;
+            color: #4f3a57;
+            text-transform: uppercase;
+            margin-top: 25px;
+      }
+      h4 {
+            font-weight: 900;
+            font-size: 22px;
+            line-height: 94%;
+            text-align: center;
+            letter-spacing: -0.015em;
+            color: #4f3a57;
+            text-transform: uppercase;
+            margin-top: 25px;
+      }
+      .btn-red {
+            background: #de1313;
+            border-radius: 24.0488px;
+            padding: 28px 18px;
+            color: white;
+            font-size: 21.8208px;
+            line-height: 111%;
+            /* or 24px */
+
+            text-align: center;
+            letter-spacing: -0.015em;
+
+            color: #ffffff;
+      }
+      .btn-blue {
+            background: #03568A;
+            border-radius: 24.0488px;
+            padding: 28px 72px;
+            color: white;
+            font-size: 21.8208px;
+            line-height: 111%;
+            /* or 24px */
+
+            text-align: center;
+            letter-spacing: -0.015em;
+
+            color: #ffffff;
+      }
+      .btn-green {
+            background: #35A40E;
+            border-radius: 24.0488px;
+            padding: 28px 72px;
+            color: white;
+            font-size: 21.8208px;
+            line-height: 111%;
+            /* or 24px */
+
+            text-align: center;
+            letter-spacing: -0.015em;
+
+            color: #ffffff;
+      }
+
 }
