@@ -110,6 +110,10 @@
                         <input type="number" class="form-control" name="quantidade_unidade">
                         <label for="name-field">Quantos peixes tem</label>
                   </div>
+                  <div id="kg_total" class="form-group d-none input-material">
+                        <input type="number" class="form-control" name="quantidade_kg">
+                        <label for="name-field">Total de Kg</label>
+                  </div>
                   <div id="price_div" class="form-group d-none input-material">
                         <input type="number" id="price" class="form-control" onkeyup="getPriceValue()" name="preco">
                         <label for="name-field">Preço por KG</label>

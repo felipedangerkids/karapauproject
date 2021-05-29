@@ -24,8 +24,10 @@ $("#check_unidade").on('click', function () {
       if (toggle2 == true) {
             $("#unidade").removeClass("d-none");
             $("#price_div").removeClass("d-none");
+            $("#kg_total").removeClass("d-none");
       } else {
             $("#unidade").addClass("d-none");
             $("#price_div").addClass("d-none");
+            $("#kg_total").addClass("d-none");
       }
 });
