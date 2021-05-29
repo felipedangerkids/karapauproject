@@ -91,6 +91,10 @@ body {
       img {
             width: 308px;
             height: 218px;
+            width: 158.31px;
+            height: 148.69px;
+            object-fit: cover;
+            border-radius: 15px;
       }
       h2 {
             font-weight: 900;
@@ -127,7 +131,7 @@ body {
             color: #ffffff;
       }
       .btn-blue {
-            background: #03568A;
+            background: #03568a;
             border-radius: 24.0488px;
             padding: 28px 72px;
             color: white;
@@ -141,7 +145,7 @@ body {
             color: #ffffff;
       }
       .btn-green {
-            background: #35A40E;
+            background: #35a40e;
             border-radius: 24.0488px;
             padding: 28px 72px;
             color: white;
@@ -154,5 +158,4 @@ body {
 
             color: #ffffff;
       }
-
 }
