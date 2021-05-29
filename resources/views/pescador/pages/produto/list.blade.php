@@ -56,7 +56,7 @@
                                     <h5 class="text-center">{{ $produto->especies->nome_portugues }}</h5>
                               </div>
                               <div >
-                                    <h5>{{ $produto->quantidade_kg }}Kg</h5>
+                                    <h5>{{ $produto->quantidade_kg }} Kg</h5>
                               </div>
                               <div >
                                     <h5>{{ $produto->preco }}</h5>
