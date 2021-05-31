@@ -16,5 +16,6 @@ class UserProduct extends Model
         'quantity',
         'image',
         'user_id',
+        'order_id',
     ];
 }

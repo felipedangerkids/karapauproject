@@ -16,4 +16,9 @@ class UserOrder extends Model
         'user_id',
         'status',
     ];
+
+    public function enderecos()
+    {
+        return $this->belongsTo(AdressBuyer::class, 'adress');
+    }
 }

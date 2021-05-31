@@ -19,6 +19,23 @@ class CheckoutController extends Controller
 
     public function payment(Request $request)
     {
+        $messages = [
+            // 'adress.required' => 'Cadastre um endereço ou escolha um cadastrado',
+            'payment.required' => 'Escolha um Metodo de pagamento para continuar',
+            'shipment.required' => 'Escolha um Metodo de Entrega para continuar',
+        ];
+        $validated = $request->validate([
+            // 'adress' => 'required',
+            'payment' => 'required',
+            'shipment' => 'required',
+        ], $messages);
+
+        $user_order = UserOrder::create([
+            'adress' => $request->adress,
+            'payment_mothod' => $request->payment,
+            'shipping_mothod' => $request->shipment,
+            'user_id' => auth()->user()->id,
+        ]);
 
         foreach (\Cart::getContent() as $item) {
 
@@ -29,15 +46,11 @@ class CheckoutController extends Controller
                 'quantity' => $item->quantity,
                 'image' => $item->attributes->image,
                 'user_id' => auth()->user()->id,
+                'order_id' => $user_order->id,
             ]);
         }
 
-        $user_order = UserOrder::create([
-            'adress' => $request->adress,
-            'payment_mothod' => $request->payment,
-            'shipping_mothod' => $request->shipment,
-            'user_id' => auth()->user()->id,
-        ]);
+  
 
         \Cart::clear();
         return redirect()->route('store.thanks');

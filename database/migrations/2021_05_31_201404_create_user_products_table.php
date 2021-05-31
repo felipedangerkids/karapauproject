@@ -21,6 +21,7 @@ class CreateUserProductsTable extends Migration
             $table->string('quantity');
             $table->string('image');
             $table->integer('user_id');
+            $table->integer('order_id');
             $table->timestamps();
         });
     }

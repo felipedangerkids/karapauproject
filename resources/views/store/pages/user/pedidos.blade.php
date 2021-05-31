@@ -19,7 +19,9 @@
 
 <div class="container">
       <div class="title">
-            <p>Olá, {{ auth()->user()->nome }}</p>
+           <a href="{{ route('store.index') }}">
+                  <p>Voltar</p>
+            </a>
       </div>
 </div>
 <div class="header-pedidos">
@@ -38,29 +40,31 @@
       </div>
 </div>
 @forelse ($user_orders as $order)
-<div class="pedidos-body">
-      <div class="container mt-4">
-            <div class="d-flex justify-content-between">
-                  <div>
-                        <h3>{{ $order->id }}</h3>
-                  </div>
-                  <div>
-                        <h3>{{ $order->payment_mothod }}</h3>
-                  </div>
-                  <div>
-                        <h3>
-                              @if($order->status == 0)      
-                              Aguardando
-                              @elseif($order->status == 1)
-                              Em preparação
-                              @elseif($order->status == 2)
-                              Entrega
-                              @endif
-                        </h3>
+<a href="{{ route('user.pedido.produto', $order->id) }}">
+      <div class="pedidos-body">
+            <div class="container mt-4">
+                  <div class="d-flex justify-content-between">
+                        <div>
+                              <h3>{{ $order->id }}</h3>
+                        </div>
+                        <div>
+                              <h3>{{ $order->payment_mothod }}</h3>
+                        </div>
+                        <div>
+                              <h3>
+                                    @if($order->status == 0)
+                                    Aguardando
+                                    @elseif($order->status == 1)
+                                    Em preparação
+                                    @elseif($order->status == 2)
+                                    Entrega
+                                    @endif
+                              </h3>
+                        </div>
                   </div>
             </div>
       </div>
-</div>
+</a>
 @empty
 <h3>Você não tem pedidos!</h3>
 @endforelse
