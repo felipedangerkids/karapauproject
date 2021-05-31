@@ -14,7 +14,7 @@
       </div>
       <div class="alert alert-info" role="alert">
             <div class="text-center">
-                  <button class="btn btn-primary">Ver Pedidos</button>
+                <a href="{{ route('user.pedidos') }}"> <button class="btn btn-primary">Ver Pedidos</button></a>
             </div>
       </div>
 </div>

@@ -22,6 +22,7 @@ use App\Http\Controllers\Buyer\BuyerController;
 use App\Http\Controllers\Cart\CartController;
 use App\Http\Controllers\Checkout\CheckoutController;
 use App\Http\Controllers\Comercial\ComercialPainelController;
+use App\Http\Controllers\Pedidos\PedidoController;
 use App\Http\Controllers\Pescador\PainelPescadorController;
 use App\Http\Controllers\Pescador\ProdutoController;
 use App\Http\Controllers\Store\StoreController;
@@ -187,4 +188,6 @@ Route::group(['middleware' => ['auth:compradorind']], function(){
     Route::post('store/checkout/store', [CheckoutController::class, 'payment'])->name('store.checkout.payment');
 
     Route::get('store/thanks', [CheckoutController::class, 'thanks'])->name('store.thanks');
+
+    Route::get('store/pedidos', [PedidoController::class, 'userPedido'])->name('user.pedidos');
 });

@@ -35,7 +35,7 @@
                   <p>Fazer Compras</p>
             </div>
             <div class="col-6">
-                  <img src="{{ url('app-store/img/icons/encomendas.svg') }}" alt="">
+                 <a href="{{ route('user.pedidos') }}"> <img src="{{ url('app-store/img/icons/encomendas.svg') }}" alt=""></a>
                   <p>SUAS ENCOMENDAS</p>
             </div>
             <div class="col-6">
