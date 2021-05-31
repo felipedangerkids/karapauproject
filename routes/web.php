@@ -183,4 +183,8 @@ Route::group(['middleware' => ['auth:compradorind']], function(){
     Route::get('store/adress', [AdressController::class, 'index'])->name('store.adress');
 
     Route::post('store/adress/save', [AdressController::class, 'store'])->name('store.adress.save');
+
+    Route::post('store/checkout/store', [CheckoutController::class, 'payment'])->name('store.checkout.payment');
+
+    Route::get('store/thanks', [CheckoutController::class, 'thanks'])->name('store.thanks');
 });
