@@ -9,7 +9,13 @@
                         <img src="{{ url('app-store/img/icons/icone-notificacoes.svg') }}" alt="">
                   </div>
                   <div class="mx-3">
-                        <img src="{{ url('app-store/img/icons/edit-off.svg') }}" alt="">
+                        @if(auth()->guard('compradorind'))
+                        <a href="{{ route('store.user.edit-ind', auth()->user()->id) }}"> <img
+                                    src="{{ url('app-store/img/icons/edit-off.svg') }}" alt=""></a>
+                        @elseif(auth()->guard() == 'buyer')
+                        <a href="{{ route('store.user.edit-col') }}"> <img
+                                    src="{{ url('app-store/img/icons/edit-off.svg') }}" alt=""></a>
+                        @endif
                   </div>
 
             </div>
@@ -24,7 +30,8 @@
 
       <div class="row mt-5 menu-icons">
             <div class="col-6">
-                <a href="{{ route('store.porto') }}"> <img src="{{ url('app-store/img/icons/compras.svg') }}" alt=""></a>
+                  <a href="{{ route('store.porto') }}"> <img src="{{ url('app-store/img/icons/compras.svg') }}"
+                              alt=""></a>
                   <p>Fazer Compras</p>
             </div>
             <div class="col-6">
@@ -34,7 +41,7 @@
             <div class="col-6">
                   <img src="{{ url('app-store/img/icons/perfil.svg') }}" alt="">
                   <p>SEUS DADOS
-                  DE PERFIL</p>
+                        DE PERFIL</p>
             </div>
             <div class="col-6">
                   <img src="{{ url('app-store/img/icons/suporte.svg') }}" alt="">

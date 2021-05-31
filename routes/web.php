@@ -12,12 +12,15 @@ use App\Http\Controllers\Auth\LoginConsultorController;
 
 use App\Http\Controllers\Admin\EstatiscaDiariaController;
 use App\Http\Controllers\Admin\PescadorController as AdminPescadorController;
+use App\Http\Controllers\Adress\AdressController;
 use App\Http\Controllers\Auth\CompradorColetivoController;
 use App\Http\Controllers\Auth\CompradorIndividualController;
 use App\Http\Controllers\Auth\PescadorController;
 use App\Http\Controllers\Auth\PescadorRegController;
 use App\Http\Controllers\Auth\StoreLoginController;
+use App\Http\Controllers\Buyer\BuyerController;
 use App\Http\Controllers\Cart\CartController;
+use App\Http\Controllers\Checkout\CheckoutController;
 use App\Http\Controllers\Comercial\ComercialPainelController;
 use App\Http\Controllers\Pescador\PainelPescadorController;
 use App\Http\Controllers\Pescador\ProdutoController;
@@ -157,11 +160,27 @@ Route::middleware('auth:pescador')->group(function(){
 Route::get('store-login-page', [StoreLoginController::class, 'index'])->name('store.login');
 Route::post('store-login', [StoreLoginController::class, 'login'])->name('store.login.post');
 
-Route::middleware('auth:compradorind')->group(function(){
+Route::group(['middleware' => ['auth:compradorind']], function(){
     Route::get('store-index', [StoreController::class, 'index'])->name('store.index');
+    Route::get('store-index-2', [StoreController::class, 'index'])->name('store.index.2');
     Route::get('store-porto', [StoreController::class, 'porto'])->name('store.porto');
     Route::get('store-produtos/{id}', [StoreController::class, 'produtos'])->name('store.produto');
     Route::get('store-produto-single/{id}', [StoreController::class, 'produto'])->name('store.produto.single');
     Route::get('store-produto-info/{id}', [StoreController::class, 'produtoInfo'])->name('store.produto.info');
     Route::any('store/cart/add', [CartController::class, 'cartAdd'])->name('store.cart.add');
+    Route::any('store/cart/clear', [CartController::class, 'clear'])->name('store.cart.clear');
+
+    Route::get('store/cart', [CartController::class, 'cart'])->name('store.cart');
+    Route::any('store/cart/remove/{id}', [CartController::class, 'itemRemove'])->name('store.cart.remove');
+
+    Route::get('store/checkout', [CheckoutController::class, 'index'])->name('store.checkout');
+
+    Route::get('store/user/edit-ind/{id}', [BuyerController::class, 'individual'])->name('store.user.edit-ind');
+    Route::get('store/user/edit-col', [BuyerController::class, 'coletivo'])->name('store.user.edit-col');
+
+    Route::post('store/user/update-ind/{id}', [CompradorIndividualController::class, 'update'])->name('store.user.update');
+
+    Route::get('store/adress', [AdressController::class, 'index'])->name('store.adress');
+
+    Route::post('store/adress/save', [AdressController::class, 'store'])->name('store.adress.save');
 });

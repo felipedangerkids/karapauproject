@@ -46,18 +46,18 @@
                   <h4>STOCK {{ $produto->quantidade_kg }} Kg</h4>
             </div>
             <form action="{{ route('store.cart.add') }}" method="POST">
-            <div class="text-center">
-                  <h4>Quantidade</h4>
-                  <div class="form-group mt-3">
-                        <select class="form-control" name="quantity" id="">
-                              <option value="5">5 Kg</option>
-                              <option value="10">10 Kg</option>
-                              <option value="15">15 Kg</option>
-                              <option value="20">20 Kg</option>
-                        </select>
+                  <div class="text-center">
+                        <h4>Quantidade</h4>
+                        <div class="form-group mt-3">
+                              <select class="form-control" name="quantity" id="">
+                                    <option value="5">5 Kg</option>
+                                    <option value="10">10 Kg</option>
+                                    <option value="15">15 Kg</option>
+                                    <option value="20">20 Kg</option>
+                              </select>
+                        </div>
                   </div>
-            </div>
-          
+
                   @csrf
                   <div class="d-none">
                         <input type="hidden" name="id" value="{{ $produto->id }}">
@@ -74,15 +74,17 @@
             </form>
       </div>
 </div>
-<div class="bottom">
-<div class="d-flex justify-content-around">
-      <div>
-            <h5>Itens ({{ Cart::getTotalQuantity() }})</h5>
+<a href="{{ route('store.checkout') }}">
+      <div class="bottom">
+            <div class="d-flex justify-content-around">
+                  <div>
+                        <h5>Itens ({{ Cart::getTotalQuantity() }} Kg) </h5>
+                  </div>
+                  <div>
+                        <h5>{{  '€ '.number_format(Cart::getSubTotal(), 2, ',', '.') }}</h5>
+                  </div>
+            </div>
       </div>
-      <div>
-            <h5>{{  '€ '.number_format(Cart::getSubTotal(), 2, ',', '.') }}</h5>
-      </div>
-</div>
-</div>
+</a>
 
 @endsection

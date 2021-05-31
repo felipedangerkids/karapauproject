@@ -50,15 +50,16 @@ return [
             'driver' => 'session',
             'provider' => 'pescadores',
         ],
+        'buyer' => [
+            'driver' => 'session',
+            'provider' => 'buyers',
+        ],
+
         'compradorind' => [
             'driver' => 'session',
             'provider' => 'compredoresinds',
         ],
 
-        'buyer' => [
-            'driver' => 'session',
-            'provider' => 'buyers',
-        ],
 
 
         'api' => [

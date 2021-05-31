@@ -18,13 +18,33 @@ class CartController extends Controller
             'id' => $product['id'], // inique row ID
             'name' =>  $product['name'],
             'price' => $product['price'],
-            'quantity' => $product['quantity'],
+            'quantity' => $request['quantity'],
             'attributes' => array(
                 'image' => $request->image,
                 'user_id' => $product['user_id'],
+             
             )
         ));
 
         return redirect()->back()->with('message', 'Produto adicionado no carrinho!');
+    }
+
+    public function cart()
+    {
+        return view('store.pages.painel.cart');
+    }
+
+    public function itemRemove($id)
+    {
+        \Cart::remove($id);
+
+        return redirect()->back();
+    }
+
+    public function clear()
+    {
+        \Cart::clear();
+
+        return redirect()->back()->with('message', 'Carrinho vazio');
     }
 }
