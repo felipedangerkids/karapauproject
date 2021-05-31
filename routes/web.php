@@ -17,6 +17,7 @@ use App\Http\Controllers\Auth\CompradorIndividualController;
 use App\Http\Controllers\Auth\PescadorController;
 use App\Http\Controllers\Auth\PescadorRegController;
 use App\Http\Controllers\Auth\StoreLoginController;
+use App\Http\Controllers\Cart\CartController;
 use App\Http\Controllers\Comercial\ComercialPainelController;
 use App\Http\Controllers\Pescador\PainelPescadorController;
 use App\Http\Controllers\Pescador\ProdutoController;
@@ -162,4 +163,5 @@ Route::middleware('auth:compradorind')->group(function(){
     Route::get('store-produtos/{id}', [StoreController::class, 'produtos'])->name('store.produto');
     Route::get('store-produto-single/{id}', [StoreController::class, 'produto'])->name('store.produto.single');
     Route::get('store-produto-info/{id}', [StoreController::class, 'produtoInfo'])->name('store.produto.info');
+    Route::any('store/cart/add', [CartController::class, 'cartAdd'])->name('store.cart.add');
 });

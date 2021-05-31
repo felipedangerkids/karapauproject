@@ -166,7 +166,7 @@ body {
             line-height: 94%;
             text-transform: uppercase;
             text-align: center;
-             padding: 15px 0;
+            padding: 15px 0;
             letter-spacing: -0.015em;
             color: #4f3a57;
       }
@@ -183,5 +183,27 @@ body {
             letter-spacing: -0.015em;
             padding: 15px 0;
             color: #ffffff;
+      }
+}
+.comprar{
+      margin-top: 25px;
+      margin-bottom: 60px;
+}
+.bottom {
+      background-color: #35a40e;
+      position: fixed;
+      bottom: 0;
+      border-radius: 15px 15px 0 0;
+      width: 100%;
+      margin-top: 20px;
+      h5 {
+            font-weight: 900;
+            font-size: 20px;
+            line-height: 94%;
+            text-align: center;
+            letter-spacing: -0.015em;
+            text-transform: uppercase;
+            color: #ffffff;
+            padding: 25px 0;
       }
 }

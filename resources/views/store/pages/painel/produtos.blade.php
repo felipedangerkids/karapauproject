@@ -45,5 +45,14 @@
       </div>
 </div>
 
-
+<div class="bottom">
+      <div class="d-flex justify-content-around">
+            <div>
+                  <h5>Itens ({{ Cart::getTotalQuantity() }})</h5>
+            </div>
+            <div>
+                  <h5>{{  '€ '.number_format(Cart::getSubTotal(), 2, ',', '.') }}</h5>
+            </div>
+      </div>
+</div>
 @endsection
