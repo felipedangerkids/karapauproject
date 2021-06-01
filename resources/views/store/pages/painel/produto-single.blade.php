@@ -65,6 +65,7 @@
                         <input type="hidden" name="price" value="{{ $produto->preco }}">
                         <input type="hidden" name="image" value="{{  $produto->especies->image }}">
                         <input type="hidden" name="user_id" value="{{  $produto->user_id }}">
+                        <input type="hidden" name="pescador_id" value="{{  $produto->pescador_id }}">
 
 
                   </div>

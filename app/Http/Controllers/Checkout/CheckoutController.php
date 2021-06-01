@@ -6,6 +6,7 @@ use App\Models\AdressBuyer;
 use Darryldecode\Cart\Cart;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\PescadorPedido;
 use App\Models\UserOrder;
 use App\Models\UserProduct;
 
@@ -35,6 +36,9 @@ class CheckoutController extends Controller
             'payment_mothod' => $request->payment,
             'shipping_mothod' => $request->shipment,
             'user_id' => auth()->user()->id,
+            'user_name' => auth()->user()->nome,
+            'email' => auth()->user()->email,
+            'telemovel' => auth()->user()->telemovel,
         ]);
 
         foreach (\Cart::getContent() as $item) {
@@ -47,10 +51,17 @@ class CheckoutController extends Controller
                 'image' => $item->attributes->image,
                 'user_id' => auth()->user()->id,
                 'order_id' => $user_order->id,
+                'pescador_id' => $item->attributes->pescador_id,
+            ]);
+
+            PescadorPedido::create([
+                'pescador_id' => $item->attributes->pescador_id,
+                'order_id' => $user_order->id,
+                'adress' => $request->adress,
             ]);
         }
 
-  
+
 
         \Cart::clear();
         return redirect()->route('store.thanks');

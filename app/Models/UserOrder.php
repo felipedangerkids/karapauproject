@@ -15,6 +15,9 @@ class UserOrder extends Model
         'shipping_mothod',
         'user_id',
         'status',
+        'user_name',
+        'email',
+        'telemovel'
     ];
 
     public function enderecos()

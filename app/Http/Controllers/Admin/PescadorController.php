@@ -8,6 +8,10 @@ use App\Models\Produto;
 use App\Models\Pescador;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\AdressBuyer;
+use App\Models\PescadorPedido;
+use App\Models\UserOrder;
+use App\Models\UserProduct;
 use Illuminate\Support\Facades\Hash;
 
 class PescadorController extends Controller
@@ -148,7 +152,21 @@ class PescadorController extends Controller
         return redirect()->back();
 
     }
-
+    
+    public function pedidos($id)
+    {
+        $pedidos = PescadorPedido::with('orders')->where('pescador_id', $id)->get();
+        // dd($orders);
+        return view('painel.pages.pescador.pedidos', compact('pedidos'));
+    }
+    public function pedidosCompletos($id)
+    {
+        $pedido = UserOrder::with('enderecos')->find($id);
+        // dd($pedidos);
+        $produtos = UserProduct::where('order_id', $id)->get();
+  
+        return view('painel.pages.pescador.pedidos-completo', compact('pedido', 'produtos'));
+    }
 
     public function destroy($id)
     {

@@ -46,7 +46,7 @@
                                           </form>
                                     </div>
                                     <div class="mx-1">
-                                          <button class="btn btn-info btn-sm">Ver Encomendas</button>
+                                         <a href="{{ route('admin.pescador.pedidos', $pescador->id) }}"> <button class="btn btn-info btn-sm">Ver Encomendas</button></a>
                                     </div>
                               </div>
                         </td>

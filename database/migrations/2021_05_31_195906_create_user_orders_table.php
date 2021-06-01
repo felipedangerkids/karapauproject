@@ -19,6 +19,9 @@ class CreateUserOrdersTable extends Migration
             $table->string('payment_mothod');
             $table->string('shipping_mothod');
             $table->integer('user_id');
+            $table->string('user_name');
+            $table->string('email');
+            $table->string('telemovel');
             $table->integer('status')->default(0);
             $table->timestamps();
         });

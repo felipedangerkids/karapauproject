@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUserProductsTable extends Migration
+class CreatePescadorPedidosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,11 @@ class CreateUserProductsTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_products', function (Blueprint $table) {
+        Schema::create('pescador_pedidos', function (Blueprint $table) {
             $table->id();
-            $table->integer('product_id');
-            $table->string('name');
-            $table->string('price');
-            $table->string('quantity');
-            $table->string('image');
-            $table->integer('user_id');
-            $table->integer('order_id');
             $table->integer('pescador_id');
+            $table->integer('order_id');
+            $table->integer('adress');
             $table->timestamps();
         });
     }
@@ -34,6 +29,6 @@ class CreateUserProductsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_products');
+        Schema::dropIfExists('pescador_pedidos');
     }
 }
