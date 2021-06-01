@@ -19,7 +19,7 @@ class StoreController extends Controller
 
     public function porto()
     {
-        $portos = Porto::all();
+        $portos = Porto::where('status', 0)->get();
         return view('store.pages.painel.porto', compact('portos'));
     }
 

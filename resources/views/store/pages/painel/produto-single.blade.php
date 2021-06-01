@@ -57,7 +57,6 @@
                               </select>
                         </div>
                   </div>
-
                   @csrf
                   <div class="d-none">
                         <input type="hidden" name="id" value="{{ $produto->id }}">
@@ -66,8 +65,6 @@
                         <input type="hidden" name="image" value="{{  $produto->especies->image }}">
                         <input type="hidden" name="user_id" value="{{  $produto->user_id }}">
                         <input type="hidden" name="pescador_id" value="{{  $produto->pescador_id }}">
-
-
                   </div>
                   <div class="text-center comprar">
                         <button type="submit" class="btn btn-green">COMPRAR</button>

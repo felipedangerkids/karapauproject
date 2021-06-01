@@ -28,9 +28,6 @@
                         <p>{{ $porto->nome }}</p>
                   </div>
                   @endforeach
-
-
-
             </div>
       </div>
 </div>

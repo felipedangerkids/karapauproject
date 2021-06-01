@@ -103,9 +103,6 @@ Route::post('consultor-entrar', [LoginConsultorController::class, 'login'])->nam
 
 
 
-
-
-
 Route::middleware(['auth:consultor'])->group(function () {
         Route::get('consultor', [ComercialPainelController::class, 'index'])->name('consultor');
         Route::get('comprador-cad', [ComercialPainelController::class, 'compradorCad']);
