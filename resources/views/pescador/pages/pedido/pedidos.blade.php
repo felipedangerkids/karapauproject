@@ -54,7 +54,7 @@
                   <div class="container">
                         <div class="d-flex  justify-content-around text-center">
 
-                              <div>
+                              <div class="nome">
                                     <h5>{{ $pedido->products->name }}</h5>
                               </div>
                               <div>
