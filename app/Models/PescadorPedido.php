@@ -13,7 +13,8 @@ class PescadorPedido extends Model
         'pescador_id',
         'order_id',
         'adress',
-        'produtos'
+        'produtos',
+        'user_id'
     ];
 
     public function orders()

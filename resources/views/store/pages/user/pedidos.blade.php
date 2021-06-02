@@ -2,24 +2,58 @@
 
 
 @section('content')
-<div class="header-top">
+<div class="header">
+      <div class="container">
+            <div class="text-center mx-auto py-5">
+                  <a href="{{ route('store.index') }}"> <img src="{{ url('app-store/img/logo.svg') }}" alt=""></a>
+            </div>
+      </div>
+</div>
+<div class="container">
+      <div class="d-flex top mt-3 justify-content-around">
+            <div>
+                  <a href="{{ route('store.index') }}"><button class="btn btn-voltar">VOLTAR</button></a>
+            </div>
+            <div>
+                  <button class="btn btn-filtrar">FILTRAR</button>
+            </div>
+      </div>
+</div>
+<div class="container">
+      @foreach ($user_orders as $order)
+      <div class="status d-flex mt-5 ">
+            <div class="item text-uppercase">
+                  <a href="#">{{ $order->products->name }} - {{ $order->products->quantity }} KG -
+                        {{  '€ '.number_format($order->products->price, 2, ',', '.') }}</a>
+            </div>
+            <div>
+                  <button
+                        class="btn @if($order->products->status == 0) btn-status0 @elseif($order->products->status == 1) btn-status1 @elseif($order->products->status == 2) btn-status2 @endif">@if($order->products->status
+                        == 0) PREPARAÇÃO @elseif($order->products->status == 1) TRANSPORTE
+                        @elseif($order->products->status == 2) ENTREGUE @endif</button>
+            </div>
+      </div>
+      @endforeach
+
+</div>
+{{-- <div class="header-top">
       <div class="container">
             <div class="d-flex icons">
                   <div class="mx-3">
                         <img src="{{ url('app-store/img/icons/icone-notificacoes.svg') }}" alt="">
-                  </div>
-                  <div class="mx-3">
-                        <img src="{{ url('app-store/img/icons/edit-off.svg') }}" alt="">
-                  </div>
+</div>
+<div class="mx-3">
+      <img src="{{ url('app-store/img/icons/edit-off.svg') }}" alt="">
+</div>
 
-            </div>
+</div>
 
-      </div>
+</div>
 </div>
 
 <div class="container">
       <div class="title">
-           <a href="{{ route('store.index') }}">
+            <a href="{{ route('store.index') }}">
                   <p>Voltar</p>
             </a>
       </div>
@@ -67,6 +101,6 @@
 </a>
 @empty
 <h3>Você não tem pedidos!</h3>
-@endforelse
+@endforelse --}}
 
 @endsection

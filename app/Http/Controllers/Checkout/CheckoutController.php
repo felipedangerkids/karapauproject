@@ -60,6 +60,7 @@ class CheckoutController extends Controller
                 'order_id' => $user_order->id,
                 'adress' => $request->adress,
                 'produtos' => $produtos->id,
+                'user_id' => auth()->user()->id,
             ]);
         }
 
