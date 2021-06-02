@@ -1,0 +1,76 @@
+.btn-voltar {
+  color: white !important;
+  display: block;
+  border-radius: 25px;
+  width: 35vw;
+  font-weight: 600;
+  font-size: 1rem;
+  background: #03568A;
+}
+
+.btn-filtrar {
+  color: white !important;
+  display: block;
+  border-radius: 25px;
+  width: 35vw;
+  font-weight: 600;
+  font-size: 1rem;
+  background: #36A6D4;
+}
+
+.status {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.item a {
+  color: #03568A;
+  font-weight: bold;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.btn {
+  display: block;
+  width: 40vw;
+}
+
+.btn-status1 {
+  background: #03568A;
+  border-radius: 25px;
+  color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.btn-status0 {
+  background: #0472B7;
+  border-radius: 25px;
+  color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.btn-status2 {
+  background: #35A40E;
+  border-radius: 25px;
+  color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=main.css.map */

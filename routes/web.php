@@ -194,3 +194,10 @@ Route::group(['middleware' => ['auth:compradorind']], function(){
     Route::get('store/pedidos', [PedidoController::class, 'userPedido'])->name('user.pedidos');
     Route::get('store/pedidos/produtos/{id}', [PedidoController::class, 'pedidoDatalheUser'])->name('user.pedido.produto');
 });
+
+
+
+
+Route::get('front/status', function(){
+return view('store.pages.user.status');
+});
