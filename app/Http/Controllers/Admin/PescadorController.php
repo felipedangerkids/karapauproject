@@ -156,7 +156,8 @@ class PescadorController extends Controller
     public function pedidos($id)
     {
         $pedidos = PescadorPedido::with('orders')->where('pescador_id', $id)->get();
-        // dd($orders);
+
+     
         return view('painel.pages.pescador.pedidos', compact('pedidos'));
     }
     public function pedidosCompletos($id)

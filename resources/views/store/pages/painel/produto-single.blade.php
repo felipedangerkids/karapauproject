@@ -6,7 +6,7 @@
 <div class="header">
       <div class="container">
             <div class="text-center mx-auto py-5">
-                  <img src="{{ url('app-store/img/logo.svg') }}" alt="">
+                  <a href="{{ route('store.index') }}"><img src="{{ url('app-store/img/logo.svg') }}" alt=""></a>
             </div>
       </div>
 </div>
@@ -16,7 +16,7 @@
                   <h3>{{ $produto->especies->nome_portugues }}</h3>
             </div>
             <div>
-                  <button class="btn btn-info">VOLTAR</button>
+                <a href="javascript:history.back()">  <button class="btn btn-info">VOLTAR</button></a>
             </div>
       </div>
 

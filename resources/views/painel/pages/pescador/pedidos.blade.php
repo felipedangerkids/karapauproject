@@ -15,7 +15,9 @@
                   </tr>
             </thead>
             <tbody>
+                
                   @foreach ($pedidos as $pedido)
+
                   <tr>
                         <th scope="row">{{ $pedido->id }}</th>
                         <td>{{ $pedido->orders->payment_mothod }}</td>
@@ -25,8 +27,9 @@
                                           class="btn btn-dark">Ver Completo</button></a>
                         </td>
                   </tr>
-                  @endforeach
 
+                  @endforeach
+                
             </tbody>
       </table>
 </div>
