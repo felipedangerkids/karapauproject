@@ -1,6 +1,4 @@
-
 /////STATUS
-
 
 .btn-voltar {
     color: white !important;
@@ -9,7 +7,7 @@
     width: 35vw;
     font-weight: 600;
     font-size: 1rem;
-    background: #03568A;
+    background: #03568a;
 }
 
 .btn-filtrar {
@@ -19,67 +17,80 @@
     width: 35vw;
     font-weight: 600;
     font-size: 1rem;
-    background: #36A6D4;
+    background: #36a6d4;
 }
-.status{
+.status {
     align-items: center;
     justify-content: space-around;
+    background-color: white;
 }
-
-.item {
-    a {
-        color: #03568A;
-        font-weight: bold;
-        align-self: flex-end;
+.status-in {
+    padding: 20px 0;
+    p {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    button {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
 
-.botao{
+.item {
+    p {
+        color: #03568a;
+        font-weight: bold;
+        align-self: flex-end;
+        text-align: center;
+    }
+}
+
+.botao {
     display: block;
     width: 40vw;
-    
 }
 .btn-status1 {
-    background: #03568A;
+    background: #03568a;
     border-radius: 25px;
     color: white;
     align-items: center;
     justify-content: center;
-
 }
 .btn-status0 {
-    background: #0472B7;
+    background: #0472b7;
     border-radius: 25px;
     color: white;
     align-items: center;
     justify-content: center;
-
 }
 .btn-status2 {
-    background: #35A40E;
+    background: #35a40e;
     border-radius: 25px;
     color: white;
     align-items: center;
     justify-content: center;
-
 }
 
 ////ENCOMENDAS
 
-.inicio{
+.inicio {
     justify-content: space-around;
     align-items: center;
-    span{
-        color: #03568A;
+    span {
+        color: #03568a;
         font-size: 1.2rem;
     }
 }
-.detail{
-    color: #03568A;
+.detail {
+    color: #03568a;
     font-size: 1.1rem;
     font-weight: bold;
 }
-.itens{
+.itens {
     justify-content: space-around;
-    color: #03568A;
+    color: #03568a;
 }

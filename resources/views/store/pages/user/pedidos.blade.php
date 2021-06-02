@@ -19,31 +19,33 @@
             </div>
       </div>
 </div>
-<div class="container">
-      @foreach ($user_orders as $order)
-      <div class="status d-flex mt-5 ">
-            <div class="item text-uppercase row">
-                  {{-- <a href="#">{{ $order->products->name }} - {{ $order->products->quantity }} KG -
+<div class="status">
+      <div class="container">
+            @foreach ($user_orders as $order)
+            <div class="d-flex mt-5 status-in">
+                  <div class="item text-uppercase row">
+                        {{-- <a href="#">{{ $order->products->name }} - {{ $order->products->quantity }} KG -
                         {{  '€ '.number_format($order->products->price, 2, ',', '.') }}</a> --}}
-                        <div class="col-4">
-                             {{ $order->products->name }} 
+                        <div class="col-3">
+                              <p>{{ $order->products->name }}</p>
                         </div>
-                        <div class="col-4">
-                             {{ $order->products->quantity }} KG 
+                        <div class="col-2">
+                              <p>{{ $order->products->quantity }} KG</p>
                         </div>
-                        <div class="col-4">
-                             {{  '€ '.number_format($order->products->price, 2, ',', '.') }}
+                        <div class="col-2">
+                              <p>{{  '€ '.number_format($order->products->price, 2, ',', '.') }}</p>
                         </div>
-            </div>
-            <div>
-                  <button
-                        class="btn @if($order->products->status == 0) btn-status0 @elseif($order->products->status == 1) btn-status1 @elseif($order->products->status == 2) btn-status2 @endif">@if($order->products->status
-                        == 0) PREPARAÇÃO @elseif($order->products->status == 1) TRANSPORTE
-                        @elseif($order->products->status == 2) ENTREGUE @endif</button>
-            </div>
-      </div>
-      @endforeach
 
+                        <div class="col-5">
+                              <button
+                                    class="btn @if($order->products->status == 0) btn-status0 @elseif($order->products->status == 1) btn-status1 @elseif($order->products->status == 2) btn-status2 @endif">@if($order->products->status
+                                    == 0) PREPARAÇÃO @elseif($order->products->status == 1) TRANSPORTE
+                                    @elseif($order->products->status == 2) ENTREGUE @endif</button>
+                        </div>
+                  </div>
+            </div>
+            @endforeach
+      </div>
 </div>
 {{-- <div class="header-top">
       <div class="container">
