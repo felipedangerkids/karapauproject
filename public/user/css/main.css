@@ -36,6 +36,7 @@
 .botao {
   display: block;
   width: 40vw;
+  border: none;
 }
 
 .btn-status1 {
@@ -96,6 +97,53 @@
 .itens {
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #03568A;
+}
+
+.square {
+  background-color: #0075AD;
+  width: 100%;
+  height: 180px;
+}
+
+.square span {
+  color: white;
+}
+
+.square .botao-trans {
+  background-color: #040824;
+  color: white;
+  border-radius: 18.3333px;
+}
+
+.square .botao-prep {
+  background-color: #F201A0;
+  color: white;
+  border-radius: 18.3333px;
+}
+
+.square .botao-entr {
+  background-color: #35A40E;
+  color: white;
+  border-radius: 18.3333px;
+}
+
+.square .avaliar {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.square .avaliar button {
+  width: 35vw;
+  display: block;
+  border-radius: 18.3333px;
+}
+
+.square #linha-horizontal {
+  width: 100%;
+  border: 1px solid gray;
 }
 /*# sourceMappingURL=main.css.map */
