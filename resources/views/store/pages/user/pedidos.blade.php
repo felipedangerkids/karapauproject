@@ -22,9 +22,18 @@
 <div class="container">
       @foreach ($user_orders as $order)
       <div class="status d-flex mt-5 ">
-            <div class="item text-uppercase">
-                  <a href="#">{{ $order->products->name }} - {{ $order->products->quantity }} KG -
-                        {{  '€ '.number_format($order->products->price, 2, ',', '.') }}</a>
+            <div class="item text-uppercase row">
+                  {{-- <a href="#">{{ $order->products->name }} - {{ $order->products->quantity }} KG -
+                        {{  '€ '.number_format($order->products->price, 2, ',', '.') }}</a> --}}
+                        <div class="col-4">
+                             {{ $order->products->name }} 
+                        </div>
+                        <div class="col-4">
+                             {{ $order->products->quantity }} KG 
+                        </div>
+                        <div class="col-4">
+                             {{  '€ '.number_format($order->products->price, 2, ',', '.') }}
+                        </div>
             </div>
             <div>
                   <button
