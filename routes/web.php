@@ -201,3 +201,6 @@ Route::group(['middleware' => ['auth:compradorind']], function(){
 Route::get('front/status', function(){
 return view('store.pages.user.status');
 });
+Route::get('front/encomenda', function(){
+return view('store.pages.user.encomenda');
+});

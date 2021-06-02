@@ -1,3 +1,7 @@
+
+/////STATUS
+
+
 .btn-voltar {
     color: white !important;
     display: block;
@@ -30,7 +34,7 @@
     }
 }
 
-.btn{
+.botao{
     display: block;
     width: 40vw;
     
@@ -58,4 +62,24 @@
     align-items: center;
     justify-content: center;
 
+}
+
+////ENCOMENDAS
+
+.inicio{
+    justify-content: space-around;
+    align-items: center;
+    span{
+        color: #03568A;
+        font-size: 1.2rem;
+    }
+}
+.detail{
+    color: #03568A;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.itens{
+    justify-content: space-around;
+    color: #03568A;
 }

@@ -33,7 +33,7 @@
       align-self: flex-end;
 }
 
-.btn {
+.botao {
   display: block;
   width: 40vw;
 }
@@ -72,5 +72,30 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.inicio {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.inicio span {
+  color: #03568A;
+  font-size: 1.2rem;
+}
+
+.detail {
+  color: #03568A;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.itens {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: #03568A;
 }
 /*# sourceMappingURL=main.css.map */
