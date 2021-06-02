@@ -22,7 +22,10 @@ class CreateUserOrdersTable extends Migration
             $table->string('user_name');
             $table->string('email');
             $table->string('telemovel');
+            $table->string('total');
+            $table->string('sub_total');
             $table->integer('status')->default(0);
+           
             $table->timestamps();
         });
     }

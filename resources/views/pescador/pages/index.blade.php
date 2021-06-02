@@ -59,10 +59,10 @@
                   </div>
                   <div class="d-flex">
                         <div>
-                              <span>000</span>
+                              <span>00{{ $pedidos->count() }}</span>
                         </div>
                         <div>
-                              <a href="">Ver Pedidos</a>
+                              <a href="{{ route('pescador.pedidos') }}">Ver Pedidos</a>
                         </div>
 
                   </div>

@@ -23,6 +23,7 @@ class CreateUserProductsTable extends Migration
             $table->integer('user_id');
             $table->integer('order_id');
             $table->integer('pescador_id');
+            $table->integer('status')->default(0);
             $table->timestamps();
         });
     }

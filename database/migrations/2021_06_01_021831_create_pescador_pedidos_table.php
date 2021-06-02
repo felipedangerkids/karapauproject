@@ -18,6 +18,7 @@ class CreatePescadorPedidosTable extends Migration
             $table->integer('pescador_id');
             $table->integer('order_id');
             $table->integer('adress');
+            $table->integer('produtos');
             $table->timestamps();
         });
     }

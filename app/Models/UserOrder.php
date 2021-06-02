@@ -17,11 +17,15 @@ class UserOrder extends Model
         'status',
         'user_name',
         'email',
-        'telemovel'
+        'telemovel',
+        'total',
+        'sub_total',
+       
     ];
 
     public function enderecos()
     {
         return $this->belongsTo(AdressBuyer::class, 'adress');
     }
+ 
 }

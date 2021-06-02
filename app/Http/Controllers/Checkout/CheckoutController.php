@@ -39,11 +39,13 @@ class CheckoutController extends Controller
             'user_name' => auth()->user()->nome,
             'email' => auth()->user()->email,
             'telemovel' => auth()->user()->telemovel,
+            'total' => \Cart::getTotal(),
+            'sub_total' => \Cart::getSubTotal(),
         ]);
 
         foreach (\Cart::getContent() as $item) {
 
-            UserProduct::create([
+            $produtos = UserProduct::create([
                 'product_id' => $item->id,
                 'name' => $item->name,
                 'price' => $item->price,
@@ -53,11 +55,11 @@ class CheckoutController extends Controller
                 'order_id' => $user_order->id,
                 'pescador_id' => $item->attributes->pescador_id,
             ]);
-
             PescadorPedido::create([
                 'pescador_id' => $item->attributes->pescador_id,
                 'order_id' => $user_order->id,
                 'adress' => $request->adress,
+                'produtos' => $produtos->id,
             ]);
         }
 
