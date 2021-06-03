@@ -1,5 +1,12 @@
+<<<<<<< Updated upstream
 /////STATUS
 
+=======
+
+/////PAGINA STATUS
+
+//BOTÕES PRINCIPAIS
+>>>>>>> Stashed changes
 .btn-voltar {
     color: white !important;
     display: block;
@@ -19,7 +26,12 @@
     font-size: 1rem;
     background: #36a6d4;
 }
+<<<<<<< Updated upstream
 .status {
+=======
+//CAMPOS INFORMATIVOS E OS STATUS DE ENTREGAS
+.status{
+>>>>>>> Stashed changes
     align-items: center;
     justify-content: space-around;
     background-color: white;
@@ -52,7 +64,12 @@
 .botao {
     display: block;
     width: 40vw;
+<<<<<<< Updated upstream
+=======
+    border: none;
+>>>>>>> Stashed changes
 }
+
 .btn-status1 {
     background: #03568a;
     border-radius: 25px;
@@ -75,7 +92,7 @@
     justify-content: center;
 }
 
-////ENCOMENDAS
+//// PAGINA ENCOMENDAS
 
 .inicio {
     justify-content: space-around;
@@ -85,12 +102,61 @@
         font-size: 1.2rem;
     }
 }
+<<<<<<< Updated upstream
 .detail {
     color: #03568a;
+=======
+//TABELAS
+.detail{
+    color: #03568A;
+>>>>>>> Stashed changes
     font-size: 1.1rem;
     font-weight: bold;
 }
 .itens {
     justify-content: space-around;
+<<<<<<< Updated upstream
     color: #03568a;
 }
+=======
+    align-items: center;
+    color: #03568A;
+}
+//CAIXA AZUL 
+.square{
+    background-color: #0075AD;
+    width: 100%;
+    height: 180px;
+    span{
+        color: white;
+    }
+//BOTOES DE STATUS DE ENTREGA    
+    .botao-trans{
+        background-color: #040824;
+        color: white;
+        border-radius: 18.3333px;
+    }
+    .botao-prep{
+        background-color:#F201A0 ;
+        color: white;
+        border-radius: 18.3333px;
+    }
+    .botao-entr{
+        background-color:#35A40E ;
+        color: white;
+        border-radius: 18.3333px;
+    }
+    .avaliar{
+        justify-content: space-around;
+        button{
+            width: 35vw;
+            display: block;
+            border-radius: 18.3333px;
+        }
+    }
+    #linha-horizontal {
+        width: 100%;
+        border: 1px solid gray;
+    }
+}
+>>>>>>> Stashed changes

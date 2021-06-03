@@ -26,7 +26,7 @@
         </div>
     </div>
 
-    <div class="container mt-3">
+    <div class="mt-5">
         <div class="d-flex itens">
             <div>
                 <span>ESPÉCIME</span>
@@ -42,21 +42,84 @@
             </div>
         </div>
     </div>
-
-    <div class="d-flex itens mt-5">
-        <div>
-            <span>SARDINHA</span>
-        </div>
-        <div>
-            <span>10 KG</span>
-        </div>
-        <div>
-            <span>€ 29,00</span>
-        </div>
-        <div>
-            <button>transporte</button>
+    <div class="square">
+        <div class="container">
+            <div class=" d-flex itens mt-3 pt-3">
+                <div>
+                    <span>SARDINHA</span>
+                </div>
+                <div>
+                    <span>10 KG</span>
+                </div>
+                <div>
+                    <span>€ 29,00</span>
+                </div>
+                <div>
+                    <button class="botao-trans">TRANSPORTE</button>
+                </div>
+            </div>
+            <div class="mt-3 text-center " id="linha-horizontal"></div>
+            <div class="d-flex mt-3 avaliar">
+                <button class="btn btn-primary">INFORMAR RECEBIMENTO</button>
+                <button class="btn btn-primary">AVALIAR</button>
+            </div>
         </div>
     </div>
-
+    <div class="square">
+        <div class="container">
+            <div class=" d-flex itens mt-3 pt-3">
+                <div>
+                    <span>SARDINHA</span>
+                </div>
+                <div>
+                    <span>10 KG</span>
+                </div>
+                <div>
+                    <span>€ 29,00</span>
+                </div>
+                <div>
+                    <button class="botao-prep">PREPARAÇÃO</button>
+                </div>
+            </div>
+            <div class="mt-3 text-center " id="linha-horizontal"></div>
+            <div class="d-flex mt-3 avaliar">
+                <button class="btn btn-primary">INFORMAR RECEBIMENTO</button>
+                <button class="btn btn-primary">AVALIAR</button>
+            </div>
+        </div>
+    </div>
+    <div class="square">
+        <div class="container">
+            <div class=" d-flex itens mt-3 pt-3">
+                <div>
+                    <span>POLVO</span>
+                </div>
+                <div>
+                    <span>01 UNIT</span>
+                </div>
+                <div>
+                    <span>€ 60,00</span>
+                </div>
+                <div>
+                    <button class="botao-entr">ENTREGUE</button>
+                </div>
+            </div>
+            <div class="mt-3 text-center " id="linha-horizontal"></div>
+            <div class="d-flex mt-3 avaliar">
+                <button class="btn btn-primary">INFORMAR RECEBIMENTO</button>
+                <button class="btn btn-primary">AVALIAR</button>
+            </div>
+        </div>
+    </div>
+    <div class="square">
+        <div class="container">
+            <div class=" itens mt-3 pt-3 text-start">
+                <span>Local de Entrega</span>
+                <div>
+                    <span>Endereço: Av. da República 1239,<br> 4430-204 Vila Nova de Gaia</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
 @endsection
