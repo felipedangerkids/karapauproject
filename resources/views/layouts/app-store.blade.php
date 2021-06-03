@@ -27,7 +27,7 @@
       {{-- <link rel="stylesheet" href="{{ url('app-comercial/css/main.min.css') }}">
       <link rel="stylesheet" href="{{ url('app-pescador/css/main.min.css') }}"> --}}
       <link rel="stylesheet" href="{{ url('app-store/css/main.min.css') }}">
-      <link rel="stylesheet" href="{{ url('user/css/main.min.css') }}">
+      <link rel="stylesheet" href="{{ url('user/css/main.css') }}">
 
 </head>
 
