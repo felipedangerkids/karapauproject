@@ -50,10 +50,18 @@
                         <h4>Quantidade</h4>
                         <div class="form-group mt-3">
                               <select class="form-control" name="quantity" id="">
+                                    @if($produto->quantidade_kg >= 5)
                                     <option value="5">5 Kg</option>
+                                    @endif
+                                    @if($produto->quantidade_kg >= 10)
                                     <option value="10">10 Kg</option>
+                                    @endif
+                                    @if($produto->quantidade_kg >= 15)
                                     <option value="15">15 Kg</option>
+                                    @endif
+                                    @if($produto->quantidade_kg >= 20)
                                     <option value="20">20 Kg</option>
+                                    @endif
                               </select>
                         </div>
                   </div>

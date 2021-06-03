@@ -7,6 +7,7 @@ use Darryldecode\Cart\Cart;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\PescadorPedido;
+use App\Models\Produto;
 use App\Models\UserOrder;
 use App\Models\UserProduct;
 
@@ -55,6 +56,11 @@ class CheckoutController extends Controller
                 'order_id' => $user_order->id,
                 'pescador_id' => $item->attributes->pescador_id,
             ]);
+
+            $quantidade = Produto::find($item->id);
+            $quantidade->quantidade_kg = $quantidade->quantidade_kg - $item->quantity;
+            $quantidade->save();
+
             PescadorPedido::create([
                 'pescador_id' => $item->attributes->pescador_id,
                 'order_id' => $user_order->id,

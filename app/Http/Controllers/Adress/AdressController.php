@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Adress;
 
-use App\Http\Controllers\Controller;
 use App\Models\AdressBuyer;
+use Darryldecode\Cart\Cart;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class AdressController extends Controller
 {
@@ -37,7 +38,12 @@ class AdressController extends Controller
     public function store(Request $request)
     {
         $adress = AdressBuyer::create($request->all());
-        return redirect()->route('store.index')->with('success', 'Endereço Salvo');
+        if(\Cart::isEmpty()){
+            return redirect()->route('store.index')->with('success', 'Endereço Salvo');
+        }else{
+            return redirect()->route('store.checkout')->with('success', 'Endereço Salvo');
+        }
+       
     }
 
     /**

@@ -6,7 +6,7 @@
 <div class="header">
       <div class="container">
             <div class="text-center mx-auto py-5">
-                <a href="{{ route('store.index') }}">  <img src="{{ url('app-store/img/logo.svg') }}" alt=""></a>
+                  <a href="{{ route('store.index') }}"> <img src="{{ url('app-store/img/logo.svg') }}" alt=""></a>
             </div>
       </div>
 </div>
@@ -23,7 +23,7 @@
       <div class="portos produtos mt-4">
             <div class="row">
                   @foreach ($produtos as $produto)
-
+                  @if($produto->quantidade_kg >= 5)
                   <div class="col-6 my-4">
                         <a href="{{ route('store.produto.single', $produto->id) }}">
                               <img src="{{ url('storage/especies/'.$produto->especies->image) }}" alt="">
@@ -36,7 +36,7 @@
                               <p>STOCK - {{ $produto->quantidade_kg }} Kg</p>
                         </a>
                   </div>
-
+                  @endif
                   @endforeach
 
 

@@ -31,12 +31,12 @@
                                           <input type="hidden" name="adress" value="{{ $adress->id }}">
                                     </address>
                                     @empty
-                                    <address class="wrapper--box">
-                                          <button class="btn btn-primary">Cadastrar Endereço</button>
-                                    </address>
+                                   
+                                         <a href="{{ route('store.adress') }}" class="btn btn-primary bg-success">Cadastrar Endereço</a>
+                              
                                     @endforelse
 
-                                    <button class="gamma">Selecionar</button>
+                                    
                               </div>
                         </div>
                   </div>
