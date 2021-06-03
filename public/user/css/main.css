@@ -5,7 +5,7 @@
   width: 35vw;
   font-weight: 600;
   font-size: 1rem;
-  background: #03568A;
+  background: #03568a;
 }
 
 .btn-filtrar {
@@ -15,7 +15,7 @@
   width: 35vw;
   font-weight: 600;
   font-size: 1rem;
-  background: #36A6D4;
+  background: #36a6d4;
 }
 
 .status {
@@ -24,13 +24,35 @@
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  background-color: white;
 }
 
-.item a {
-  color: #03568A;
+.status-in {
+  padding: 20px 0;
+}
+
+.status-in p {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.status-in button {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.item p {
+  color: #03568a;
   font-weight: bold;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  text-align: center;
 }
 
 .botao {
@@ -40,7 +62,7 @@
 }
 
 .btn-status1 {
-  background: #03568A;
+  background: #03568a;
   border-radius: 25px;
   color: white;
   -webkit-box-align: center;
@@ -52,7 +74,7 @@
 }
 
 .btn-status0 {
-  background: #0472B7;
+  background: #0472b7;
   border-radius: 25px;
   color: white;
   -webkit-box-align: center;
@@ -64,7 +86,7 @@
 }
 
 .btn-status2 {
-  background: #35A40E;
+  background: #35a40e;
   border-radius: 25px;
   color: white;
   -webkit-box-align: center;
@@ -84,7 +106,7 @@
 }
 
 .inicio span {
-  color: #03568A;
+  color: #03568a;
   font-size: 1.2rem;
 }
 
