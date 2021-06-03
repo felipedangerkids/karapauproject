@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Carbon;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Produto extends Model
 {
@@ -36,6 +37,10 @@ class Produto extends Model
     public function portos()
     {
         return $this->belongsTo(Porto::class, 'porto_id');
+    }
+    public function scopeOlderThanOneDay($query)
+    {
+        return $query->where('created_at', '>', Carbon::yesterday());
     }
     
 }

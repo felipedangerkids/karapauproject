@@ -25,7 +25,7 @@ class StoreController extends Controller
 
     public function produtos($id)
     {
-        $produtos = Produto::where('porto_id', $id)->with('especies')->get();
+        $produtos = Produto::where('porto_id', $id)->olderThanOneDay()->with('especies')->get();
         $porto = Porto::find($id);
         return view('store.pages.painel.produtos', compact('produtos', 'porto'));
     }

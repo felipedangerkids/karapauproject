@@ -107,8 +107,7 @@
                                                                   </p>
                                                                   <p>
                                                                         <a
-                                                                              href="{{ route('store.cart.remove', $item->id) }}">
-                                                                              <button class="alpha">remove</button></a>
+                                                                              href="{{ route('store.cart.remove', $item->id) }}" class="alpha btn btn-danger bg-danger">remover</a>
                                                                   </p>
                                                             </div>
                                                       </div>
