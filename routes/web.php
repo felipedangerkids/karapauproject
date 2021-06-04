@@ -183,6 +183,9 @@ Route::group(['middleware' => ['auth:compradorind']], function(){
 
     Route::post('store/user/update-ind/{id}', [CompradorIndividualController::class, 'update'])->name('store.user.update');
 
+
+    Route::get('store/checkout/adress', [CheckoutController::class, 'adress'])->name('store.checkout.adress');
+    
     Route::get('store/adress', [AdressController::class, 'index'])->name('store.adress');
 
     Route::post('store/adress/save', [AdressController::class, 'store'])->name('store.adress.save');

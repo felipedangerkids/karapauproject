@@ -13,10 +13,11 @@ use App\Models\UserProduct;
 
 class CheckoutController extends Controller
 {
-    // public function adress()
-    // {
-    //     return
-    // }
+    public function adress()
+    {
+        $adresses = AdressBuyer::where('user_id', auth()->user()->id)->get();
+        return view('store.pages.painel.endereco', compact('adresses'));
+    }
     public function index()
     {
         $adresses = AdressBuyer::where('user_id', auth()->user()->id)->get();

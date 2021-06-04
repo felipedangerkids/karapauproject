@@ -45,7 +45,7 @@
       </div>
 </div>
 
-<a href="{{ route('store.checkout') }}">
+<a href="{{ route('store.checkout.adress') }}">
       <div class="bottom">
             <div class="d-flex justify-content-around">
                   <div>
