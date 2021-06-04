@@ -45,6 +45,12 @@
             <div>
                   <h4>STOCK {{ $produto->quantidade_kg }} Kg</h4>
             </div>
+            @php
+            $value = 0;
+            foreach (\Cart::getContent() as $item) {
+            $value = $item->quantity;
+            }
+            @endphp
             <form action="{{ route('store.cart.add') }}" method="POST">
                   <div class="text-center">
                         <h4>Quantidade</h4>
@@ -52,8 +58,8 @@
                               <div class="qty-input">
                                     <button class="qty-count qty-count--minus" data-action="minus"
                                           type="button">-</button>
-                                    <input class="product-qty" type="number" name="quantity" min="10" max="{{ $produto->quantidade_kg }}"
-                                          value="10">
+                                    <input class="product-qty" type="number" name="quantity" min="10"
+                                          max="{{ $produto->quantidade_kg - $value}}" value="10">
                                     <button class="qty-count qty-count--add" data-action="add" type="button">+</button>
                               </div>
                               </select>
@@ -68,11 +74,16 @@
                         <input type="hidden" name="user_id" value="{{  $produto->user_id }}">
                         <input type="hidden" name="pescador_id" value="{{  $produto->pescador_id }}">
                   </div>
-                  @if()
-                  <div class="text-center comprar">
-                        <button type="submit" class="btn btn-green">COMPRAR</button>
-                  </div>
-                  @endif
+
+                  @if($value < $produto->quantidade_kg)
+                        <div class="text-center comprar">
+                              <button type="submit" class="btn btn-green">COMPRAR</button>
+                        </div>
+                        @else
+                        <div class="text-center comprar">
+                              <h3>Produto Esgotado!</h3>
+                        </div>
+                        @endif
             </form>
       </div>
 </div>
