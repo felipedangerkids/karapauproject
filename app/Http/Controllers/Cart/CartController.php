@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Cart;
 
 use App\Http\Controllers\Controller;
+use App\Models\Produto;
 use Illuminate\Http\Request;
 use Darryldecode\Cart\Cart;
 
@@ -11,8 +12,9 @@ class CartController extends Controller
         public function cartAdd(Request $request)
     {
 
+
         $product = $request->all();
-      
+
      
         $cart = \Cart::add(array(
             'id' => $product['id'], // inique row ID

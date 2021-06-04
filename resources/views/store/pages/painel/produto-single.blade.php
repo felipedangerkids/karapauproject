@@ -16,7 +16,7 @@
                   <h3>{{ $produto->especies->nome_portugues }}</h3>
             </div>
             <div>
-                <a href="javascript:history.back()">  <button class="btn btn-info">VOLTAR</button></a>
+                  <a href="javascript:history.back()"> <button class="btn btn-info">VOLTAR</button></a>
             </div>
       </div>
 
@@ -49,19 +49,13 @@
                   <div class="text-center">
                         <h4>Quantidade</h4>
                         <div class="form-group mt-3">
-                              <select class="form-control" name="quantity" id="">
-                                    @if($produto->quantidade_kg >= 5)
-                                    <option value="5">5 Kg</option>
-                                    @endif
-                                    @if($produto->quantidade_kg >= 10)
-                                    <option value="10">10 Kg</option>
-                                    @endif
-                                    @if($produto->quantidade_kg >= 15)
-                                    <option value="15">15 Kg</option>
-                                    @endif
-                                    @if($produto->quantidade_kg >= 20)
-                                    <option value="20">20 Kg</option>
-                                    @endif
+                              <div class="qty-input">
+                                    <button class="qty-count qty-count--minus" data-action="minus"
+                                          type="button">-</button>
+                                    <input class="product-qty" type="number" name="quantity" min="10" max="{{ $produto->quantidade_kg }}"
+                                          value="10">
+                                    <button class="qty-count qty-count--add" data-action="add" type="button">+</button>
+                              </div>
                               </select>
                         </div>
                   </div>
@@ -74,9 +68,11 @@
                         <input type="hidden" name="user_id" value="{{  $produto->user_id }}">
                         <input type="hidden" name="pescador_id" value="{{  $produto->pescador_id }}">
                   </div>
+                  @if()
                   <div class="text-center comprar">
                         <button type="submit" class="btn btn-green">COMPRAR</button>
                   </div>
+                  @endif
             </form>
       </div>
 </div>

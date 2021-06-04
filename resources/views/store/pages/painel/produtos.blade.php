@@ -23,7 +23,7 @@
       <div class="portos produtos mt-4">
             <div class="row">
                   @foreach ($produtos as $produto)
-                  @if($produto->quantidade_kg >= 5)
+                  @if($produto->quantidade_kg >= 10)
                   <div class="col-6 my-4">
                         <a href="{{ route('store.produto.single', $produto->id) }}">
                               <img src="{{ url('storage/especies/'.$produto->especies->image) }}" alt="">
