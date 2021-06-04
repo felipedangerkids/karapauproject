@@ -16,7 +16,7 @@
                   <button class="btn btn-voltar">VOLTAR</button>
             </div>
             <div>
-                  <span>ENCOMENDA 1001</span>
+                  <span>ENCOMENDA {{ $order->id }}</span>
             </div>
       </div>
 </div>
@@ -42,20 +42,24 @@
             </div>
       </div>
 </div>
+
 <div class="square">
       <div class="container">
             <div class=" d-flex itens mt-3 pt-3">
                   <div>
-                        <span>SARDINHA</span>
+                        <span>{{ $order->products->name }}</span>
                   </div>
                   <div>
-                        <span>10 KG</span>
+                        <span>{{ $order->products->quantity }} KG</span>
                   </div>
                   <div>
-                        <span>€ 29,00</span>
+                        <span>{{  '€ '.number_format($order->products->price, 2, ',', '.') }}</span>
                   </div>
                   <div>
-                        <button class="botao-trans">TRANSPORTE</button>
+                        <button
+                              class="@if($order->products->status == 0) botao-prep @elseif($order->products->status == 1) botao-trans @elseif($order->products->status == 2) botao-entr @endif">@if($order->products->status
+                              == 0) PREPARAÇÃO @elseif($order->products->status == 1) TRANSPORTE
+                              @elseif($order->products->status == 2) ENTREGUE @endif</button>
                   </div>
             </div>
             <div class="mt-3 text-center " id="linha-horizontal"></div>
@@ -69,9 +73,20 @@
 <div class="square">
       <div class="container">
             <div class=" itens mt-3 pt-3 text-start">
+                  <span>Conta para Transferência</span>
+                  <div>
+                        <span>Banco: Nubank <br> Conta: 00000-0 <br> Ag: 01 <br> Razão: 000000000-0000</span>
+                  </div>
+            </div>
+      </div>
+</div>
+<div class="square">
+      <div class="container">
+            <div class=" itens mt-3 pt-3 text-start">
                   <span>Local de Entrega</span>
                   <div>
-                        <span>Endereço: Av. da República 1239,<br> 4430-204 Vila Nova de Gaia</span>
+                        <span>Endereço: {{ $order->adresses->morada }},<br> {{ $order->adresses->codigo_postal }}
+                              {{ $order->adresses->distrito }}</span>
                   </div>
             </div>
       </div>
@@ -82,14 +97,14 @@
             <div class="d-flex icons">
                   <div class="mx-3">
                         <img src="{{ url('app-store/img/icons/icone-notificacoes.svg') }}" alt="">
-                  </div>
-                  <div class="mx-3">
-                        <img src="{{ url('app-store/img/icons/edit-off.svg') }}" alt="">
-                  </div>
+</div>
+<div class="mx-3">
+      <img src="{{ url('app-store/img/icons/edit-off.svg') }}" alt="">
+</div>
 
-            </div>
+</div>
 
-      </div>
+</div>
 </div>
 
 <div class="container">

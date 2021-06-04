@@ -18,9 +18,9 @@ class PedidoController extends Controller
 
     public function pedidoDatalheUser($id)
     {
-        $produtos = UserProduct::where('order_id', $id)->get();
-        $order = UserOrder::where('id', $id)->with('enderecos')->get();
-  
-        return view('store.pages.user.pedido-produtos', compact('produtos', 'order'));
+       
+        $order  = PescadorPedido::with('adresses', 'orders', 'products')->find($id);
+
+        return view('store.pages.user.pedido-produtos', compact('order'));
     }
 }

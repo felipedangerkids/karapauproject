@@ -22,7 +22,7 @@
 <div class="status">
       <div class="container">
             @foreach ($user_orders as $order)
-            <a href="">
+            <a href="{{ route('user.pedido.produto', $order->id) }}">
                   <div class="d-flex mt-5 status-in">
                         <div class="item text-uppercase row">
                               {{-- <a href="#">{{ $order->products->name }} - {{ $order->products->quantity }} KG -
