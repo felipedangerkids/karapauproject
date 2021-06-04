@@ -3,21 +3,26 @@
 
 @section('content')
 
-<div class="container mt-5">
-      <div class="alert alert-success" role="alert">
-            Pedido realizado com sucesso! aguardando pagamento para liberação.
-      </div>
-      <div class="alert alert-info" role="alert">
-            <p>Conta: 4525</p>
-            <p>Agencia: 0000-0</p>
-            <p>Banco: Nubank</p>
-      </div>
-      <div class="alert alert-info" role="alert">
-            <div class="text-center">
-                <a href="{{ route('user.pedidos') }}"> <button class="btn btn-primary">Ver Pedidos</button></a>
+<div class="header">
+      <div class="container">
+            <div class="text-center mx-auto py-5">
+                  <a href="{{ route('store.index') }}"> <img src="{{ url('app-store/img/logo.svg') }}" alt=""></a>
             </div>
+      </div>
+</div>
+
+<div class="mt-5">
+      <div class="checkad">
+            <img src="{{ url('user/img/check.png') }}" alt="">
+      </div>
+      <div class="texto-ok text-center">
+            <h1>PEDIDO REALIZADO</h1>
+      </div>
+      <div class="text-center mt-3">
+          <a href="{{ route('user.pedidos') }}">  <button class="botao-enc">Ver encomendas</button></a>
       </div>
 </div>
 
 
 @endsection
+

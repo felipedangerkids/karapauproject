@@ -92,7 +92,13 @@
 
                   <div class="d-flex mt-5 status-in">
                         <div class="item text-uppercase row">
+<<<<<<< HEAD
                             
+=======
+                              {{-- <a href="#">{{ $order->products->name }} - {{ $order->products->quantity }} KG -
+                              {{  '€ '.number_format($order->products->price, 2, ',', '.') }}</a> --}}
+                              <div class="col-4">
+>>>>>>> main
                                     <p>CARAPAU</p>
                               </div>
                               <div class="col-2">
