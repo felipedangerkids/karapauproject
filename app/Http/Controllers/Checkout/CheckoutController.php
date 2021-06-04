@@ -13,6 +13,10 @@ use App\Models\UserProduct;
 
 class CheckoutController extends Controller
 {
+    // public function adress()
+    // {
+    //     return
+    // }
     public function index()
     {
         $adresses = AdressBuyer::where('user_id', auth()->user()->id)->get();

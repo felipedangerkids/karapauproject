@@ -53,7 +53,7 @@
       </div>
       <div class="container mt-4">
             <div class="morada text-right">
-                  <button class="btn btn-cadastrar">Alterar</button>
+                  <button type="button" class="btn btn-cadastrar">Alterar</button>
             </div>
       </div>
       <div class="mt-4">
@@ -81,7 +81,7 @@
                                     <p>Transferência Bancária</p>
                               </div>
                               <div class="col-5">
-                                    <button class="btn btn-voltar">Alterar</button>
+                                    <button type="button" class="btn btn-voltar">Alterar</button>
                               </div>
                         </div>
                         <input type="hidden" name="payment" value="Transferência Bancária">
@@ -91,12 +91,7 @@
             </div>
 
       </div>
-      <div class="container mt-4">
-            <div class="morada text-right">
-                  <button class="btn btn-cadastrar">Alterar</button>
-            </div>
 
-      </div>
       <div class="mt-4">
             <div class="container">
                   <div class="morada">
