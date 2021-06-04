@@ -31,7 +31,31 @@
                   <p>Arte da Pesca</p>
             </div>
             <div class="row-2">
-                  <p>{{ $produto->arte }}</p>
+                  <p>
+                        @if ($produto->arte == 'redes_de_emalhar')
+                        Redes de emalhar
+                        @elseif($produto->arte == 'rede')
+                        Rede
+                        @elseif($produto->arte == 'vara')
+                        Vara
+                        @elseif($produto->arte == 'cerco')
+                        Cerco
+                        @elseif($produto->arte == 'arrasto')
+                        Arrasto
+                        @elseif($produto->arte == 'anzol')
+                        Anzol
+                        @elseif($produto->arte == 'armadilhas')
+                        Armadilhas
+                        @elseif($produto->arte == 'apanha')
+                        Apanha
+                        @elseif($produto->arte == 'redes_de_tresmalho')
+                        Redes de Tresmalho
+                        @elseif($produto->arte == 'envolventes_arrastantes')
+                        Envolventes arrastantes
+                        @elseif($produto->arte == 'arte_xavega')
+                        Arte Xávega
+                        @endif
+                  </p>
             </div>
             @if ($produto->unidade == 'Unidade')
             <div class="row-1 mt-5">
