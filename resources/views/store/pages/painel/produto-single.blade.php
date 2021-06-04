@@ -90,6 +90,8 @@
                         <input type="hidden" name="image" value="{{  $produto->especies->image }}">
                         <input type="hidden" name="user_id" value="{{  $produto->user_id }}">
                         <input type="hidden" name="pescador_id" value="{{  $produto->pescador_id }}">
+                        <input type="hidden" name="embarcacao" value="{{  $produto->embarcacao }}">
+                        
                   </div>
 
                   @if($value < $produto->quantidade_kg)

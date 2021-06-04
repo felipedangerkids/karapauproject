@@ -25,6 +25,8 @@ class CartController extends Controller
                 'image' => $request->image,
                 'user_id' => $product['user_id'],
                 'pescador_id' => $product['pescador_id'],
+                'embarcacao' => $product['embarcacao'],
+                
              
             )
         ));
