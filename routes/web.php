@@ -204,6 +204,14 @@ return view('store.pages.user.status');
 Route::get('front/encomenda', function(){
 return view('store.pages.user.encomenda');
 });
+<<<<<<< Updated upstream
 Route::get('front/okay', function(){
 return view('store.pages.user.okay');
+=======
+Route::get('front/endereco', function(){
+return view('store.pages.painel.endereco');
+});
+Route::get('front/checkout', function(){
+return view('store.pages.painel.checkout-new');
+>>>>>>> Stashed changes
 });
