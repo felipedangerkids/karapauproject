@@ -204,3 +204,6 @@ return view('store.pages.user.status');
 Route::get('front/encomenda', function(){
 return view('store.pages.user.encomenda');
 });
+Route::get('front/okay', function(){
+return view('store.pages.user.okay');
+});
