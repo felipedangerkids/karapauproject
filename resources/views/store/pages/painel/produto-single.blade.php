@@ -52,6 +52,8 @@
             }
             @endphp
             <form action="{{ route('store.cart.add') }}" method="POST">
+                  @csrf
+                  @if ($produto->unidade == 'Kg')
                   <div class="text-center">
                         <h4>Quantidade</h4>
                         <div class="form-group mt-3">
@@ -62,10 +64,25 @@
                                           max="{{ $produto->quantidade_kg - $value}}" value="10">
                                     <button class="qty-count qty-count--add" data-action="add" type="button">+</button>
                               </div>
-                              </select>
+
                         </div>
                   </div>
-                  @csrf
+                  @else
+                  <div class="text-center d-none">
+                        <h4>Quantidade</h4>
+                        <div class="form-group mt-3">
+                              <div class="qty-input">
+                                    <button class="qty-count qty-count--minus" data-action="minus"
+                                          type="button">-</button>
+                                    <input class="product-qty" type="number" name="quantity" min="10"
+                                          max="{{ $produto->quantidade_kg - $value}}" value="{{ $produto->quantidade_kg }}">
+                                    <button class="qty-count qty-count--add" data-action="add" type="button">+</button>
+                              </div>
+
+                        </div>
+                  </div>
+                  @endif
+
                   <div class="d-none">
                         <input type="hidden" name="id" value="{{ $produto->id }}">
                         <input type="hidden" name="name" value="{{ $produto->especies->nome_portugues }}">

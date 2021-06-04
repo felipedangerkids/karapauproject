@@ -6,7 +6,7 @@
 <div class="header">
       <div class="container">
             <div class="text-center mx-auto py-5">
-                <a href="{{ route('store.index') }}">  <img src="{{ url('app-store/img/logo.svg') }}" alt=""></a>
+                  <a href="{{ route('store.index') }}"> <img src="{{ url('app-store/img/logo.svg') }}" alt=""></a>
             </div>
       </div>
 </div>
@@ -16,7 +16,7 @@
                   <h3>{{ $produto->especies->nome_portugues }}</h3>
             </div>
             <div>
-                 <a href="javascript:history.back()"> <button class="btn btn-info">VOLTAR</button></a>
+                  <a href="javascript:history.back()"> <button class="btn btn-info">VOLTAR</button></a>
             </div>
       </div>
       <div class="produtos-single">
@@ -33,6 +33,14 @@
             <div class="row-2">
                   <p>{{ $produto->arte }}</p>
             </div>
+            @if ($produto->unidade == 'Unidade')
+            <div class="row-1 mt-5">
+                  <p>Unidades do Produto</p>
+            </div>
+            <div class="row-2">
+                  <p>{{ $produto->quantidade_unidade }}</p>
+            </div>
+            @endif
             <div class="row-1">
                   <p>Tamanho</p>
             </div>
