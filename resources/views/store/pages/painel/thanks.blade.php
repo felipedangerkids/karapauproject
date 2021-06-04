@@ -19,10 +19,9 @@
             <h1>PEDIDO REALIZADO</h1>
       </div>
       <div class="text-center mt-3">
-          <a href="{{ route('user.pedidos') }}">  <button class="botao-enc">Ver encomendas</button></a>
+           <a href="{{ route('user.pedidos') }}"> <button class="botao-enc">Ver encomendas</button></a>
       </div>
 </div>
 
 
 @endsection
-

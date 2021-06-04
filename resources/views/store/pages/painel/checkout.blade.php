@@ -83,8 +83,9 @@
                               <div class="col-5">
                                     <button class="btn btn-voltar">Alterar</button>
                               </div>
-
                         </div>
+                        <input type="hidden" name="payment" value="Transferência Bancária">
+                        <input type="hidden" name="shipment" value="Entrega Padrão">
 
                   </div>
             </div>
@@ -162,7 +163,7 @@
                   </div>
             </div>
 
-      </div>
+      </div><a href="{{ route('user.pedidos') }}">
       <div class="container my-4">
             <div class="text-right">
                   <button type="submit" class="btn btn-voltar mx-auto">FINALIZAR</button>
