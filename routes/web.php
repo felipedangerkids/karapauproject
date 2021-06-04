@@ -205,5 +205,5 @@ Route::get('front/encomenda', function(){
 return view('store.pages.user.encomenda');
 });
 Route::get('front/okay', function(){
-return view('store.pages.user.okay');
+return view('store.pages.painel.checkout-new');
 });
