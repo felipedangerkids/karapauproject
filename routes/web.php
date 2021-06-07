@@ -85,6 +85,7 @@ Route::middleware(['auth'])->prefix('admin')->group( function () {
     Route::post('estatistica/store', [EstatiscaDiariaController::class, 'store'])->name('admin.estatistica.store');
 
 
+
     Route::get('consultor', [ComercialController::class, 'index'])->name('admin.consultores');
     Route::get('consultor-create', [ComercialController::class, 'create'])->name('admin.consultores.create');
     Route::post('consultor-store', [LoginConsultorController::class, 'store'])->name('admin.consultores.store');

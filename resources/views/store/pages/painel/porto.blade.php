@@ -24,8 +24,8 @@
                   <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
                         data-parent="#accordionExample">
                         <div class="collapse" id="collapseExample">
-                              <div>
-                                    <button class="btn btn-success">Especies</button>
+                              <div class="form-group">
+                                    <input type="text" class="form-control">
                               </div>
                         </div>
                   </div>
