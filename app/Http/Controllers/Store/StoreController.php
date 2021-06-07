@@ -49,7 +49,7 @@ class StoreController extends Controller
             $portos = '';
             $portos = DB::table('portos')->where('nome', 'LIKE', '%' . $request->search . "%")->get();
         
-        return view('store.pages.painel.porto-filter', compact('portos'))->render();
+        // return view('store.pages.painel.porto-filter', compact('portos'))->render();
         }
     }
 }
