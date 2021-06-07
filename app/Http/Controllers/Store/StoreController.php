@@ -4,12 +4,14 @@ namespace App\Http\Controllers\Store;
 
 use App\Models\Porto;
 use App\Models\Produto;
+use Illuminate\View\View;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 
 class StoreController extends Controller
 {
-   
+
 
 
     public function index()
@@ -39,5 +41,15 @@ class StoreController extends Controller
     {
         $produto = Produto::with('especies')->find($id);
         return view('store.pages.painel.info-produto', compact('produto'));
+    }
+
+    public function portoSearch(Request $request)
+    {
+        if ($request->ajax()) {
+            $portos = '';
+            $portos = DB::table('portos')->where('nome', 'LIKE', '%' . $request->search . "%")->get();
+        
+        // return view('store.pages.painel.porto-filter', compact('portos'))->render();
+        }
     }
 }

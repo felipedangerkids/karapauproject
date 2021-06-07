@@ -85,6 +85,7 @@ Route::middleware(['auth'])->prefix('admin')->group( function () {
     Route::post('estatistica/store', [EstatiscaDiariaController::class, 'store'])->name('admin.estatistica.store');
 
 
+
     Route::get('consultor', [ComercialController::class, 'index'])->name('admin.consultores');
     Route::get('consultor-create', [ComercialController::class, 'create'])->name('admin.consultores.create');
     Route::post('consultor-store', [LoginConsultorController::class, 'store'])->name('admin.consultores.store');
@@ -193,6 +194,8 @@ Route::group(['middleware' => ['auth:compradorind']], function(){
     Route::post('store/checkout/store', [CheckoutController::class, 'payment'])->name('store.checkout.payment');
 
     Route::get('store/thanks', [CheckoutController::class, 'thanks'])->name('store.thanks');
+
+    Route::get('porto/buscar', [StoreController::class, 'portoSearch'])->name('store.porto.buscar');
 
     Route::get('store/pedidos', [PedidoController::class, 'userPedido'])->name('user.pedidos');
     Route::get('store/pedidos/produtos/{id}', [PedidoController::class, 'pedidoDatalheUser'])->name('user.pedido.produto');
