@@ -195,6 +195,8 @@ Route::group(['middleware' => ['auth:compradorind']], function(){
 
     Route::get('store/thanks', [CheckoutController::class, 'thanks'])->name('store.thanks');
 
+    Route::get('porto/buscar', [StoreController::class, 'portoSearch'])->name('store.porto.buscar');
+
     Route::get('store/pedidos', [PedidoController::class, 'userPedido'])->name('user.pedidos');
     Route::get('store/pedidos/produtos/{id}', [PedidoController::class, 'pedidoDatalheUser'])->name('user.pedido.produto');
 });
