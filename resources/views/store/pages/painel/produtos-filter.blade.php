@@ -33,7 +33,7 @@
                             @csrf
                             <div class="form-group">
                                 <select name="especie_id" class="form-control" id="">
-                                    <option >Espécie</option>
+                                    <option value="">Espécie</option>
                                     @foreach ($especies as $especie)
                                     <option value="{{ $especie->id }}">{{ $especie->nome_portugues }}</option>
                                     @endforeach
@@ -42,7 +42,7 @@
                             </div>
                             <div class="form-group">
                                 <select name="tamanho" class="form-control" id="">
-                                    <option >Tamanho</option>
+                                    <option value="">Tamanho</option>
                                     <option value="tamanho1">Tamanho 1 (T1)</option>
                                     <option value="tamanho2">Tamanho 2 (T2)</option>
                                     <option value="tamanho3">Tamanho 3 (T3)</option>
@@ -51,7 +51,7 @@
                             </div>
                             <div class="form-group">
                                 <select name="arte" class="form-control" id="">
-                                    <option >Arte</option>
+                                    <option value="">Arte</option>
                                     <option value="rede">Rede</option>
                                     <option value="vara">Vara</option>
                                     <option value="cerco">Cerco</option>
