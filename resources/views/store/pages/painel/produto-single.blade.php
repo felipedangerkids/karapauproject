@@ -16,7 +16,7 @@
                   <h3>{{ $produto->especies->nome_portugues }}</h3>
             </div>
             <div>
-                  <a href="javascript:history.back()"> <button class="btn btn-info">VOLTAR</button></a>
+                  <a href="{{ route('store.produto') }}"> <button class="btn btn-info">VOLTAR</button></a>
             </div>
       </div>
 
