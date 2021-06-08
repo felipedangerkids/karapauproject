@@ -6,7 +6,7 @@
 <div class="header">
       <div class="container">
             <div class="text-center mx-auto py-5">
-                  <a href=""><img src="{{ url('app-store/img/logo.svg') }}" alt=""></a>
+                  <a href="#"><img src="{{ url('app-store/img/logo.svg') }}" alt=""></a>
             </div>
       </div>
 </div>
