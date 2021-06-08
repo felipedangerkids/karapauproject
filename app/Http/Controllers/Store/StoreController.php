@@ -48,6 +48,9 @@ class StoreController extends Controller
         if ($request->ajax()) {
             $portos = '';
             $portos = DB::table('portos')->where('nome', 'LIKE', '%' . $request->search . "%")->get();
+
+
+            return response()->json($portos);
         
         // return view('store.pages.painel.porto-filter', compact('portos'))->render();
         }

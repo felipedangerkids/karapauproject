@@ -70,6 +70,8 @@
 
     @endif
     <script type="text/javascript">
+    var url = "{{ route('store.produto', '') }}"
+    var urlImage = "{{ url('storage/portos') }}"
         $('#search').on('keyup', function() {
             $value = $(this).val();
             $.ajax({
@@ -80,8 +82,14 @@
                 },
                 success: function(data) {
                       console.log(data);
-                    $('tbody').html('');
-                    $('tbody').html(data);
+                      $('.portos').find('.row').empty();
+                      for(var i = 0; data.length > i; i++){
+
+                        $('.portos').find('.row').append('<div class="col-6">'+'<a href="'+url+'/'+data[i].id+'">'+'<img'+
+                                   " "+'src="'+urlImage+'/'+data[i].image+'" alt=""></a>'+
+                        '<p>'+data[i].nome+'</p></div>');
+                      }
+                   
                 }
             });
         })
