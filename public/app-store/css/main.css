@@ -7,6 +7,10 @@ body {
   background-color: #f2f2f2;
 }
 
+div#collapseExample {
+  margin: 10px 0;
+}
+
 .header-top {
   background-image: url("/app-store/img/header-top.svg");
   background-position: center;
