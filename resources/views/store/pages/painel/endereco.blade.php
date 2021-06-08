@@ -5,7 +5,7 @@
 <div class="header">
       <div class="container">
             <div class="text-center d-flex justify-content-end mx-auto py-5">
-                  <a href="javascript:history.back()"> <button class="btn btn-voltar">VOLTAR</button></a>
+                  <a href="javascript:history.back()"> <button class="btn btn-voltar2">VOLTAR</button></a>
             </div>
       </div>
 </div>
@@ -20,7 +20,7 @@
 <div class="container">
       <div class="morada">
             <p>Novo Morada</p>
-            <a href="{{ route('store.adress') }}"> <button class="btn btn-cadastrar">cadastrar</button></a>
+            <a href="{{ route('store.adress') }}"> <button class="btn btn-cadastrar">CADASTRAR</button></a>
       </div>
 </div>
 
@@ -46,6 +46,9 @@
                   <input type="hidden" name="adress" value="{{ $adress->id }}">
             </div>
       </a>
+      <div class="mt-5">
+            <button class="btn btn-continuar">CONTINUAR</button>
+      </div>
       @endif
       @empty
 
