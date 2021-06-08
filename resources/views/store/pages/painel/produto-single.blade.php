@@ -16,7 +16,7 @@
                   <h3>{{ $produto->especies->nome_portugues }}</h3>
             </div>
             <div>
-                  <a href="{{ route('store.porto') }}"> <button class="btn btn-info">VOLTAR</button></a>
+                  <a href="{{ route('store.produto', $produto->porto_id) }}"> <button class="btn btn-info">VOLTAR</button></a>
             </div>
       </div>
 
