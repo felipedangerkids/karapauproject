@@ -47,7 +47,7 @@
             </div>
       </a>
       <div class="mt-5">
-            <button class="btn btn-continuar">CONTINUAR</button>
+            <a href="{{ route('store.checkout') }}"> <button class="btn btn-continuar">CONTINUAR</button></a>
       </div>
       @endif
       @empty

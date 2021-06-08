@@ -18,7 +18,7 @@
       <div class="header">
             <div class="container">
                   <div class="text-center d-flex justify-content-end mx-auto py-5">
-                        <a href="javascript:history.back()"> <button class="btn btn-voltar">VOLTAR</button></a>
+                        <a href="{{ route('store.checkout.adress') }}"> <button type="button" class="btn btn-voltar">VOLTAR</button></a>
                   </div>
             </div>
       </div>
@@ -136,7 +136,7 @@
                                     <div class="col-4 d-flex flex-column">
                                           <button
                                                 class="btn btn-status0 mb-2">{{ $item->attributes->embarcacao }}</button>
-                                          <a href="{{ route('store.cart.remove', $item->id) }}"> <button
+                                          <a href="{{ route('store.cart.remove', $item->id) }}"> <button type="button"
                                                       class="btn btn-status0 bg-danger mt-4">REMOVER</button></a>
                                     </div>
                               </div>
