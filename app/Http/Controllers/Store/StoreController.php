@@ -8,6 +8,7 @@ use Illuminate\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use App\Models\Especie;
 
 class StoreController extends Controller
 {
@@ -29,7 +30,8 @@ class StoreController extends Controller
     {
         $produtos = Produto::where('porto_id', $id)->olderThanOneDay()->with('especies')->get();
         $porto = Porto::find($id);
-        return view('store.pages.painel.produtos', compact('produtos', 'porto'));
+        $especies = Especie::all();
+        return view('store.pages.painel.produtos', compact('produtos', 'porto', 'especies'));
     }
 
     public function produto($id)
@@ -51,8 +53,31 @@ class StoreController extends Controller
 
 
             return response()->json($portos);
-        
-        // return view('store.pages.painel.porto-filter', compact('portos'))->render();
         }
+    }
+
+    public function produtoSearch(Request $request)
+    {
+        // $porto = Porto::find($id);
+        $produtos = $request->except('_token');
+        $especies = Especie::all();
+        $produtos = '';
+        $query = Produto::query();
+
+
+        $termos = $request->only('especie_id', 'tamanho', 'arte');
+    
+        foreach ($termos as $nome => $valor) {
+            if ($valor) { 
+                $query->where($nome, 'LIKE', '%' . $valor . '%');
+            }
+        }
+    
+
+        $produtos = $query->get();
+
+        // dd($produtos);
+        // return response()->json($portos);
+        return view('store.pages.painel.produtos-filter', compact('produtos', 'especies'));
     }
 }

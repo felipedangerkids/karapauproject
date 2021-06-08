@@ -7,7 +7,7 @@
         <div class="container">
             <div class="d-flex top mt-3 justify-content-around">
                 <div class="porto-nome">
-                    <h3>{{ $porto->nome }}</h3>
+                    <h3>Resultado</h3>
                 </div>
                 <div class="">
                     <a href="/store-porto" class="btn btn-info">TROCAR</a>
