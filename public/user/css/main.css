@@ -18,6 +18,26 @@
   width: 28%;
 }
 
+.btn-voltar2 {
+  background: #36a6d4;
+  border-radius: 25px;
+  color: white;
+  padding: 15px 35px;
+  font-weight: 800;
+  font-size: 21.3333px;
+  line-height: 32px;
+}
+
+.btn-continuar {
+  background-color: #35A40E;
+  border-radius: 25px;
+  padding: 15px 35px;
+  font-weight: 800;
+  font-size: 21.3333px;
+  line-height: 32px;
+  color: #ffffff;
+}
+
 .btn-info {
   background: #36a6d4 !important;
   color: white !important;
