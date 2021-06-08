@@ -12,12 +12,16 @@
 </div>
 <div class="container">
       <div class="d-flex top mt-3 justify-content-around">
-            <div>
+            <div class="porto-nome">
                   <h3>{{ $porto->nome }}</h3>
             </div>
-            <div>
-                  <button class="btn btn-info">FILTRAR</button>
+            <div class="">
+                  <a href="/store-porto" class="btn btn-info">TROCAR</a>
             </div>
+
+      </div>
+      <div class=" mt-5 top d-flex justify-content-end">
+            <button class="btn btn-info">FILTRAR</button>
       </div>
 
       <div class="portos produtos mt-4">

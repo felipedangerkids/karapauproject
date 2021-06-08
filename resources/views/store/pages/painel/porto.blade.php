@@ -10,6 +10,10 @@
             </div>
       </div>
 </div>
+
+<div class="text-center">
+      <a href="/store-index" class="btn btn-voltar1">VOLTAR</a>
+</div>
 <div class="container">
       <div class="d-flex top mt-3  justify-content-around">
             <div>
